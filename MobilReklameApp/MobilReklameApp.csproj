@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
+    <Compile Include="BaseClasses\Class1.cs" />
     <Compile Include="BaseClasses\DomainClassBase.cs" />
     <Compile Include="DomainClasses\Customer.cs" />
     <Compile Include="DomainClasses\Employee.cs" />
