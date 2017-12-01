@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class OrderCatalog 
+    class OrderCatalog
     {
+
+        private string _memberName;
+
+        public OrderCatalog(string MemberName)
+        {
+            _memberName = MemberName;
+        }
+
+
+        public string MemberName
+        {
+            get { return _memberName; }
+        }
+
+
+
 
     }
 }
