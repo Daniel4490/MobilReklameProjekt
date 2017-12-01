@@ -2,18 +2,18 @@
 {
     public class EnumOrdre
     {
-        enum OrdreStatus
+        public class EnumOrdreClass
         {
-            Afventer,
-            Accepteret,
-            Anulleret,
-            Igangværende,
-            Færdig,
-            Leveret
+            enum OrdreStatus
+            {
+                Afventer,
+                Accepteret,
+                Anulleret,
+                Igangværende,
+                Færdig,
+                Leveret
+            }
 
         }
-
-
     }
-    
 }
