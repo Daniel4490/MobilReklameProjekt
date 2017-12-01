@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Order  
+    class Order
     {
         private string _ordreBeskrivelse;
         private int _ordreDato;
-        private string _ordreLeveringsDato;
+        private int _ordreLeveringsDato;
         private int _ordreNummer;
         private string _produktType;
         private string _ordreStatus;
+        private string _produktMateriale;
 
 
-        public Order(string OrdreBeskrivelse, string OrdreDato, string OrdreLeveringsDato, int OrdreNummer, string ProduktType, string OrdreStatus)
+
+        public Order(string OrdreBeskrivelse, int OrdreDato, string OrdreLeveringsDato, int OrdreNummer,
+            string ProduktType, string OrdreStatus, string ProduktMateriale)
         {
             _ordreBeskrivelse = OrdreBeskrivelse;
             _ordreDato = OrdreDato;
@@ -25,24 +28,48 @@ namespace MobilReklameApp.DomainClasses
             _ordreNummer = OrdreNummer;
             _produktType = ProduktType;
             _ordreStatus = OrdreStatus;
+            _produktMateriale = ProduktMateriale;
 
         }
 
-    public string OrdreBeskrivelse
-    {
-        get { return _ordreBeskrivelse; }
-        
-    }
-
-    public string OrdreBeskrivelse
+        public string OrdreBeskrivelse
         {
             get { return _ordreBeskrivelse; }
 
         }
 
-    public string OrdreBeskrivelse
+        public int OrdreDato
         {
             get { return _ordreBeskrivelse; }
 
         }
+
+        public int OrdreLeveringsDato
+        {
+            get { return _ordreLeveringsDato; }
+
+        }
+
+        public int OrdreNummer
+        {
+            get { return _ordreNummer; }
+        }
+
+        public string OrdreStatus
+        {
+            get { return _ordreStatus; }
+        }
+
+        public string ProduktType
+        {
+            get { return _produktType; }
+        }
+
+        public string ProduktMateriale
+        {
+            get { return _produktMateriale; }
+        }
+
     }
+
+}
