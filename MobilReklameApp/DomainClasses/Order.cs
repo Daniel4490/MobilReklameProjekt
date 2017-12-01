@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Order
+    class Order  
     {
         private string _ordreBeskrivelse;
         private int _ordreDato;
@@ -16,7 +17,7 @@ namespace MobilReklameApp.DomainClasses
         private string _ordreStatus;
 
 
-        public Order()
+        public Order(string OrdreBeskrivelse, string OrdreDato, string OrdreLeveringsDato, int OrdreNummer, string ProduktType, string OrdreStatus)
         {
             _ordreBeskrivelse = OrdreBeskrivelse;
             _ordreDato = OrdreDato;
@@ -27,22 +28,21 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
-        public string OrdreBeskrivelse
+    public string OrdreBeskrivelse
+    {
+        get { return _ordreBeskrivelse; }
+        
+    }
+
+    public string OrdreBeskrivelse
         {
             get { return _ordreBeskrivelse; }
 
         }
 
-        public string OrdreBeskrivelse
-        {
-            get { return _ordreBeskrivelse; }
-
-        }
-
-        public string OrdreBeskrivelse
+    public string OrdreBeskrivelse
         {
             get { return _ordreBeskrivelse; }
 
         }
     }
-}
