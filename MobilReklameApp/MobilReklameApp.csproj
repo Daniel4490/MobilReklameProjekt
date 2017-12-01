@@ -101,6 +101,7 @@
     <Compile Include="DomainClasses\Employee.cs" />
     <Compile Include="DomainClasses\EmployeeCatalog.cs" />
     <Compile Include="DomainClasses\Order.cs" />
+    <Compile Include="DomainClasses\OrderCatalog.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
