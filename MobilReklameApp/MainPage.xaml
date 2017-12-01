@@ -9,35 +9,46 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="1006*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        
-        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+
+            
+            
+        <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="Opret påmindelse" FontSize="25" Padding="10,10,10,10" />
                 <Button Content="Kundebase" FontSize="25" Padding="10,10,10,10"/>
                 <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" />
             </StackPanel>
-
+        </Grid>
+            
+        <Grid Row="1">
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" FontSize="30" Width="300"/>
                 <Button Content="Afventende ordre" FontSize="30" Width="300"/>
                 <Button Content="Opret ordre" FontSize="30" Width="300"/>
             </StackPanel>
+        </Grid>
 
-            <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
-                <TextBlock Text="Notifikationer" FontSize="30" TextDecorations="Underline"/>
-                <TextBlock Padding="20,10,10,10" Text="Ordre er færdig men ikke afsendt" Foreground="Red" FontWeight="Bold"/>
-                <TextBlock Padding="20,10,10,10" Text="Jan skal ringe til kunde om ændring i levering" FontWeight="Bold"/>
-
+        <Grid Row="2">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                <TextBlock Text="Notifikationer" FontSize="30" TextDecorations="Underline" Margin="0,0,0,0"/>
+                <TextBlock Padding="20,10,10,10" Text="Ordre er færdig men ikke afsendt" Foreground="Red" FontWeight="Bold" Margin="0,0,0,0"/>
+                <TextBlock Padding="20,10,10,10" Text="Jan skal ringe til kunde om ændring i levering" FontWeight="Bold" Margin="6,0,-6,0"/>
             </StackPanel>
+        </Grid>
 
-        </StackPanel>
+ 
+
+
+        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>

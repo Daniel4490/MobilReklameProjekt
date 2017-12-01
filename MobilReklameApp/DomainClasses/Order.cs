@@ -43,6 +43,7 @@ namespace MobilReklameApp.DomainClasses
                 Færdig,
                 Leveret
             }
+
             static void Main()
             {
                 int x = (int)OrdreStatus.Afventer;
@@ -50,7 +51,7 @@ namespace MobilReklameApp.DomainClasses
 
 
         }
-        
+      
 
         public string OrdreBeskrivelse
         {
