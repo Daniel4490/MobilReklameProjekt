@@ -19,7 +19,7 @@ namespace MobilReklameApp.DomainClasses
 
 
 
-        public Order(string OrdreBeskrivelse, int OrdreDato, string OrdreLeveringsDato, int OrdreNummer,
+        public Order(string OrdreBeskrivelse, int OrdreDato, int OrdreLeveringsDato, int OrdreNummer,
             string ProduktType, string OrdreStatus, string ProduktMateriale)
         {
             _ordreBeskrivelse = OrdreBeskrivelse;
@@ -43,50 +43,51 @@ namespace MobilReklameApp.DomainClasses
                 Færdig,
                 Leveret
             }
-
             static void Main()
             {
-                string x = (string) OrdreStatus.Afventer;
+                string x = (string)OrdreStatus.Afventer;
             }
 
-            public string OrdreBeskrivelse
-            {
-                get { return _ordreBeskrivelse; }
 
-            }
+        }
+        
 
-            public int OrdreDato
-            {
-                get { return _ordreDato; }
+        public string OrdreBeskrivelse
+        {
+            get { return _ordreBeskrivelse; }
 
-            }
+        }
 
-            public int OrdreLeveringsDato
-            {
-                get { return _ordreLeveringsDato; }
+        public int OrdreDato
+        {
+            get { return _ordreDato; }
 
-            }
+        }
 
-            public int OrdreNummer
-            {
-                get { return _ordreNummer; }
-            }
+        public int OrdreLeveringsDato
+        {
+            get { return _ordreLeveringsDato; }
 
-            public string OrdreStatus
-            {
-                get { return _ordreStatus; }
-            }
+        }
 
-            public string ProduktType
-            {
-                get { return _produktType; }
-            }
+        public int OrdreNummer
+        {
+            get { return _ordreNummer; }
+        }
 
-            public string ProduktMateriale
-            {
-                get { return _produktMateriale; }
-            }
+        public string OrdreStatus
+        {
+            get { return _ordreStatus; }
+        }
 
+        public string ProduktType
+        {
+            get { return _produktType; }
+        }
+
+        public string ProduktMateriale
+        {
+            get { return _produktMateriale; }
         }
 
     }
