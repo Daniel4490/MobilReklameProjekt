@@ -45,7 +45,7 @@ namespace MobilReklameApp.DomainClasses
             }
             static void Main()
             {
-                string x = (string)OrdreStatus.Afventer;
+                int x = (int)OrdreStatus.Afventer;
             }
 
 
