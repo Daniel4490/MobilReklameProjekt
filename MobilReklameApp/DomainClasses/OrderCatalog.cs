@@ -10,6 +10,6 @@ namespace MobilReklameApp.DomainClasses
     {
 
 
-        Jeg hedder Morten
+        
     }
 }
