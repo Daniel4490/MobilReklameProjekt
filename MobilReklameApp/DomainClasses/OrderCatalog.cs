@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class OrderCatalog
+    class OrderCatalog 
     {
 
-
-       
     }
 }

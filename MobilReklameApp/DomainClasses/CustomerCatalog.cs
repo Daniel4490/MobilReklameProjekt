@@ -20,9 +20,9 @@ namespace MobilReklameApp.DomainClasses
             get { return _customers.Values.ToList(); }
         }
 
-        public void Add(int tlf, Customer customer)
+        public void Add(Customer customer)
         {
-            _customers.Add(tlf, customer);
+            _customers.Add(customer.Id, customer);
         }
 
 

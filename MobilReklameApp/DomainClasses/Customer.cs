@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Cryptography.Core;
+using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Customer
+    class Customer : DomainClassBase
     {
 
         private string _adresse;
@@ -20,10 +21,8 @@ namespace MobilReklameApp.DomainClasses
             _adresse = Adresse;
             _tlf = Telefon;
             _mail = Mail;
+            Id = _tlf;
         }
-
-
-
 
         public string Adresse
         {
@@ -40,7 +39,6 @@ namespace MobilReklameApp.DomainClasses
             get { return _mail; }
         }
 
-
-
+        public override int Id { get; set; }
     }
 }
