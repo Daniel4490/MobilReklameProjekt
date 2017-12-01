@@ -8,5 +8,16 @@ namespace MobilReklameApp.DomainClasses
 {
     class Order
     {
+
+
+
+
+
+
+
+
+
+
+
     }
 }
