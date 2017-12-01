@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Order
+    class Ordre
     {
         private string _ordreBeskrivelse;
         private int _ordreDato;
@@ -19,7 +19,7 @@ namespace MobilReklameApp.DomainClasses
 
 
 
-        public Order(string OrdreBeskrivelse, int OrdreDato, int OrdreLeveringsDato, int OrdreNummer,
+        public Ordre(string OrdreBeskrivelse, int OrdreDato, int OrdreLeveringsDato, int OrdreNummer,
             string ProduktType, string OrdreStatus, string ProduktMateriale)
         {
             _ordreBeskrivelse = OrdreBeskrivelse;
@@ -31,27 +31,6 @@ namespace MobilReklameApp.DomainClasses
             _produktMateriale = ProduktMateriale;
 
         }
-
-        public class EnumOrder
-        {
-            enum OrdreStatus
-            {
-                Afventer,
-                Accepteret,
-                Anulleret,
-                Igangværende,
-                Færdig,
-                Leveret
-            }
-
-            static void Main()
-            {
-                int x = (int)OrdreStatus.Afventer;
-            }
-
-
-        }
-      
 
         public string OrdreBeskrivelse
         {
@@ -92,4 +71,6 @@ namespace MobilReklameApp.DomainClasses
         }
 
     }
+
+
 }
