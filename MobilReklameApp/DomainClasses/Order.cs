@@ -32,44 +32,62 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
-        public string OrdreBeskrivelse
+        public class EnumOrder
         {
-            get { return _ordreBeskrivelse; }
+            enum OrdreStatus
+            {
+                Afventer,
+                Accepteret,
+                Anulleret,
+                Igangværende,
+                Færdig,
+                Leveret
+            }
 
-        }
+            static void Main()
+            {
+                string x = (string) OrdreStatus.Afventer;
+            }
 
-        public int OrdreDato
-        {
-            get { return _ordreBeskrivelse; }
+            public string OrdreBeskrivelse
+            {
+                get { return _ordreBeskrivelse; }
 
-        }
+            }
 
-        public int OrdreLeveringsDato
-        {
-            get { return _ordreLeveringsDato; }
+            public int OrdreDato
+            {
+                get { return _ordreDato; }
 
-        }
+            }
 
-        public int OrdreNummer
-        {
-            get { return _ordreNummer; }
-        }
+            public int OrdreLeveringsDato
+            {
+                get { return _ordreLeveringsDato; }
 
-        public string OrdreStatus
-        {
-            get { return _ordreStatus; }
-        }
+            }
 
-        public string ProduktType
-        {
-            get { return _produktType; }
-        }
+            public int OrdreNummer
+            {
+                get { return _ordreNummer; }
+            }
 
-        public string ProduktMateriale
-        {
-            get { return _produktMateriale; }
+            public string OrdreStatus
+            {
+                get { return _ordreStatus; }
+            }
+
+            public string ProduktType
+            {
+                get { return _produktType; }
+            }
+
+            public string ProduktMateriale
+            {
+                get { return _produktMateriale; }
+            }
+
         }
 
     }
-
 }
