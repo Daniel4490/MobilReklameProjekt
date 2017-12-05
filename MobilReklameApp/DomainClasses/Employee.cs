@@ -11,19 +11,11 @@ namespace MobilReklameApp.DomainClasses
     {
         private string _name;
         private string _phoneNumber;
-        private string _id;
-
+        
         public Employee(string name, string phoneNumber)
         {
             _name = name;
             _phoneNumber = phoneNumber;
-            
-        }
-
-        public override string Id
-        {
-            get { return _id; }
-            set { _id = value; }
         }
 
         public string Name
@@ -35,14 +27,5 @@ namespace MobilReklameApp.DomainClasses
         {
             get { return _phoneNumber; }
         }
-
-        public string ID
-        {
-            get { return _id; }
-        }
-
-    
-
-
     }
 }
