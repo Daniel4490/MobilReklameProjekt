@@ -9,18 +9,30 @@ namespace MobilReklameApp.DomainClasses
 {
     class Ordre
     {
+        public enum OrdreStatus
+        {
+            Afventer,
+            Accepteret,
+            Anulleret,
+            Igangværende,
+            Færdig,
+            Leveret
+        }
+
+        
+
         private string _ordreBeskrivelse;
         private int _ordreDato;
         private int _ordreLeveringsDato;
         private int _ordreNummer;
         private string _produktType;
-        private string _ordreStatus;
+        public OrdreStatus _ordreStatus;
         private string _produktMateriale;
 
+        
 
-
-        public Ordre(string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, int ordreNummer,
-            string produktType, string ordreStatus, string produktMateriale)
+        public Ordre(OrdreStatus ordreStatus, string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, int ordreNummer,
+            string produktType, string produktMateriale)
         {
             _ordreBeskrivelse = ordreBeskrivelse;
             _ordreDato = ordreDato;
@@ -32,6 +44,7 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
+        
         public string OrdreBeskrivelse
         {
             get { return _ordreBeskrivelse; }
@@ -55,10 +68,11 @@ namespace MobilReklameApp.DomainClasses
             get { return _ordreNummer; }
         }
 
-        public string OrdreStatus
+        public string EnummOrdreStatus
         {
             get { return _ordreStatus; }
         }
+        
 
         public string ProduktType
         {
@@ -70,7 +84,12 @@ namespace MobilReklameApp.DomainClasses
             get { return _produktMateriale; }
         }
 
+
+
+
+
     }
+
 
 
 }
