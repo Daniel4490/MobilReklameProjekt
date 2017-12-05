@@ -12,7 +12,7 @@ namespace MobilReklameApp.DomainClasses
     {
         private string _firstName;
         private string _lastName;
-        private string _adress;
+        private string _address;
         private string _phone;
         private string _email;
 
@@ -21,12 +21,17 @@ namespace MobilReklameApp.DomainClasses
         {
             _firstName = firstName;
             _lastName = lastName;
-            _adress = adress;
+            _address = adress;
             _phone = phone;
             _email = email;
 
             Id = phone;
 
+        }
+
+        public Customer()
+        {
+            //parameterless constructor nessecarry for inheritance
         }
 
 
@@ -41,9 +46,9 @@ namespace MobilReklameApp.DomainClasses
             get { return _lastName; }
         }
 
-        public string Adress
+        public string Address
         {
-            get { return _adress; }
+            get { return _address; }
         }
 
         public string Phone

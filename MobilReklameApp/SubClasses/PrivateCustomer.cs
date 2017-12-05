@@ -10,8 +10,5 @@ namespace MobilReklameApp.SubClasses
     class PrivateCustomer : Customer
     {
         
-
-        public PrivateCustomer(int Name)
-            : base()
     }
 }
