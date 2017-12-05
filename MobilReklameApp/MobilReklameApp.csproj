@@ -107,6 +107,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubClasses\CompanyCustomer.cs" />
+    <Compile Include="SubClasses\PrivateCustomer.cs" />
+    <Compile Include="SubClasses\PublicCustomer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
