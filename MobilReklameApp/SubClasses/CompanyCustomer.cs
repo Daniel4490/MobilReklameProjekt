@@ -9,5 +9,6 @@ namespace MobilReklameApp.SubClasses
 {
     class CompanyCustomer : Customer
     {
+
     }
 }

@@ -9,7 +9,7 @@ namespace MobilReklameApp.DomainClasses
 {
     class Ordre
     {
-        public enum OrdreStatus
+        public enum OrderStatus
         {
             Afventer,
             Accepteret,
@@ -21,67 +21,69 @@ namespace MobilReklameApp.DomainClasses
 
         
 
-        private string _ordreBeskrivelse;
-        private int _ordreDato;
-        private int _ordreLeveringsDato;
-        private int _ordreNummer;
-        private string _produktType;
-        public OrdreStatus _ordreStatus;
-        private string _produktMateriale;
+        private string _orderDescription;
+        private DateTime _orderDate = DateTime.Now;
+        private DateTime _orderDeliveryDate;
+        private int _orderNumber;
+        private string _productType;
+        public OrderStatus _orderStatus;
+        private string _productMaterial;
 
         
 
-        public Ordre(OrdreStatus ordreStatus, string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, int ordreNummer,
+        public Ordre(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, int orderNumber,
             string produktType, string produktMateriale)
         {
-            _ordreBeskrivelse = ordreBeskrivelse;
-            _ordreDato = ordreDato;
-            _ordreLeveringsDato = ordreLeveringsDato;
-            _ordreNummer = ordreNummer;
-            _produktType = produktType;
-            _ordreStatus = ordreStatus;
-            _produktMateriale = produktMateriale;
+            _orderDescription = orderDescription;
+            _orderDate = orderDate;
+            _orderDeliveryDate = orderDeliveryDate;
+            _orderNumber = orderNumber;
+            _productType = produktType;
+            _orderStatus = orderStatus;
+            _productMaterial = produktMateriale;
 
         }
+
+
 
         
-        public string OrdreBeskrivelse
+        public string OrderDescriptions
         {
-            get { return _ordreBeskrivelse; }
+            get { return _orderDescription; }
 
         }
 
-        public int OrdreDato
+        public DateTime OrdreDato
         {
-            get { return _ordreDato; }
+            get { return _orderDate; }
 
         }
 
-        public int OrdreLeveringsDato
+        public DateTime OrderDeliveryDate
         {
-            get { return _ordreLeveringsDato; }
+            get { return _orderDeliveryDate; }
 
         }
 
         public int OrdreNummer
         {
-            get { return _ordreNummer; }
+            get { return _orderNumber; }
         }
 
-        public string EnummOrdreStatus
+        public OrderStatus EnummOrderStatus
         {
-            get { return _ordreStatus; }
+            get { return _orderStatus; }
         }
         
 
-        public string ProduktType
+        public string ProductType
         {
-            get { return _produktType; }
+            get { return _productType; }
         }
 
-        public string ProduktMateriale
+        public string ProductMaterial
         {
-            get { return _produktMateriale; }
+            get { return _productMaterial; }
         }
 
 

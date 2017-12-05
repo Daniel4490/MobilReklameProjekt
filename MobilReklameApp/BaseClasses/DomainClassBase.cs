@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace MobilReklameApp.BaseClasses
 {
     public abstract class DomainClassBase
-
-
     {
+
+
         public abstract string Id { get; set; }
     }
 }
