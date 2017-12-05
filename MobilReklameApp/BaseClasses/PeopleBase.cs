@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Cryptography.Core;
-using MobilReklameApp.BaseClasses;
 
-namespace MobilReklameApp.DomainClasses
+
+namespace MobilReklameApp.BaseClasses
 {
     class PeopleBase
     {
