@@ -10,17 +10,17 @@ namespace MobilReklameApp.DomainClasses
     class Employee : DomainClassBase
     {
         private string _name;
-        private int _phoneNumber;
-        private int _id;
+        private string _phoneNumber;
+        private string _id;
 
-        public Employee(string name, int phoneNumber, int iD)
+        public Employee(string name, string phoneNumber)
         {
             _name = name;
             _phoneNumber = phoneNumber;
-            _id = iD;
+            
         }
 
-        public override int Id
+        public override string Id
         {
             get { return _id; }
             set { _id = value; }
@@ -31,12 +31,12 @@ namespace MobilReklameApp.DomainClasses
             get { return _name; }
         }
 
-        public int PhoneNumber
+        public string PhoneNumber
         {
             get { return _phoneNumber; }
         }
 
-        public int ID
+        public string ID
         {
             get { return _id; }
         }

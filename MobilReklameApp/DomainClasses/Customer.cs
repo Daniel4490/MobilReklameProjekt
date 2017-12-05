@@ -12,11 +12,11 @@ namespace MobilReklameApp.DomainClasses
     {
 
         private string _adresse;
-        private int _tlf;
+        private string _tlf;
         private string _mail;
 
 
-        public Customer(string adresse, int telefon, string mail)
+        public Customer(string adresse, string telefon, string mail)
         {
             _adresse = adresse;
             _tlf = telefon;
@@ -29,7 +29,7 @@ namespace MobilReklameApp.DomainClasses
             get { return _adresse; }
         }
 
-        public int Telefon
+        public string Telefon
         {
             get { return _tlf; }
         }
@@ -39,6 +39,6 @@ namespace MobilReklameApp.DomainClasses
             get { return _mail; }
         }
 
-        public override int Id { get; set; }
+        public override string Id { get; set; }
     }
 }

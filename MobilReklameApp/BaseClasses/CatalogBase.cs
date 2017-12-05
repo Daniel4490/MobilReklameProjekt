@@ -9,11 +9,11 @@ namespace MobilReklameApp.BaseClasses
     public abstract class CatalogBase<TDomainClass>
         where TDomainClass : DomainClassBase
     {
-        private Dictionary<int, TDomainClass> _items;
+        private Dictionary<string, TDomainClass> _items;
 
         protected CatalogBase()
         {
-            _items = new Dictionary<int, TDomainClass>();
+            _items = new Dictionary<string, TDomainClass>();
         }
 
         public List<TDomainClass> All

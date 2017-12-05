@@ -9,7 +9,7 @@ namespace MobilReklameApp.DomainClasses
 {
     class CustomerCatalog : CatalogBase<Customer>
     {
-        private Dictionary<int, Customer> _customers;
+        private Dictionary<string, Customer> _customers;
 
         public CustomerCatalog()
         {
