@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Ordre
+    class Order
     {
         public enum OrderStatus
         {
@@ -31,7 +31,7 @@ namespace MobilReklameApp.DomainClasses
 
         
 
-        public Ordre(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, int orderNumber,
+        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, int orderNumber,
             string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;

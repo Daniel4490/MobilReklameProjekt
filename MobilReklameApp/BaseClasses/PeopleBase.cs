@@ -8,28 +8,25 @@ using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Customer : DomainClassBase
+    class PeopleBase
     {
         private string _firstName;
         private string _lastName;
         private string _address;
         private string _phone;
         private string _email;
+        
 
-
-        public Customer(string firstName, string lastName, string adress, string phone, string email)
+        public PeopleBase(string firstName, string lastName, string adress, string phone, string email)
         {
             _firstName = firstName;
             _lastName = lastName;
             _address = adress;
             _phone = phone;
             _email = email;
-
-            Id = phone;
-
         }
 
-        public Customer()
+        public PeopleBase()
         {
             //parameterless constructor nessecarry for inheritance
         }
@@ -61,6 +58,10 @@ namespace MobilReklameApp.DomainClasses
             get { return _email; }
         }
 
-        public override string Id { get; set; }
+        public string ID
+        {
+            get { return _phone; }
+        }
+        
     }
 }

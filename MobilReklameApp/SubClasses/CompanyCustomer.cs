@@ -7,7 +7,7 @@ using MobilReklameApp.DomainClasses;
 
 namespace MobilReklameApp.SubClasses
 {
-    class CompanyCustomer : Customer
+    class CompanyCustomer : PeopleBase
     {
 
     }
