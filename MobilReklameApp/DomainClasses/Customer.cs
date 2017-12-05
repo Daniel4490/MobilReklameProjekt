@@ -12,32 +12,48 @@ namespace MobilReklameApp.DomainClasses
     {
         private string _firstName;
         private string _lastName;
-        private string _adresse;
-        private string _tlf;
-        private string _mail;
+        private string _adress;
+        private string _phone;
+        private string _email;
 
 
-        public Customer(string adresse, string telefon, string mail)
+        public Customer(string firstName, string lastName, string adress, string phone, string email)
         {
-            _adresse = adresse;
-            _tlf = telefon;
-            _mail = mail;
-            Id = _tlf;
+            _firstName = firstName;
+            _lastName = lastName;
+            _adress = adress;
+            _phone = phone;
+            _email = email;
+
+            Id = phone;
+
         }
 
-        public string Adresse
+
+
+        public string FirstName
         {
-            get { return _adresse; }
+            get { return _firstName; }
         }
 
-        public string Telefon
+        public string LastName
         {
-            get { return _tlf; }
+            get { return _lastName; }
         }
 
-        public string Mail
+        public string Adress
         {
-            get { return _mail; }
+            get { return _adress; }
+        }
+
+        public string Phone
+        {
+            get { return _phone; }
+        }
+
+        public string Email
+        {
+            get { return _email; }
         }
 
         public override string Id { get; set; }
