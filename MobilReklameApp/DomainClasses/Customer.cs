@@ -10,7 +10,8 @@ namespace MobilReklameApp.DomainClasses
 {
     class Customer : DomainClassBase
     {
-
+        private string _firstName;
+        private string _lastName;
         private string _adresse;
         private string _tlf;
         private string _mail;
