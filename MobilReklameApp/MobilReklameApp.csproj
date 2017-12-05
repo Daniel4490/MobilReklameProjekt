@@ -101,7 +101,6 @@
     <Compile Include="DomainClasses\CustomerCatalog.cs" />
     <Compile Include="DomainClasses\Employee.cs" />
     <Compile Include="DomainClasses\EmployeeCatalog.cs" />
-    <Compile Include="DomainClasses\EnumOrdre.cs" />
     <Compile Include="DomainClasses\Order.cs" />
     <Compile Include="DomainClasses\OrderCatalog.cs" />
     <Compile Include="MainPage.xaml.cs">
