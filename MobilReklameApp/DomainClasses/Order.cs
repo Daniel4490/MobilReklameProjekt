@@ -19,16 +19,16 @@ namespace MobilReklameApp.DomainClasses
 
 
 
-        public Ordre(string OrdreBeskrivelse, int OrdreDato, int OrdreLeveringsDato, int OrdreNummer,
-            string ProduktType, string OrdreStatus, string ProduktMateriale)
+        public Ordre(string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, int ordreNummer,
+            string produktType, string ordreStatus, string produktMateriale)
         {
-            _ordreBeskrivelse = OrdreBeskrivelse;
-            _ordreDato = OrdreDato;
-            _ordreLeveringsDato = OrdreLeveringsDato;
-            _ordreNummer = OrdreNummer;
-            _produktType = ProduktType;
-            _ordreStatus = OrdreStatus;
-            _produktMateriale = ProduktMateriale;
+            _ordreBeskrivelse = ordreBeskrivelse;
+            _ordreDato = ordreDato;
+            _ordreLeveringsDato = ordreLeveringsDato;
+            _ordreNummer = ordreNummer;
+            _produktType = produktType;
+            _ordreStatus = ordreStatus;
+            _produktMateriale = produktMateriale;
 
         }
 

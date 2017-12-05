@@ -13,11 +13,11 @@ namespace MobilReklameApp.DomainClasses
         private int _phoneNumber;
         private int _id;
 
-        public Employee(string Name, int PhoneNumber, int ID)
+        public Employee(string name, int phoneNumber, int iD)
         {
-            _name = Name;
-            _phoneNumber = PhoneNumber;
-            _id = ID;
+            _name = name;
+            _phoneNumber = phoneNumber;
+            _id = iD;
         }
 
         public override int Id

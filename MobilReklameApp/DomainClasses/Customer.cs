@@ -16,11 +16,11 @@ namespace MobilReklameApp.DomainClasses
         private string _mail;
 
 
-        public Customer(string Adresse, int Telefon, string Mail)
+        public Customer(string adresse, int telefon, string mail)
         {
-            _adresse = Adresse;
-            _tlf = Telefon;
-            _mail = Mail;
+            _adresse = adresse;
+            _tlf = telefon;
+            _mail = mail;
             Id = _tlf;
         }
 
