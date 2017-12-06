@@ -50,7 +50,7 @@
             
         <Grid Row="1">
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
-                <Button Content="Igangværende ordre" FontSize="30" Width="300"/>
+                <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
                 <Button Content="Afventende ordre" FontSize="30" Width="300"/>
                 <Button Content="Opret ordre" FontSize="30" Width="300"/>
                 <TextBlock Text="Notifikationer" FontSize="30" TextDecorations="Underline" Margin="0,0,0,0"/>

@@ -26,5 +26,10 @@ namespace MobilReklameApp
         {
             this.InitializeComponent();
         }
+
+        public void OrderOverViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderOverView1), null);
+        }
     }
 }
