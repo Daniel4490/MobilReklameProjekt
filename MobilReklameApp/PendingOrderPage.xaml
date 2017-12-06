@@ -8,6 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Column="1">
+            <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right"/>
+            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="25" Padding="10,10,10,10"/>
+        </Grid>
 
     </Grid>
 </Page>

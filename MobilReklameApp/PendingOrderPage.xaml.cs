@@ -26,5 +26,11 @@ namespace MobilReklameApp
         {
             this.InitializeComponent();
         }
+
+        public void BackToMainPageClick(object sender, RoutedEventArgs h)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
+
     }
 }
