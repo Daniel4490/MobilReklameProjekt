@@ -67,7 +67,7 @@
 
         <Grid Grid.Column="1" Grid.Row="1">
             <TextBlock Text=""/>
-            <ListView ItemsSource="{Binding }" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
+            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" >
@@ -86,11 +86,19 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrebeskrivelse:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreBeskrivelse}"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrderDescriptions}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordre leveringsdato:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreLeveringsDato}"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrderDeliveryDate}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                        <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrenummer:"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreNummer}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                        <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrestatus:"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.EnummOrderStatus}"/>
                     </StackPanel>
                 </StackPanel>
                 </StackPanel>

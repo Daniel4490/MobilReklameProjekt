@@ -19,8 +19,8 @@ namespace MobilReklameApp.DomainClasses
         {
             _orders = new ObservableCollection<Order>();
 
-            _orders.Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
-            _orders.Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
+            _orders.Add(new Order(Order.OrderStatus.Afventer, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
+            _orders.Add(new Order(Order.OrderStatus.Accepteret, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
             _orders.Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
 
             _selectedOrder = _orders[0];
