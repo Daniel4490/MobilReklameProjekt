@@ -8,5 +8,6 @@ namespace MobilReklameApp.DomainClasses
 {
     class OrderItemViewModel
     {
+
     }
 }
