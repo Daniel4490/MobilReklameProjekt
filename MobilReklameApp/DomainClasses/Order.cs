@@ -24,20 +24,19 @@ namespace MobilReklameApp.DomainClasses
         private string _orderDescription;
         private DateTime _orderDate = DateTime.Now;
         private DateTime _orderDeliveryDate;
-        private int _orderNumber;
+        private int _orderNumber = 1000;
         private string _productType;
         public OrderStatus _orderStatus;
         private string _productMaterial;
 
         
 
-        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, int orderNumber,
-            string produktType, string produktMateriale)
+        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;
             _orderDate = orderDate;
             _orderDeliveryDate = orderDeliveryDate;
-            _orderNumber = orderNumber;
+            _orderNumber++;
             _productType = produktType;
             _orderStatus = orderStatus;
             _productMaterial = produktMateriale;
