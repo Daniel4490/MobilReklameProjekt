@@ -50,7 +50,7 @@ namespace MobilReklameApp.DomainClasses
         public string OrderDescriptions
         {
             get { return _orderDescription; }
-
+            set { _orderDescription = value; }
         }
 
         public DateTime OrdreDato
