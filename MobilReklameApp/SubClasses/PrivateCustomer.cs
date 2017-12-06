@@ -10,6 +10,8 @@ namespace MobilReklameApp.SubClasses
 {
     class PrivateCustomer : PeopleBase
     {
+
+
         
     }
 }
