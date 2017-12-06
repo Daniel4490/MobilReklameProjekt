@@ -10,8 +10,8 @@ namespace MobilReklameApp.SubClasses
 {
     class PrivateCustomer : PeopleBase
     {
-        public PrivateCustomer(string firstName, string lastName, string adress, string phone, string email)
-            : base(firstName, lastName, adress, phone, email)
+        public PrivateCustomer(string firstName, string lastName, string address, string phone, string email)
+            : base(firstName, lastName, address, phone, email)
         {
             
         }

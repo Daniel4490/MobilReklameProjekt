@@ -11,8 +11,8 @@ namespace MobilReklameApp.DomainClasses
     {
 
 
-        public Employee(string firstName, string lastName, string adress, string phone, string email)
-            : base(firstName, lastName, adress, phone, email)
+        public Employee(string firstName, string lastName, string address, string phone, string email)
+            : base(firstName, lastName, address, phone, email)
         {
             
         }

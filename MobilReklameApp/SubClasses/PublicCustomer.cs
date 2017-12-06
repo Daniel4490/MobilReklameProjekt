@@ -13,8 +13,8 @@ namespace MobilReklameApp.SubClasses
         
         private string _ean;
 
-        public PublicCustomer(string firstName, string lastName, string adress, string phone, string email, string ean)
-            : base(firstName, lastName, adress, phone, email)
+        public PublicCustomer(string firstName, string lastName, string address, string phone, string email, string ean)
+            : base(firstName, lastName, address, phone, email)
         {
             
             _ean = ean;
