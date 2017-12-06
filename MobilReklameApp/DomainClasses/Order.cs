@@ -22,11 +22,11 @@ namespace MobilReklameApp.DomainClasses
         
 
         private string _orderDescription;
-        private DateTime _orderDate = DateTime.Now;
-        private DateTime _orderDeliveryDate;
+        private DateTime _orderDate = DateTime.Now; //.ToLongDateString
+        private DateTime _orderDeliveryDate = DateTime.Now.AddDays(365); //.ToLongDateString
         private int _orderNumber = 1000;
         private string _productType;
-        public OrderStatus _orderStatus;
+        private OrderStatus _orderStatus;
         private string _productMaterial;
 
         
@@ -64,9 +64,10 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
-        public int OrdreNummer
+        public int OrderNumber
         {
             get { return _orderNumber; }
+            //set { _orderNumber = value++; }
         }
 
         public OrderStatus EnummOrderStatus

@@ -4,28 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    //class CustomerCatalog : CatalogBase<Customer>
-    //{
-    //    private Dictionary<string, Customer> _customers;
+    class CustomerCatalog : CatalogBase<PrivateCustomer>
+    {
+        private Dictionary<string, PrivateCustomer> _customers;
 
-    //    public CustomerCatalog()
-    //    {
-            
-    //    }
-    //    public List<Customer> listAll
-    //    {
-    //        get { return _customers.Values.ToList(); }
-    //    }
+        public CustomerCatalog()
+        {
 
-    //    public void Add(Customer customer)
-    //    {
-    //        _customers.Add(customer.Id, customer);
-    //    }
+        }
+        public List<PrivateCustomer> listAll
+        {
+            get { return _customers.Values.ToList(); }
+        }
 
-
-
-   // }
+        public void Add(PrivateCustomer customer)
+        {
+            _customers.Add(customer.ID, customer);
+        }
+    }
 }
