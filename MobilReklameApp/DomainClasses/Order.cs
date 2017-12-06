@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Order
+   public class Order
     {
         public enum OrderStatus
         {

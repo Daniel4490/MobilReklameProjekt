@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace MobilReklameApp.BaseClasses
 {
     public abstract class CatalogBase<TDomainClass>
-        where TDomainClass : DomainClassBase
     {
         private Dictionary<string, TDomainClass> _items;
 

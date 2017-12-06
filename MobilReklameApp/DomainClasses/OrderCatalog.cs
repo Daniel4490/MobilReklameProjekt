@@ -7,25 +7,25 @@ using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    public class OrderCatalog : CatalogBase<Ordre>
+    public class OrderCatalog : CatalogBase<Order>
     {
 
-        private Dictionary<string, Ordre> _orders;
+        private Dictionary<int, Order> _orders;
 
         public OrderCatalog()
         {
-            _orders = new Dictionary<string, Ordre>();
-            Add(new Ordre("Ordre beskrivelse", 05, 06, "Ordrenummer", "Produkttype", "Ordrestatus", "produkt materiale") );
+            _orders = new Dictionary<int, Order>();
+            Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Now, DateTime.Now, 223344, "Produkt type", "Produkt Materiale") );
         }
 
-        public List<Ordre> listAll
+        public List<Order> listAll
         {
             get { return _orders.Values.ToList(); }
         }
 
-        public void Add(Ordre ordre)
+        public void Add(Order ordre)
         {
-            _orders.Add(ordre.Id, ordre);
+            _orders.Add(ordre.OrdreNummer, ordre);
         }
 
 
