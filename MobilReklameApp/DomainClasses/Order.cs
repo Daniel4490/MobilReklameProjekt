@@ -4,22 +4,23 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class Ordre
+    public class Ordre : DomainClassBase
     {
         private string _ordreBeskrivelse;
         private int _ordreDato;
         private int _ordreLeveringsDato;
-        private int _ordreNummer;
+        private string _ordreNummer;
         private string _produktType;
         private string _ordreStatus;
         private string _produktMateriale;
 
 
 
-        public Ordre(string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, int ordreNummer,
+        public Ordre(string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, string ordreNummer,
             string produktType, string ordreStatus, string produktMateriale)
         {
             _ordreBeskrivelse = ordreBeskrivelse;
@@ -30,6 +31,7 @@ namespace MobilReklameApp.DomainClasses
             _ordreStatus = ordreStatus;
             _produktMateriale = produktMateriale;
 
+            Id = _ordreNummer;
         }
 
         public string OrdreBeskrivelse
@@ -50,7 +52,7 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
-        public int OrdreNummer
+        public string OrdreNummer
         {
             get { return _ordreNummer; }
         }
@@ -70,6 +72,7 @@ namespace MobilReklameApp.DomainClasses
             get { return _produktMateriale; }
         }
 
+        public override string Id { get; set; }
     }
 
 
