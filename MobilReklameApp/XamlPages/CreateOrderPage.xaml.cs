@@ -20,11 +20,16 @@ namespace MobilReklameApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OrderOverView1 : Page
+    public sealed partial class CreateOrderPage : Page
     {
-        public OrderOverView1()
+        public CreateOrderPage()
         {
             this.InitializeComponent();
+        }
+
+        public void BackToMainPageClick(object sender, RoutedEventArgs j)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
         }
     }
 }
