@@ -23,10 +23,10 @@ namespace MobilReklameApp.DomainClasses
             get { return _orders.Values.ToList(); }
         }
 
-        public void Add(Order ordre)
-        {
-            _orders.Add(ordre.OrdreNummer, ordre);
-        }
+        //public void Add(Order ordre)
+        //{
+        //    _orders.Add(ordre.OrdreNummer, ordre);
+        //}
 
 
 

@@ -15,9 +15,9 @@ namespace MobilReklameApp.DomainClasses
         {
             _employees = new Dictionary<int, Employee>();
 
-            Add(new Employee("Jan","23414823"));
-            Add(new Employee("Daniel", "23414823"));
-            Add(new Employee("Thomas", "23414823"));
+            Add(new Employee("Jan","23414823", "", "", ""));
+            Add(new Employee("Daniel", "23414823", "", "", ""));
+            Add(new Employee("Thomas", "23414823", "", "", ""));
         }
     }
 }
