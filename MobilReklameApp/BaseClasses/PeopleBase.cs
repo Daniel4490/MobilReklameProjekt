@@ -18,11 +18,11 @@ namespace MobilReklameApp.BaseClasses
         private string _email;
 
 
-        protected PeopleBase(string firstName, string lastName, string adress, string phone, string email)
+        protected PeopleBase(string firstName, string lastName, string address, string phone, string email)
         {
             _firstName = firstName;
             _lastName = lastName;
-            _address = adress;
+            _address = address;
             _phone = phone;
             _email = email;           
         }

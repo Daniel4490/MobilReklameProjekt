@@ -9,23 +9,13 @@ namespace MobilReklameApp.DomainClasses
 {
     class Employee : PeopleBase
     {
-        private string _name;
-        private string _phoneNumber;
+
+
+        public Employee(string firstName, string lastName, string address, string phone, string email)
+            : base(firstName, lastName, address, phone, email)
+        {
+            
+        }
         
-        public Employee(string name, string phoneNumber)
-        {
-            _name = name;
-            _phoneNumber = phoneNumber;
-        }
-
-        public string Name
-        {
-            get { return _name; }
-        }
-
-        public string PhoneNumber
-        {
-            get { return _phoneNumber; }
-        }
     }
 }

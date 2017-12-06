@@ -13,7 +13,7 @@ namespace MobilReklameApp.DomainClasses
 
     //    public CustomerCatalog()
     //    {
-
+            
     //    }
     //    public List<Customer> listAll
     //    {
@@ -27,5 +27,5 @@ namespace MobilReklameApp.DomainClasses
 
 
 
-    //}
+   // }
 }
