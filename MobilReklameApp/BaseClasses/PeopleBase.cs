@@ -8,27 +8,30 @@ using Windows.Security.Cryptography.Core;
 
 namespace MobilReklameApp.BaseClasses
 {
-    class PeopleBase
+   public abstract class PeopleBase
+
     {
         private string _firstName;
         private string _lastName;
         private string _address;
         private string _phone;
         private string _email;
-        
 
-        public PeopleBase(string firstName, string lastName, string adress, string phone, string email)
+
+        protected PeopleBase(string firstName, string lastName, string adress, string phone, string email)
         {
             _firstName = firstName;
             _lastName = lastName;
             _address = adress;
             _phone = phone;
             _email = email;
+
+            
         }
 
         public PeopleBase()
         {
-            //parameterless constructor nessecarry for inheritance
+            // parameterless constructor nessecarry for inheritance
         }
 
 
