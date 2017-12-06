@@ -37,7 +37,7 @@ namespace MobilReklameApp
             this.Frame.Navigate(typeof(PendingOrderPage), null);
         }
 
-        public void CreateOrderClick(object sender, RoutedEventArgs f)
+        public void CreateOrderPageClick(object sender, RoutedEventArgs f)
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
