@@ -5,12 +5,31 @@
     xmlns:local="using:MobilReklameApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:domainClasses="using:MobilReklameApp.DomainClasses"
     mc:Ignorable="d">
+
+    <Page.DataContext>
+        <domainClasses:OrderItemViewModel/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,8 +38,8 @@
         </Grid.ColumnDefinitions>
 
 
-
-
+            
+            
         <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="Opret påmindelse" FontSize="25" Padding="10,10,10,10" />
@@ -28,7 +47,7 @@
                 <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" />
             </StackPanel>
         </Grid>
-
+            
         <Grid Row="1">
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" FontSize="30" Width="300"/>
@@ -45,10 +64,37 @@
 
 
 
-        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-            <StackPanel HorizontalAlignment="Left" Height="272" Margin="289,253,0,0" VerticalAlignment="Top" Width="734"/>
-            <TextBlock  Margin="149,29,0,0" Text="DEN ER NU BUNDET" TextWrapping="Wrap" VerticalAlignment="Center" Height="178" Width="672"/>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <TextBlock Text=""/>
+            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" >
+                            <StackPanel Margin="10,10,10,10">
+                                <TextBlock FontSize="24" Text="{Binding OrdreNummer}"/>
+                                <TextBlock FontSize="24" Text="{Binding OrdreBeskrivelse}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
 
-    </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                        <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrebeskrivelse:"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreBeskrivelse}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                        <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordre leveringsdato:"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreLeveringsDato}"/>
+                    </StackPanel>
+                </StackPanel>
+                </StackPanel>
+            
+        </Grid>
+
+        </Grid>
 </Page>
