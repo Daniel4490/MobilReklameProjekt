@@ -24,9 +24,7 @@ namespace MobilReklameApp.BaseClasses
             _lastName = lastName;
             _address = adress;
             _phone = phone;
-            _email = email;
-
-            
+            _email = email;           
         }
 
         public PeopleBase()
