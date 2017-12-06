@@ -4,76 +4,94 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    public class Ordre : DomainClassBase
+    class Order
     {
-        private string _ordreBeskrivelse;
-        private int _ordreDato;
-        private int _ordreLeveringsDato;
-        private string _ordreNummer;
-        private string _produktType;
-        private string _ordreStatus;
-        private string _produktMateriale;
-
-
-
-        public Ordre(string ordreBeskrivelse, int ordreDato, int ordreLeveringsDato, string ordreNummer,
-            string produktType, string ordreStatus, string produktMateriale)
+        public enum OrderStatus
         {
-            _ordreBeskrivelse = ordreBeskrivelse;
-            _ordreDato = ordreDato;
-            _ordreLeveringsDato = ordreLeveringsDato;
-            _ordreNummer = ordreNummer;
-            _produktType = produktType;
-            _ordreStatus = ordreStatus;
-            _produktMateriale = produktMateriale;
-
-            Id = _ordreNummer;
+            Afventer,
+            Accepteret,
+            Anulleret,
+            Igangværende,
+            Færdig,
+            Leveret
         }
 
-        public string OrdreBeskrivelse
+        
+
+        private string _orderDescription;
+        private DateTime _orderDate = DateTime.Now;
+        private DateTime _orderDeliveryDate;
+        private int _orderNumber;
+        private string _productType;
+        public OrderStatus _orderStatus;
+        private string _productMaterial;
+
+        
+
+        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, int orderNumber,
+            string produktType, string produktMateriale)
         {
-            get { return _ordreBeskrivelse; }
-
-        }
-
-        public int OrdreDato
-        {
-            get { return _ordreDato; }
-
-        }
-
-        public int OrdreLeveringsDato
-        {
-            get { return _ordreLeveringsDato; }
+            _orderDescription = orderDescription;
+            _orderDate = orderDate;
+            _orderDeliveryDate = orderDeliveryDate;
+            _orderNumber = orderNumber;
+            _productType = produktType;
+            _orderStatus = orderStatus;
+            _productMaterial = produktMateriale;
 
         }
 
-        public string OrdreNummer
+
+
+        
+        public string OrderDescriptions
         {
-            get { return _ordreNummer; }
+            get { return _orderDescription; }
+
         }
 
-        public string OrdreStatus
+        public DateTime OrdreDato
         {
-            get { return _ordreStatus; }
+            get { return _orderDate; }
+
         }
 
-        public string ProduktType
+        public DateTime OrderDeliveryDate
         {
-            get { return _produktType; }
+            get { return _orderDeliveryDate; }
+
         }
 
-        public string ProduktMateriale
+        public int OrdreNummer
         {
-            get { return _produktMateriale; }
+            get { return _orderNumber; }
         }
 
-        public override string Id { get; set; }
+        public OrderStatus EnummOrderStatus
+        {
+            get { return _orderStatus; }
+        }
+        
+
+        public string ProductType
+        {
+            get { return _productType; }
+        }
+
+        public string ProductMaterial
+        {
+            get { return _productMaterial; }
+        }
+
+
+
+
+
     }
+
 
 
 }

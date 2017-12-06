@@ -96,20 +96,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
-    <Compile Include="BaseClasses\DomainClassBase.cs" />
-    <Compile Include="BaseClasses\ItemViewModelBase.cs" />
-    <Compile Include="DomainClasses\Customer.cs" />
+    <Compile Include="BaseClasses\PeopleBase.cs" />
     <Compile Include="DomainClasses\CustomerCatalog.cs" />
     <Compile Include="DomainClasses\Employee.cs" />
     <Compile Include="DomainClasses\EmployeeCatalog.cs" />
-    <Compile Include="DomainClasses\EnumOrdre.cs" />
     <Compile Include="DomainClasses\Order.cs" />
     <Compile Include="DomainClasses\OrderCatalog.cs" />
-    <Compile Include="DomainClasses\OrderItemViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubClasses\CompanyCustomer.cs" />
+    <Compile Include="SubClasses\PrivateCustomer.cs" />
+    <Compile Include="SubClasses\PublicCustomer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
