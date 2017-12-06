@@ -11,5 +11,7 @@ namespace MobilReklameApp.SubClasses
     class CompanyCustomer : PeopleBase
     {
 
+
+
     }
 }
