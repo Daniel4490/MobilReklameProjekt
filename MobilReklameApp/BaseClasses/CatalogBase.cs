@@ -20,9 +20,9 @@ namespace MobilReklameApp.BaseClasses
             get { return _items.Values.ToList(); }
         }
 
-      /*  public void Add(TDomainClass obj)
+        public void Add(TDomainClass obj)
         {
-            _items.Add(obj.Id, obj);
-        } */
+           //  _items.Add(obj.Id, obj);
+        }
     }
 }
