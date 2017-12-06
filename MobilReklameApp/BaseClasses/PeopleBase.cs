@@ -16,7 +16,7 @@ namespace MobilReklameApp.BaseClasses
         private string _address;
         private string _phone;
         private string _email;
-
+        
 
         protected PeopleBase(string firstName, string lastName, string adress, string phone, string email)
         {
@@ -25,7 +25,6 @@ namespace MobilReklameApp.BaseClasses
             _address = adress;
             _phone = phone;
             _email = email;
-
             
         }
 
