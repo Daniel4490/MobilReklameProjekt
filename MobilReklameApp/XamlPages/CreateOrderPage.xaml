@@ -17,9 +17,30 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <Grid Column="1">
-            <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right"/>
-            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="25" Padding="10,10,10,10"/>
+
+
+        <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="Ordreoversigt" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
+        </StackPanel>
+
+
+        <Grid HorizontalAlignment="Left" Height="1073" Margin="20,0,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="1535" Grid.Column="1">
+            <StackPanel Margin="0,50,0,0" Width="570" Height="310" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top" Height="50" Width="570"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,0,0" VerticalAlignment="Top" Width="576">
+                <Image Height="165" Width="420" Margin="0,0,0,0"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Height="300" Margin="0,400,0,0" VerticalAlignment="Top" Width="1000">
+                <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
+                <TextBox Text="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla bla" Height="250" FontSize="28" TextWrapping="Wrap"/>
+            </StackPanel>
         </Grid>
 
 

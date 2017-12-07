@@ -41,5 +41,10 @@ namespace MobilReklameApp
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

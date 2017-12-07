@@ -66,8 +66,8 @@
 
 
         <Grid Grid.Column="1" Grid.Row="1">
-            <TextBlock Text=""/>
-            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
+            
+            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" >

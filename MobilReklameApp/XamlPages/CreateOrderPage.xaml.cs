@@ -31,5 +31,15 @@ namespace MobilReklameApp
         {
             this.Frame.Navigate(typeof(MainPage), null);
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
