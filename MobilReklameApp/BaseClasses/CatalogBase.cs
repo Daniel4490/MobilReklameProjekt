@@ -22,7 +22,7 @@ namespace MobilReklameApp.BaseClasses
 
         public void Add(TDomainClass obj)
         {
-           //  _items.Add(obj.Id, obj);
+           // _items.Add(obj.Id, obj);
         }
     }
 }

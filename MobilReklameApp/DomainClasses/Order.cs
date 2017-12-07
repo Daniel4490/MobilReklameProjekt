@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
@@ -23,22 +22,23 @@ namespace MobilReklameApp.DomainClasses
         
 
         private string _orderDescription;
-        private DateTime _orderDate = DateTime.Now;
-        private DateTime _orderDeliveryDate;
+        private DateTime _orderDate = DateTime.Now; //.ToLongDateString
+        private DateTime _orderDeliveryDate = DateTime.Now.AddDays(365); //.ToLongDateString
         private int _orderNumber = 1000;
         private string _productType;
-        private ObservableCollection<OrderStatus> _orderStatus;
+        private OrderStatus _orderStatus;
         private string _productMaterial;
 
         
 
-        public Order(string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, string produktType, string produktMateriale)
+        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;
             _orderDate = orderDate;
             _orderDeliveryDate = orderDeliveryDate;
             _orderNumber++;
             _productType = produktType;
+            _orderStatus = orderStatus;
             _productMaterial = produktMateriale;
 
         }
@@ -64,15 +64,15 @@ namespace MobilReklameApp.DomainClasses
 
         }
 
-        public int OrdreNummer
+        public int OrderNumber
         {
             get { return _orderNumber; }
+            //set { _orderNumber = value++; }
         }
 
-        public ObservableCollection<OrderStatus> EnummOrderStatus
+        public OrderStatus EnummOrderStatus
         {
             get { return _orderStatus; }
-            set { _orderStatus = value; }
         }
         
 
