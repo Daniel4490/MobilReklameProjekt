@@ -31,20 +31,10 @@ namespace MobilReklameApp
         {
             this.Frame.Navigate(typeof(OrderOverView1), null);
         }
-         
-        public void PendingOrderPageClick(object sender, RoutedEventArgs d)
-        {
-            this.Frame.Navigate(typeof(PendingOrderPage), null);
-        }
 
         public void CreateOrderPageClick(object sender, RoutedEventArgs f)
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

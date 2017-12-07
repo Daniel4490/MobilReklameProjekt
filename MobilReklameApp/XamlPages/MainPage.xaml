@@ -25,6 +25,11 @@
             <Setter Property="Margin" Value="5,5,5,5"/>
             <Setter Property="IsReadOnly" Value="True"/>
         </Style>
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+        </Style>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -52,7 +57,6 @@
         <Grid Row="1">
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
-                <Button Content="Afventende ordre" Click="PendingOrderPageClick" FontSize="30" Width="300"/>
                 <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300"/>
                 <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0"/>
                 <TextBlock Padding="20,10,10,10" Text="Ordre er færdig men ikke afsendt" Foreground="Red" FontWeight="Bold" Margin="0,0,0,0"/>
@@ -62,12 +66,9 @@
 
         <Grid Row="2"/>
 
-
-
-
         <Grid Grid.Column="1" Grid.Row="1">
-            
-            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
+            <TextBlock Text=""/>
+            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" >
@@ -81,7 +82,7 @@
             </ListView>
         </Grid>
 
-        <Grid Grid.Column="1" Grid.Row="2">
+                <Grid Grid.Column="1" Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
@@ -94,11 +95,11 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrenummer:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreNummer}"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrderNumber}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrestatus:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.EnummOrderStatus}"/>
+                        <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding OrderStatuses}" SelectedItem="{Binding SelectedOrder.EnummOrderStatus, Mode=TwoWay}" />
                     </StackPanel>
                 </StackPanel>
                 </StackPanel>
