@@ -67,19 +67,22 @@
         <Grid Row="2"/>
 
         <Grid Grid.Column="1" Grid.Row="1">
-            <TextBlock Text=""/>
-            <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" >
-                            <StackPanel Margin="10,10,10,10">
-                                <TextBlock FontSize="24" Text="{Binding OrderDescriptions}"/>
-                                <TextBlock FontSize="24" Text="{Binding OrdreDato}"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Margin="10,10,10,10" Orientation="Vertical">
+                                        <TextBlock FontSize="24" Text="{Binding EnummOrderStatus, Mode=TwoWay}" />
+                                        <TextBlock FontSize="24" Text="{Binding OrdreDato}" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </ScrollViewer>
         </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="2">

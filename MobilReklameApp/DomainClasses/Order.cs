@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MobilReklameApp.DomainClasses
 {
-   public class Order
+   public class Order : INotifyPropertyChanged
     {
         public enum OrderStatus
         {
@@ -31,11 +33,9 @@ namespace MobilReklameApp.DomainClasses
 
         
 
-        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, string produktType, string produktMateriale)
+        public Order(OrderStatus orderStatus, string orderDescription, string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;
-            _orderDate = orderDate;
-            _orderDeliveryDate = orderDeliveryDate;
             _orderNumber++;
             _productType = produktType;
             _orderStatus = orderStatus;
@@ -73,6 +73,11 @@ namespace MobilReklameApp.DomainClasses
         public OrderStatus EnummOrderStatus
         {
             get { return _orderStatus; }
+            set
+            {
+                _orderStatus = value;
+                OnPropertyChanged();
+            }
         }
         
 
@@ -87,9 +92,12 @@ namespace MobilReklameApp.DomainClasses
         }
 
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
-
-
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
 

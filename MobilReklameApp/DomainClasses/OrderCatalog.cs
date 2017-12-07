@@ -15,7 +15,7 @@ namespace MobilReklameApp.DomainClasses
         public OrderCatalog()
         {
             _orders = new Dictionary<int, Order>();
-            Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale") );
+            Add(new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale") );
         }
 
         public List<Order> listAll
@@ -23,7 +23,7 @@ namespace MobilReklameApp.DomainClasses
             get { return _orders.Values.ToList(); }
         }
 
-        public void Add(Order order)
+        public void AddO(Order order)
         {
             _orders.Add(order.OrderNumber, order);
         }
