@@ -15,7 +15,7 @@ namespace MobilReklameApp.DomainClasses
         public OrderCatalog()
         {
             _orders = new Dictionary<int, Order>();
-            Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale") );
+            Add(new Order("Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale") );
         }
 
         public List<Order> listAll

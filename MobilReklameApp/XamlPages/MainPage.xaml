@@ -25,6 +25,11 @@
             <Setter Property="Margin" Value="5,5,5,5"/>
             <Setter Property="IsReadOnly" Value="True"/>
         </Style>
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+        </Style>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -98,7 +103,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrestatus:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.EnummOrderStatus}"/>
+                        <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder.EnummOrderStatus, Mode=TwoWay}" />
                     </StackPanel>
                 </StackPanel>
                 </StackPanel>
