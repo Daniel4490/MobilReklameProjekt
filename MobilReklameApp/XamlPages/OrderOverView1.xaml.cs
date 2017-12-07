@@ -36,5 +36,10 @@ namespace MobilReklameApp
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

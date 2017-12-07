@@ -21,7 +21,13 @@
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right"/>
                 <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="-372,13,0,145" Height="60" Width="130"/>
                 <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="-225,13,0,145" Height="60" Width="130"/>
-       </Grid>
+            <TextBlock Text="Ordre-nr" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" Margin="4,164,1374,-3" />
+            <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" Margin="268,166,1110,-3" />
+            <TextBlock Text="Oprettet" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" Margin="-176,164,176,-1"/>
+            <TextBlock Text="Status" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" HorizontalAlignment="Center" Margin="767,162,682,-3"></TextBlock>
+            <Button Content="Opret påmindelse" FontSize="25" Padding="10,10,10,10" Margin="1132,13,0,147" />
+            <Button Content="Kundebase" FontSize="25" Padding="10,10,10,10" Margin="1370,11,0,147"/>
+        </Grid>
 
         </Grid>
 </Page>
