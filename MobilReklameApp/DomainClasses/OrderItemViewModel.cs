@@ -15,6 +15,7 @@ namespace MobilReklameApp.DomainClasses
         private ObservableCollection<Order> _orders;
         private Order _selectedOrder;
         private ObservableCollection<Order.OrderStatus> _orderStatuses;
+        private Order.OrderStatus _selectedStatus;
 
         public OrderItemViewModel()
         {
@@ -43,7 +44,19 @@ namespace MobilReklameApp.DomainClasses
         public ObservableCollection<Order.OrderStatus> OrderStatuses
         {
             get { return _orderStatuses; }
-            set { OrderStatuses = value; }
+            
+        }
+
+        public Order.OrderStatus SelectedStatus
+        {
+            get { return _selectedStatus; }
+            set
+            {
+                _selectedStatus = value;
+                _selectedOrder.EnummOrderStatus = value;
+                OnPropertyChanged();
+
+            }
         }
 
         public Order SelectedOrder
