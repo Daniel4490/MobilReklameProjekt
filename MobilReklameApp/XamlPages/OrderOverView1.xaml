@@ -19,7 +19,8 @@
         </Grid.ColumnDefinitions>
         <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right"/>
-                <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="25" Padding="10,10,10,10"/>
+                <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="-372,13,0,145" Height="60" Width="130"/>
+                <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="-225,13,0,145" Height="60" Width="130"/>
        </Grid>
 
         </Grid>
