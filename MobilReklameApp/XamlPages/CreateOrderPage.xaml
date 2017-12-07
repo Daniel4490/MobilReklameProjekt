@@ -34,12 +34,12 @@
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,0,0" VerticalAlignment="Top" Width="576">
-                <Image Height="165" Width="420" Margin="0,0,0,0"/>
-            </StackPanel>
             <StackPanel HorizontalAlignment="Left" Height="300" Margin="0,400,0,0" VerticalAlignment="Top" Width="1000">
                 <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
                 <TextBox Text="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla bla" Height="250" FontSize="28" TextWrapping="Wrap"/>
+                <StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,424,0" VerticalAlignment="Top" Width="576">
+                    <Image Height="165" Width="420" Margin="0,0,0,0"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
 
