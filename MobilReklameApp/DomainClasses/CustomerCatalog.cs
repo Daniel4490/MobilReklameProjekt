@@ -21,7 +21,7 @@ namespace MobilReklameApp.DomainClasses
             get { return _customers.Values.ToList(); }
         }
 
-        public void Add(PrivateCustomer customer)
+        public void AddC(PrivateCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }

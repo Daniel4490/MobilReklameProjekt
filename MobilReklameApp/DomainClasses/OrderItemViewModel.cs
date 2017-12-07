@@ -14,14 +14,23 @@ namespace MobilReklameApp.DomainClasses
     {
         private ObservableCollection<Order> _orders;
         private Order _selectedOrder;
+        private ObservableCollection<Order.OrderStatus> _orderStatuses;
 
         public OrderItemViewModel()
         {
             _orders = new ObservableCollection<Order>();
+            _orderStatuses = new ObservableCollection<Order.OrderStatus>();
 
-            _orders.Add(new Order(Order.OrderStatus.Afventer, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
-            _orders.Add(new Order(Order.OrderStatus.Accepteret, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
-            _orders.Add(new Order(Order.OrderStatus.Igangværende, "Ordre beskrivelse", DateTime.Today, DateTime.Today, "Produkt type", "Produkt Materiale"));
+            _orders.Add(new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
+            _orders.Add(new Order(Order.OrderStatus.Accepteret, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
+            _orders.Add(new Order(Order.OrderStatus.Anulleret, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
+
+            _orderStatuses.Add(Order.OrderStatus.Afventer);
+            _orderStatuses.Add(Order.OrderStatus.Accepteret);
+            _orderStatuses.Add(Order.OrderStatus.Anulleret);
+            _orderStatuses.Add(Order.OrderStatus.Færdig);
+            _orderStatuses.Add(Order.OrderStatus.Igangværende);
+            _orderStatuses.Add(Order.OrderStatus.Leveret);
 
             _selectedOrder = _orders[0];
         }
@@ -29,6 +38,12 @@ namespace MobilReklameApp.DomainClasses
         public ObservableCollection<Order> Orders
         {
             get { return _orders; }
+        }
+
+        public ObservableCollection<Order.OrderStatus> OrderStatuses
+        {
+            get { return _orderStatuses; }
+            set { OrderStatuses = value; }
         }
 
         public Order SelectedOrder

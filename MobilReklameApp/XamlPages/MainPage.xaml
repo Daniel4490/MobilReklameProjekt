@@ -25,6 +25,11 @@
             <Setter Property="Margin" Value="5,5,5,5"/>
             <Setter Property="IsReadOnly" Value="True"/>
         </Style>
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+        </Style>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -71,7 +76,7 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" >
                             <StackPanel Margin="10,10,10,10">
-                                <TextBlock FontSize="24" Text="{Binding OrderDescriptions}"/>
+                                <TextBlock FontSize="24" Text="{Binding EnummOrderStatus, Mode=TwoWay}"/>
                                 <TextBlock FontSize="24" Text="{Binding OrdreDato}"/>
                             </StackPanel>
                         </StackPanel>
@@ -93,11 +98,11 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrenummer:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrdreNummer}"/>
+                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.OrderNumber}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
                         <TextBlock Style="{StaticResource TextBlockStyle}" Text ="Ordrestatus:"/>
-                        <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding SelectedOrder.EnummOrderStatus}"/>
+                        <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding OrderStatuses}" SelectedItem="{Binding SelectedOrder.EnummOrderStatus, Mode=TwoWay}" />
                     </StackPanel>
                 </StackPanel>
                 </StackPanel>
