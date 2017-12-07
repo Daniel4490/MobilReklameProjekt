@@ -31,11 +31,9 @@ namespace MobilReklameApp.DomainClasses
 
         
 
-        public Order(OrderStatus orderStatus, string orderDescription, DateTime orderDate, DateTime orderDeliveryDate, string produktType, string produktMateriale)
+        public Order(OrderStatus orderStatus, string orderDescription, string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;
-            _orderDate = orderDate;
-            _orderDeliveryDate = orderDeliveryDate;
             _orderNumber++;
             _productType = produktType;
             _orderStatus = orderStatus;
