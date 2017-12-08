@@ -12,6 +12,7 @@ namespace MobilReklameApp.DomainClasses
 {
     public class OrderItemViewModel : INotifyPropertyChanged
     {
+        private OrderCatalog _orderCatalog;
         private ObservableCollection<Order> _orders;
         private Order _selectedOrder;
         private ObservableCollection<Order.OrderStatus> _orderStatuses;
@@ -19,12 +20,14 @@ namespace MobilReklameApp.DomainClasses
 
         public OrderItemViewModel()
         {
+            _orderCatalog = new OrderCatalog();
             _orders = new ObservableCollection<Order>();
             _orderStatuses = new ObservableCollection<Order.OrderStatus>();
 
-            _orders.Add(new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
-            _orders.Add(new Order(Order.OrderStatus.Accepteret, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
-            _orders.Add(new Order(Order.OrderStatus.Anulleret, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
+            foreach (Order order in _orderCatalog.listAll)
+            {
+                _orders.Add(order);   
+            }
 
             _orderStatuses.Add(Order.OrderStatus.Afventer);
             _orderStatuses.Add(Order.OrderStatus.Accepteret);
