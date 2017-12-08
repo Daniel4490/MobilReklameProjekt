@@ -8,77 +8,103 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition  Height="8*"/>
+            <RowDefinition  Height="1*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="73*"/>
-            <ColumnDefinition Width="567*"/>
-        </Grid.ColumnDefinitions>
 
 
-        <StackPanel Margin="0,0,0,0" Orientation="Vertical" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-            <Button Content="Ordreoversigt" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
-        </StackPanel>
+            <StackPanel Margin="0,0,0,0" Orientation="Vertical" HorizontalAlignment="Left" Grid.Row="1" BorderBrush="Black">
+                <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+                <Button Content="Ordreoversigt" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
+            </StackPanel>
 
 
-        <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="3" VerticalAlignment="Stretch" Grid.Column="1">
-            <StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,0,0" VerticalAlignment="Top" Width="1000">
+
+
+        <Grid Margin="0,0,0,0" Grid.Column="1" Grid.Row="1">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid>
+                <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000">
+                    <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
+                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
+                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
+                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top" Height="50" Width="570"/>
+                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
+                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
+                </StackPanel>
+            </Grid>
+            
+            <!--<StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,0,0" VerticalAlignment="Top" Width="1000">
                 <Image Height="165" Width="420" Margin="0,0,0,0"/>
-            </StackPanel>
-            <StackPanel Margin="0,50,0,0" Width="570" Height="310" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Grid.RowSpan="2">
-                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top" Height="50" Width="570"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Height="400" Margin="0,400,0,0" VerticalAlignment="Top" Width="572" Grid.RowSpan="2">
+            </StackPanel>-->
+
+            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000">
                 <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
-                <TextBox Text="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla" FontSize="28" TextWrapping="Wrap"/>
+                <TextBox MinHeight="400" Text="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla" FontSize="28" TextWrapping="Wrap"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Height="600" Margin="600,100,0,0" VerticalAlignment="Top" Width="400" Orientation="Horizontal">
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="100" Height="600">
-                    <TextBlock Text="Mål:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,4,0,0"/>
-                    <TextBlock Text="Antal:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Lam:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Lam:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Medie:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,0,0,0"/>
-                    <TextBlock Text="Medie:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="3 mm alu sand.:" TextWrapping="Wrap" Height="50" TextAlignment="Center"/>
-                    <TextBlock Text="10 mm PVC:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Pris kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
-                    <TextBlock Text="dtp kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
-                    <TextBlock Text="Fragt kr." TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Op til +10%:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                    <TextBlock Text="Lev. antal:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
-                </StackPanel>
+
+            <Grid HorizontalAlignment="Left" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" >
+
+                    <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0" BorderThickness="0,0,0,0" BorderBrush="#66000000" VerticalAlignment="Bottom" Height="530">
+
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="600" BorderBrush="#66000000">
+                        <TextBlock Text="Mål:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,2"/>
+                        <TextBlock Text="Antal:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,2"/>
+                        <TextBlock Text="Lam:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,0,0,0"/>
+                        <TextBlock Text="Lam:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="Medie:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,0,0,0"/>
+                        <TextBlock Text="Medie:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="751c:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="3 mm alu sand.:" TextWrapping="Wrap" Height="50" TextAlignment="Center"/>
+                        <TextBlock Text="10 mm PVC:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="Lev. antal:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="dtp kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
+                        <TextBlock Text="Op til +10%:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="Fragt kr." TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,0"/>
+                        <TextBlock Text="Pris kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
+                    </StackPanel>
+
                 <StackPanel Height="600" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="50"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
-                    <TextBox Text="TextBox" Height="30"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,1,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="50" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
+                    <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
                 </StackPanel>
-            </StackPanel>
+                </StackPanel>
+                <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" Text="Produkt:" VerticalAlignment="Top" Height="120"/>
+            </Grid>
         </Grid>
 
 
