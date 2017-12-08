@@ -14,7 +14,6 @@
 
     <Grid Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
@@ -30,16 +29,67 @@
         </StackPanel>
 
         <Grid VerticalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="3">
-            <StackPanel HorizontalAlignment="Stretch" Height="86" Margin="0,30,0,0" VerticalAlignment="Top" Orientation="Horizontal">
-                <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" HorizontalAlignment="Left" Width="130" Height="50" />
-                <TextBlock Text="Ordre-nr" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Stretch"/>
-                <TextBlock Text="Oprettet" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="40,0,0,0" HorizontalAlignment="Left" Height="50" Width="130"/>
-                <TextBlock Text="Status" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="40,0,0,0" Width="130" Height="50" HorizontalAlignment="Left" />
+            <StackPanel HorizontalAlignment="Stretch" Height="auto" Margin="0,30,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+
+                <StackPanel>
+                    <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center"/>
+                    <ListView ItemsSource="{Binding Orders}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10,10,10,10">
+                                    <TextBlock Text="KUNDENAVN"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Ordre-nr" FontSize="25" Padding="10,10,10,10" TextAlignment="Center"/>
+                    <ListView ItemsSource="{Binding Orders}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10,10,10,10">
+                                    <TextBlock Text="{Binding OrderNumber}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                
+                <StackPanel>
+                    <TextBlock Text="Oprettet" FontSize="25" Padding="10,10,10,10" TextAlignment="Center"/>
+                    <ListView ItemsSource="{Binding Orders}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10,10,10,10">
+                                    <TextBlock Text="{Binding OrderDate}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                
+                <StackPanel>
+                    <TextBlock Text="Status" FontSize="25" Padding="10,10,10,10" TextAlignment="Center"/>
+                    <ListView ItemsSource="{Binding Orders}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10,10,10,10">
+                                    <TextBlock Text="{Binding EnummOrderStatus}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                
+                
+                
             </StackPanel>
 
 
         </Grid>
-        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="0,100,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Grid.RowSpan="3" Grid.Column="1">
+        <!--<ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="0,100,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Grid.RowSpan="3" Grid.Column="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -50,7 +100,7 @@
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
 
     </Grid>
 </Page>

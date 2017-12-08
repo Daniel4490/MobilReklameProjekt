@@ -48,7 +48,7 @@
             
         <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Opret påmindelse" FontSize="25" Padding="10,10,10,10" />
+                <Button Content="Opret påmindelse" Click="CreateANoteClick" FontSize="25" Padding="10,10,10,10" />
                 <Button Content="Kundebase" FontSize="25" Padding="10,10,10,10"/>
                 <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" />
             </StackPanel>

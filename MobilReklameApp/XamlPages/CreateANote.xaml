@@ -8,6 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="20,10,0,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="Auto" Margin="409,424,-1409,-725" VerticalAlignment="Top" Width="1000" RenderTransformOrigin="0.503,0.522" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <TextBlock Text="Påmindelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
+            <TextBox Text="Brugeren har mulighed for at oprette en påmindelse der kan ses af alle brugere" Height="250" FontSize="28" TextWrapping="Wrap"/>
+            <StackPanel HorizontalAlignment="Right" Height="Auto" Margin="0,0,424,0" VerticalAlignment="Top" Width="576">
+                <Image Height="Auto" Width="420" Margin="0,0,0,0"/>
+
+            </StackPanel>
+        </StackPanel>
+
 
     </Grid>
 </Page>
