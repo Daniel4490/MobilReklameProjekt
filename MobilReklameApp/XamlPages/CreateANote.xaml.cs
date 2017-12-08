@@ -36,5 +36,11 @@ namespace MobilReklameApp.XamlPages
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
+
+        public void GoToOrderOverViewPage(object sender, RoutedEventArgs l)
+        {
+            this.Frame.Navigate(typeof(OrderOverView1), null);
+        }
+
     }
 }

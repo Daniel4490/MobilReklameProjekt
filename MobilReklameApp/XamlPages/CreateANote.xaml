@@ -20,7 +20,7 @@
         <StackPanel Margin="20,10,0,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-            <Button Content="OrdreOversigt" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="Auto" Margin="409,424,-1409,-725" VerticalAlignment="Top" Width="1000" RenderTransformOrigin="0.503,0.522" Grid.ColumnSpan="2" Grid.RowSpan="3">
