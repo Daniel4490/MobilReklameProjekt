@@ -22,17 +22,15 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="20,10,0,10" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Margin="20,10,0,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="IDK?" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
         </StackPanel>
 
         <Grid VerticalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="3">
-            <StackPanel Margin="0,0,500,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-                <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="0,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-                <Button Content="IDK?" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Stretch" Height="86" Margin="0,145,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Stretch" Height="86" Margin="0,30,0,0" VerticalAlignment="Top" Orientation="Horizontal">
                 <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" HorizontalAlignment="Left" Width="130" Height="50" />
                 <TextBlock Text="Ordre-nr" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Stretch"/>
                 <TextBlock Text="Oprettet" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="40,0,0,0" HorizontalAlignment="Left" Height="50" Width="130"/>
@@ -41,7 +39,7 @@
 
 
         </Grid>
-        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="0,230,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Grid.RowSpan="3" Grid.Column="1">
+        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="0,100,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Grid.RowSpan="3" Grid.Column="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
