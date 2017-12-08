@@ -48,7 +48,7 @@
             
         <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Opret påmindelse" FontSize="25" Padding="10,10,10,10" />
+                <Button Content="Opret påmindelse" Click="CreateANoteClick" FontSize="25" Padding="10,10,10,10" />
                 <Button Content="Kundebase" FontSize="25" Padding="10,10,10,10"/>
                 <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" />
             </StackPanel>
@@ -57,7 +57,7 @@
         <Grid Row="1">
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
-                <Button Content="Opret ordre" Click="CreateANoteClick" FontSize="30" Width="300"/>
+                <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300"/>
                 <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0"/>
                 <TextBlock Padding="20,10,10,10" Text="Ordre er færdig men ikke afsendt" Foreground="Red" FontWeight="Bold" Margin="0,0,0,0"/>
                 <TextBlock Padding="20,10,10,10" Text="Jan skal ringe til kunde om ændring i levering" FontWeight="Bold" Margin="6,0,-6,0"/>
