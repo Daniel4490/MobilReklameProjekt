@@ -41,7 +41,7 @@
 
 
         </Grid>
-        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="380,230,-1911,-430" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1531" Height="200" Grid.RowSpan="3">
+        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="0,230,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Grid.RowSpan="3" Grid.Column="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
