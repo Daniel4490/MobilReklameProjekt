@@ -9,13 +9,14 @@ namespace MobilReklameApp.DomainClasses
 {
     public class OrderCatalog : CatalogBase<Order>
     {
-
         private Dictionary<int, Order> _orders;
 
         public OrderCatalog()
         {
             _orders = new Dictionary<int, Order>();
-            Add(new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale") );
+            _orders.Add(1,new Order(Order.OrderStatus.Afventer, "Ordrebeskrivelse","Produkttype", "Produktmateriale"));
+            _orders.Add(2,new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
+            _orders.Add(3, new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
         }
 
         public List<Order> listAll
