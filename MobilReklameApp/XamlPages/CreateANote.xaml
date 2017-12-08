@@ -17,7 +17,7 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="20,10,1554,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" Grid.ColumnSpan="2">
+        <StackPanel Margin="20,10,0,1" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.RowSpan="2">
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
