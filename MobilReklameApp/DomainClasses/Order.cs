@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -22,14 +23,16 @@ namespace MobilReklameApp.DomainClasses
         }
 
         
-
+        
         private string _orderDescription;
-        private DateTime _orderDate = DateTime.Now; //.ToLongDateString
-        private DateTime _orderDeliveryDate = DateTime.Now.AddDays(365); //.ToLongDateString
+        private string _orderDate = DateTime.Now.ToString("D"); //.ToLongDateString
+        private string _orderDeliveryDate = DateTime.Now.AddDays(365).ToString("D"); //.ToLongDateString
         private static int _orderNumber = 1000;
         private string _productType;
         private OrderStatus _orderStatus;
         private string _productMaterial;
+
+        
 
         
 
@@ -53,14 +56,14 @@ namespace MobilReklameApp.DomainClasses
             set { _orderDescription = value; }
         }
 
-        public DateTime OrderDate
+        public string OrderDate
         {
             get { return _orderDate ; }
 
         }
 
 
-        public DateTime OrderDeliveryDate
+        public string OrderDeliveryDate
         {
             get { return _orderDeliveryDate; }
 
