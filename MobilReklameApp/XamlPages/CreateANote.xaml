@@ -14,23 +14,23 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="20,10,0,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+        <StackPanel Margin="20,10,1554,10" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="498" Margin="409,366,-1743,-864" VerticalAlignment="Top" Width="1334" RenderTransformOrigin="0.503,0.522" Grid.ColumnSpan="2" Grid.RowSpan="3">
-            <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="52" TextAlignment="Center" FontSize="40" Margin="0,0,738.4,0" />
-            <TextBox Text="Brugeren har mulighed for at oprette en påmindelse der kan ses af alle brugere" Height="274" FontSize="28" TextWrapping="Wrap" Margin="0,0,736.4,0"/>
+        <StackPanel HorizontalAlignment="Left" Height="450" Margin="3,-2,0,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522" Grid.RowSpan="3" Grid.Column="1">
+            <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
+            <TextBox Text="Brugeren har mulighed for at oprette en påmindelse der kan ses af alle brugere" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0"/>
+            <Button Content="Gem påmindelsen" FontSize="17" Padding="10,10,10,10" Margin="20,1,0,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
             <StackPanel HorizontalAlignment="Right" Height="Auto" Margin="0,0,424,0" VerticalAlignment="Top" Width="576">
                 <Image Height="Auto" Width="420" Margin="0,0,0,0"/>
 
             </StackPanel>
-            <Button Content="Gem påmindelsen" FontSize="17" Padding="10,10,10,10" Margin="20,30,0,0" Height="55" Width="170" VerticalAlignment="Top"/>
         </StackPanel>
 
 
