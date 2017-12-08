@@ -21,7 +21,7 @@
         </Style>
         <Style x:Key="TextBoxStyle" TargetType="TextBox">
             <Setter Property="FontSize" Value="24"/>
-            <Setter Property="Width" Value="300"/>
+            <Setter Property="Width" Value="400"/>
             <Setter Property="Margin" Value="5,5,5,5"/>
             <Setter Property="IsReadOnly" Value="True"/>
         </Style>
@@ -74,8 +74,8 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
                                     <StackPanel Margin="10,10,10,10" Orientation="Vertical">
-                                        <TextBlock FontSize="24" Text="{Binding EnummOrderStatus, Mode=TwoWay}" />
-                                        <TextBlock FontSize="24" Text="{Binding OrdreDato}" />
+                                        <TextBlock FontSize="24" Text="{Binding OrderDescriptions, Mode=TwoWay}" />
+                                        <TextBlock FontSize="24" Text="{Binding EnummOrderStatus}"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
