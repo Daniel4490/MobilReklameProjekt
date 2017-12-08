@@ -103,7 +103,7 @@
                     <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
                 </StackPanel>
                 </StackPanel>
-                <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" Text="Produkt:" VerticalAlignment="Top" Height="120"/>
+                <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" Text="Produkt:" VerticalAlignment="Top" Height="120" TextWrapping="Wrap" MaxHeight="120"/>
             </Grid>
         </Grid>
 
