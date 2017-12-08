@@ -26,5 +26,15 @@ namespace MobilReklameApp.XamlPages
         {
             this.InitializeComponent();
         }
+
+        public void BackToMainPageClick(object sender, RoutedEventArgs g)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
+
+        public void GoToCreateOrderPage(object sender, RoutedEventArgs z)
+        {
+            this.Frame.Navigate(typeof(CreateOrderPage), null);
+        }
     }
 }
