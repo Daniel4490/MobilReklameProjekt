@@ -33,7 +33,24 @@
                 <Button Content="IDK?" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Stretch" Height="86" Margin="0,145,0,0" VerticalAlignment="Top" Orientation="Horizontal">
-                <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" HorizontalAlignment="Left" Width="130" Height="50" />
+                
+                
+                <StackPanel>
+                    <TextBlock Text="Kunde" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" HorizontalAlignment="Left" Width="130" Height="50" />
+                    <ListView ItemsSource="{Binding Orders}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Margin="10,10,10,10">
+                                        <TextBlock FontSize="24" Text="{Binding EnummOrderStatus}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                    </ListView>
+                </StackPanel>
+
                 <TextBlock Text="Ordre-nr" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Stretch"/>
                 <TextBlock Text="Oprettet" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="40,0,0,0" HorizontalAlignment="Left" Height="50" Width="130"/>
                 <TextBlock Text="Status" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Top" Margin="40,0,0,0" Width="130" Height="50" HorizontalAlignment="Left" />
@@ -41,7 +58,7 @@
 
 
         </Grid>
-        <ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="380,230,-1911,-430" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1531" Height="200" Grid.RowSpan="3">
+        <!--<ListView ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" Margin="380,230,-1911,-430" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1531" Height="200" Grid.RowSpan="3">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -52,7 +69,7 @@
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
 
     </Grid>
 </Page>
