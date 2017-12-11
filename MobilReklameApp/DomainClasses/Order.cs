@@ -39,11 +39,10 @@ namespace MobilReklameApp.DomainClasses
         public Order(OrderStatus orderStatus, string orderDescription, string produktType, string produktMateriale)
         {
             _orderDescription = orderDescription;
-            _orderNumber++;
             _productType = produktType;
             _orderStatus = orderStatus;
             _productMaterial = produktMateriale;
-            this.OrderNumber = _orderNumber;
+            OrderNumber = _orderNumber++;
 
         }
 

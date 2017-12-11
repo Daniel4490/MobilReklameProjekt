@@ -10,6 +10,7 @@ namespace MobilReklameApp.DomainClasses
     public class OrderCatalog : CatalogBase<Order>
     {
         private Dictionary<int, Order> _orders;
+        private static OrderCatalog _singletonInstance;
 
         public OrderCatalog()
         {
@@ -29,7 +30,17 @@ namespace MobilReklameApp.DomainClasses
             _orders.Add(order.OrderNumber, order);
         }
 
-
+        //The following insures that this catalog becomes a singleton
+        //along with the "_singletonInstance" instance field at the top
+        public static OrderCatalog SingletonInstance
+        {
+            get
+            {
+                if (_singletonInstance != null) return _singletonInstance;
+                _singletonInstance = new OrderCatalog();
+                return _singletonInstance;
+            }
+        }
 
 
     }

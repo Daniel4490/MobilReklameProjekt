@@ -24,5 +24,6 @@ namespace MobilReklameApp.BaseClasses
         {
            // _items.Add(obj.Id, obj);
         }
+
     }
 }

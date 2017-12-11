@@ -15,8 +15,7 @@ namespace MobilReklameApp.BaseClasses
         private string _address;
         private string _phone;
         private string _email;
-        
-
+ 
         protected PeopleBase(string firstName, string lastName, string address, string phone, string email)
         {
             _firstName = firstName;
@@ -24,11 +23,6 @@ namespace MobilReklameApp.BaseClasses
             _address = address;
             _phone = phone;
             _email = email;           
-        }
-
-        public PeopleBase()
-        {
-            // parameterless constructor nessecarry for inheritance
         }
 
         public string FirstName
@@ -61,8 +55,6 @@ namespace MobilReklameApp.BaseClasses
            get { return _phone; }
        }
 
-
-
         //creates a unique ID based on the first two initials in firstname, 
         //first two initials in lastname,
         //the last four digitals in the phonenumber
@@ -86,9 +78,9 @@ namespace MobilReklameApp.BaseClasses
         //            phoneArray[7]);
         //        string iDString = iDStringBuilder.ToString();
         //        return iDString;
-
+        //
         //    }
-
+        //
         //}
 
 
