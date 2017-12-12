@@ -74,15 +74,16 @@
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
-    <Compile Include="DomainClasses\CompanyCustomerCatalog.cs" />
-    <Compile Include="DomainClasses\PublicCustomerCatalog.cs" />
+    <Compile Include="SubClasses\CreateNoteCommand.cs" />
+    <Compile Include="SubClasses\Note.cs" />
+    <Compile Include="SubClasses\NoteCatalog.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
     <Compile Include="XamlPages\CreateOrderPage.xaml.cs">
       <DependentUpon>CreateOrderPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DomainClasses\PrivateCustomerCatalog.cs" />
+    <Compile Include="DomainClasses\CustomerCatalog.cs" />
     <Compile Include="DomainClasses\Employee.cs" />
     <Compile Include="DomainClasses\EmployeeCatalog.cs" />
     <Compile Include="DomainClasses\Order.cs" />
