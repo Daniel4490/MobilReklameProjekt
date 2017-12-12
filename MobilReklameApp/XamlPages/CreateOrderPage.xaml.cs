@@ -32,6 +32,10 @@ namespace MobilReklameApp
             this.Frame.Navigate(typeof(MainPage), null);
         }
 
-        
+        public void GoToOrderOverview(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderOverView1), null);
+        }
+
     }
 }

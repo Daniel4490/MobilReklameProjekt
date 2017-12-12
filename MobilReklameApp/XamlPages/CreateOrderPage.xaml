@@ -26,7 +26,7 @@
 
             <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" BorderBrush="Black" Grid.ColumnSpan="2">
                 <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-                <Button Content="Ordreoversigt" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
+                <Button Content="Ordreoversigt" Click="GoToOrderOverview" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
             </StackPanel>
 
 
