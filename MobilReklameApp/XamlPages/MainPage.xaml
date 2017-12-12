@@ -55,7 +55,7 @@
         </Grid>
             
         <Grid Row="1">
-            <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
+            <StackPanel Margin="10,0,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
                 <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300"/>
             </StackPanel>
