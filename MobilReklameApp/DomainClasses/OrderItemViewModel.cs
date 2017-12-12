@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
@@ -14,15 +15,29 @@ namespace MobilReklameApp.DomainClasses
     {
         private OrderCatalog _orderCatalog;
         private ObservableCollection<Order> _orders;
+
         private Order _selectedOrder;
+
         private ObservableCollection<Order.OrderStatus> _orderStatuses;
         private Order.OrderStatus _selectedStatus;
+
+        private NoteCatalog _noteCatalog;
+        private ObservableCollection<string> _notes;
 
         public OrderItemViewModel()
         {
             _orderCatalog = new OrderCatalog();
             _orders = new ObservableCollection<Order>();
+
             _orderStatuses = new ObservableCollection<Order.OrderStatus>();
+
+            _noteCatalog = new NoteCatalog();
+            _notes = new ObservableCollection<string>();
+
+            foreach (string note in _noteCatalog.ListAll)
+            {
+                _notes.Add(note);
+            }
 
             foreach (Order order in _orderCatalog.listAll)
             {
@@ -42,6 +57,11 @@ namespace MobilReklameApp.DomainClasses
         public ObservableCollection<Order> Orders
         {
             get { return _orders; }
+        }
+
+        public ObservableCollection<string> Notes
+        {
+            get { return _notes; }
         }
 
         public ObservableCollection<Order.OrderStatus> OrderStatuses

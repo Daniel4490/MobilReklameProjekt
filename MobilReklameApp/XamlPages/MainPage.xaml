@@ -58,13 +58,26 @@
             <StackPanel Margin="10,10,10,10" Orientation="Vertical" VerticalAlignment="Top">
                 <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
                 <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300"/>
-                <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0"/>
-                <TextBlock Padding="20,10,10,10" Text="Ordre er færdig men ikke afsendt" Foreground="Red" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBlock Padding="20,10,10,10" Text="Jan skal ringe til kunde om ændring i levering" FontWeight="Bold" Margin="6,0,-6,0"/>
             </StackPanel>
         </Grid>
 
-        <Grid Row="2"/>
+        <Grid Row="2">
+            <StackPanel>
+                <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0" />
+                <ListView ItemsSource="{Binding Notes}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Margin="5,5,5,5" Orientation="Vertical">
+                                    <TextBlock Padding="20,10,10,10" Text="{Binding }" TextWrapping="Wrap"
+                                               Foreground="Red" FontWeight="Bold" Margin="0,0,0,0" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">

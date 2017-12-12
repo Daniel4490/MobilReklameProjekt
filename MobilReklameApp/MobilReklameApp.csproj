@@ -74,9 +74,9 @@
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
-    <Compile Include="XamlPages\CustomerBasePage.xaml.cs">
-      <DependentUpon>CustomerBasePage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="SubClasses\CreateNoteCommand.cs" />
+    <Compile Include="SubClasses\Note.cs" />
+    <Compile Include="SubClasses\NoteCatalog.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
@@ -141,10 +141,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="XamlPages\CustomerBasePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="XamlPages\CreateANote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
