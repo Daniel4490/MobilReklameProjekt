@@ -60,7 +60,7 @@
                 <TextBox MinHeight="400" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla"/>
             </StackPanel>
 
-            <Grid HorizontalAlignment="Left" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" >
+            <Grid HorizontalAlignment="Left" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
 
                     <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0" BorderThickness="0,0,0,0" BorderBrush="#66000000" VerticalAlignment="Bottom" Height="530">
