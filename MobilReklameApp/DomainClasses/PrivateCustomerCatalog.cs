@@ -8,13 +8,19 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class CustomerCatalog : CatalogBase<PrivateCustomer>
+    class PrivateCustomerCatalog : CatalogBase<PrivateCustomer>
     {
         private Dictionary<string, PrivateCustomer> _customers;
-        private static CustomerCatalog _singletonInstance;
+        private static PrivateCustomerCatalog _singletonInstance;
 
-        public CustomerCatalog()
+        public PrivateCustomerCatalog()
         {
+
+            _customers = new Dictionary<string, PrivateCustomer>();
+            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej","Larsen phone", "LarsenMail"));
+            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej", "Larsen phone", "LarsenMail"));
+            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej", "Larsen phone", "LarsenMail"));
+
 
         }
         public List<PrivateCustomer> listAll
@@ -29,12 +35,12 @@ namespace MobilReklameApp.DomainClasses
 
         //The following insures that this catalog becomes a singleton
         //along with the "_singletonInstance" instance field at the top
-        public static CustomerCatalog SingletonInstance
+        public static PrivateCustomerCatalog SingletonInstance
         {
             get
             {
                 if (_singletonInstance != null) return _singletonInstance;
-                _singletonInstance = new CustomerCatalog();
+                _singletonInstance = new PrivateCustomerCatalog();
                 return _singletonInstance;
             }
         }
