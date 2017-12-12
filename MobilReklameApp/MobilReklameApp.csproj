@@ -74,6 +74,9 @@
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
+    <Compile Include="SubClasses\CreateNoteCommand.cs" />
+    <Compile Include="SubClasses\Note.cs" />
+    <Compile Include="SubClasses\NoteCatalog.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
