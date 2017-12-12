@@ -59,12 +59,12 @@
                 <Image Height="165" Width="420" Margin="0,0,0,0"/>
             </StackPanel>-->
 
-            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000">
+            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000">
                 <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
                 <TextBox MinHeight="400" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla"/>
             </StackPanel>
 
-            <Grid HorizontalAlignment="Left" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
+            <Grid HorizontalAlignment="Stretch" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
 
                     <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0" BorderThickness="0,0,0,0" BorderBrush="#66000000" VerticalAlignment="Bottom" Height="530">
@@ -109,7 +109,7 @@
                 </StackPanel>
                 <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" VerticalAlignment="Top" Height="120" TextWrapping="Wrap" MaxHeight="120" BorderThickness="2,2,2,2" PlaceholderText="Produkt:"/>
             </Grid>
-            <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="0,0,0,30" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="400" Grid.Column="1" Grid.Row="1">
+            <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Height="60" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="400" Grid.Column="1" Grid.Row="1">
                 <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="130" Height="60" Margin="0,0,0,0" FontSize="18"/>
             </StackPanel>
         </Grid>
