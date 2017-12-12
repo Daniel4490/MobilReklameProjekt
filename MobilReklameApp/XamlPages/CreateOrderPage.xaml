@@ -65,7 +65,7 @@
                     <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0" BorderThickness="0,0,0,0" BorderBrush="#66000000" VerticalAlignment="Bottom" Height="530">
 
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="600" BorderBrush="#66000000">
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="530" BorderBrush="#66000000">
                         <TextBlock Text="Mål:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,2"/>
                         <TextBlock Text="Antal:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,2,0,2"/>
                         <TextBlock Text="Lam:" TextWrapping="Wrap" Height="30" TextAlignment="Center" Margin="0,0,0,0"/>
@@ -84,7 +84,7 @@
                         <TextBlock Text="Pris kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
                     </StackPanel>
 
-                <StackPanel Height="600" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
+                <StackPanel Height="530" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
                     <TextBox Text="TextBox" Height="30" BorderThickness="2,1,2,1"/>
                     <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
                     <TextBox Text="TextBox" Height="30" BorderThickness="2,0,2,1"/>
@@ -105,6 +105,9 @@
                 </StackPanel>
                 <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" Text="Produkt:" VerticalAlignment="Top" Height="120" TextWrapping="Wrap" MaxHeight="120"/>
             </Grid>
+            <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="0,0,0,30" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="400" Grid.Column="1" Grid.Row="1">
+                <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="130" Height="60" Margin="0,0,0,0" FontSize="18"/>
+            </StackPanel>
         </Grid>
 
 
