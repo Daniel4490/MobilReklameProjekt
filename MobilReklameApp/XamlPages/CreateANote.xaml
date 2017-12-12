@@ -30,13 +30,14 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="450" Margin="3,-2,0,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522" Grid.RowSpan="3" Grid.Column="1">
             <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
-            <TextBox Text="{Binding NoteText, Mode=TwoWay}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0"/>
+            <TextBox Text="{Binding NoteText}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0" PlaceholderText="Opret ny note her:"/>
             <Button Content="Gem påmindelsen" Command="{Binding CreateNoteCommand}" FontSize="17" Padding="10,10,10,10" Margin="20,1,0,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
             <StackPanel HorizontalAlignment="Right" Height="Auto" Margin="0,0,424,0" VerticalAlignment="Top" Width="576">
                 <Image Height="Auto" Width="420" Margin="0,0,0,0"/>
 
             </StackPanel>
         </StackPanel>
+
 
     </Grid>
 </Page>

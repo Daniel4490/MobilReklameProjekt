@@ -5,8 +5,12 @@
     xmlns:local="using:MobilReklameApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:domainClasses="using:MobilReklameApp.DomainClasses"
     mc:Ignorable="d">
-
+    
+    <Page.DataContext >
+        <domainClasses:CreateOrderViewModel/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -110,9 +114,10 @@
             </StackPanel>
         </Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Row="1">
-            <ComboBox HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="52" Margin="0,50,0,0" Width="170" BorderThickness="2,2,0,2"/>
+            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="52" Margin="0,50,0,0" Width="170" BorderThickness="2,2,0,2"/>
         </StackPanel>
 
 
     </Grid>
 </Page>
+
