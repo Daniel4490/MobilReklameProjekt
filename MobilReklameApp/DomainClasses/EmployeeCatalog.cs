@@ -10,6 +10,7 @@ namespace MobilReklameApp.DomainClasses
     class EmployeeCatalog : CatalogBase<Employee>
     {
         private Dictionary<int, Employee> _employees;
+        private static EmployeeCatalog _singletonInstance;
 
         public EmployeeCatalog()
         {
@@ -20,6 +21,18 @@ namespace MobilReklameApp.DomainClasses
             Add(new Employee("Thomas", "23414823", "Somethingvej 3", "23414825", "Thomas@mobilreklame.dk"));
 
             
+        }
+
+        //The following insures that this catalog becomes a singleton
+        //along with the "_singletonInstance" instance field at the top
+        public static EmployeeCatalog SingletonInstance
+        {
+            get
+            {
+                if (_singletonInstance != null) return _singletonInstance;
+                _singletonInstance = new EmployeeCatalog();
+                return _singletonInstance;
+            }
         }
     }
 }
