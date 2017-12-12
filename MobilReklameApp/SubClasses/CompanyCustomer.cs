@@ -14,7 +14,7 @@ namespace MobilReklameApp.SubClasses
         private string _cvr;
 
         public CompanyCustomer(string cvr, string firstName, string lastName, string address, string phone, string email)
-            : base(firstName, lastName, address, phone, email)
+            : base(firstName, lastName, address, phone, email) 
         {
             _cvr = cvr;
         }
