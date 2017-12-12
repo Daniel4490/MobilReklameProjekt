@@ -74,7 +74,11 @@
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
+    <Compile Include="DomainClasses\CompanyCustomerCatalogV2.cs" />
     <Compile Include="DomainClasses\CreateOrderViewModel.cs" />
+    <Compile Include="DomainClasses\CustomerCatalog.cs" />
+    <Compile Include="DomainClasses\PrivateCustomerCatalogV2.cs" />
+    <Compile Include="DomainClasses\PublicCustomerCatalogV2.cs" />
     <Compile Include="SubClasses\CreateNoteCommand.cs" />
     <Compile Include="SubClasses\Note.cs" />
     <Compile Include="SubClasses\NoteCatalog.cs" />
@@ -84,7 +88,6 @@
     <Compile Include="XamlPages\CreateOrderPage.xaml.cs">
       <DependentUpon>CreateOrderPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DomainClasses\CustomerCatalog.cs" />
     <Compile Include="DomainClasses\Employee.cs" />
     <Compile Include="DomainClasses\EmployeeCatalog.cs" />
     <Compile Include="DomainClasses\Order.cs" />
