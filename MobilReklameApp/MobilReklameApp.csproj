@@ -93,6 +93,9 @@
     <Compile Include="DomainClasses\Order.cs" />
     <Compile Include="DomainClasses\OrderCatalog.cs" />
     <Compile Include="DomainClasses\OrderItemViewModel.cs" />
+    <Compile Include="XamlPages\CustomerBasePage.xaml.cs">
+      <DependentUpon>CustomerBasePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XamlPages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
     <Page Include="XamlPages\CreateOrderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlPages\CustomerBasePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="XamlPages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
