@@ -20,7 +20,7 @@ namespace MobilReklameApp.DomainClasses
             _orders.Add(3, new Order(Order.OrderStatus.Afventer, "Ordrer beskrivelse", "Produkt type", "Produkt materiale"));
         }
 
-        public List<Order> listAll
+        public List<Order> ListAll
         {
             get { return _orders.Values.ToList(); }
         }

@@ -39,7 +39,7 @@ namespace MobilReklameApp.DomainClasses
                 _notes.Add(note);
             }
 
-            foreach (Order order in _orderCatalog.listAll)
+            foreach (Order order in _orderCatalog.ListAll)
             {
                 _orders.Add(order);   
             }
