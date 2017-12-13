@@ -34,20 +34,31 @@ namespace MobilReklameApp.DomainClasses
         private ObservableCollection<CustomerChosen> _customerChosens;
         public CreateOrderViewModel()
         {
+            //This is to make the ComboBox Work
             _customerChosens = new ObservableCollection<CustomerChosen>();
 
             _customerChosens.Add(CustomerChosen.Privat);
             _customerChosens.Add(CustomerChosen.Erhverv);
             _customerChosens.Add(CustomerChosen.Offentlig);
+            //This is to make the ComboBox Work
+
+            
+            Dictionary<CustomerChosen, bool> offentligCustomerState = new Dictionary<CustomerChosen, bool>();
+            offentligCustomerState.Add(CustomerChosen.Offentlig, true);
+            offentligCustomerState.Add(CustomerChosen.Offentlig, false);
+
+            _allCustomerStates.Add(CustomerChosen.Offentlig, offentligCustomerState);
+
+
         }
 
-
+        //This is to make the ComboBox Work
         public ObservableCollection<CustomerChosen> CustomerChosens
         {
             get { return _customerChosens; }
 
         }
-
+        //This is to make the ComboBox Work
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -61,6 +72,17 @@ namespace MobilReklameApp.DomainClasses
 
 
 
+
+        private CustomerChosen _customerState;
+        private Dictionary<CustomerChosen, Dictionary<CustomerChosen, bool>> _allCustomerStates;
+
+        public Dictionary<CustomerChosen, bool> CustomerStates
+        {
+            get
+            {
+                return _allCustomerStates[_customerState];
+            }
+        }
 
 
 
