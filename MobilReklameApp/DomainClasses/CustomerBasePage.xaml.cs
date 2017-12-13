@@ -12,23 +12,22 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using MobilReklameApp.DomainClasses;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace MobilReklameApp.XamlPages
+namespace MobilReklameApp.DomainClasses
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateANote : Page
+    public sealed partial class CustomerBasePage : Page
     {
-        public CreateANote()
+        public CustomerBasePage()
         {
             this.InitializeComponent();
         }
 
-        public void BackToMainPageClick(object sender, RoutedEventArgs g)
+        public void BackToMainPageClick(object sender, RoutedEventArgs j)
         {
             this.Frame.Navigate(typeof(MainPage), null);
         }
@@ -37,17 +36,5 @@ namespace MobilReklameApp.XamlPages
         {
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
-
-        public void GoToOrderOverViewPage(object sender, RoutedEventArgs l)
-        {
-            this.Frame.Navigate(typeof(OrderOverView1), null);
-        }
-
-        public void GoToCustomerBase(object sender, RoutedEventArgs t)
-        {
-            this.Frame.Navigate(typeof(CustomerBasePage), null);
-        }
-
-
     }
 }

@@ -25,8 +25,8 @@
 
 
         <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" BorderBrush="Black" Grid.ColumnSpan="2">
-            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Button Content="Ordreoversigt" Click="GoToOrderOverview" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
+            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,20,0,0" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Button Content="Ordreoversigt" Click="GoToOrderOverview" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
         </StackPanel>
 
 
@@ -44,10 +44,11 @@
             </Grid.RowDefinitions>
 
 
-            <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <StackPanel Margin="0,0,0,0" Width="570" Height="352" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.RowSpan="2" Grid.ColumnSpan="2">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Firmanavn:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Navn/Firmanavn:"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="CVR:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="EAN:" BorderThickness="2,2,2,0"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Addresse:"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Telefon:"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="E-Mail:"/>
@@ -57,9 +58,9 @@
                 <Image Height="165" Width="420" Margin="0,0,0,0"/>
             </StackPanel>-->
 
-            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,50,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="300">
+            <StackPanel HorizontalAlignment="Left" MinHeight="310" Margin="0,100,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="250">
                 <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
-                <TextBox MinHeight="300" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla"/>
+                <TextBox MinHeight="200" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Detaljer:" MaxHeight="250"/>
             </StackPanel>
 
             <Grid HorizontalAlignment="Stretch" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
@@ -109,10 +110,10 @@
             </Grid>
         </Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Row="1">
-            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="52" Margin="0,50,0,0" Width="170" BorderThickness="2,2,0,2"/>
+            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="53" Margin="0,50,0,0" Width="170" BorderThickness="0,2,2,2" FlowDirection="RightToLeft"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="300" Grid.Column="1" Orientation="Vertical">
-            <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Height="60" Margin="0,30,20,0" FontSize="18" HorizontalContentAlignment="Center"/>
+            <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Height="60" Margin="0,20,20,0" FontSize="18" HorizontalContentAlignment="Center"/>
         </StackPanel>
 
 
