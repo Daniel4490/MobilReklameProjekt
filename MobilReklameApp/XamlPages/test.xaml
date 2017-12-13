@@ -10,18 +10,18 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition  Height="8*"/>
-            <RowDefinition  Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition  Height="5*"/>
+            <RowDefinition  Height="5*"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="58,-104,-332,-3676" Orientation="Vertical" HorizontalAlignment="Left" Grid.Row="1" BorderBrush="Black" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Button Content="Button 3" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Height="168" Width="376"/>
-            <Button Content="Button 2" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Stretch" Margin="0,20,0,0" VerticalAlignment="Stretch" Height="170" FontWeight="Normal" Width="368"/>
-            <Button Content="Button1" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Right" Padding="10,10,10,10" Height="166" Width="254" VerticalAlignment="Top" Margin="20,90,0,0"  />
+        <StackPanel Margin="0,0,0,0" Orientation="Vertical" HorizontalAlignment="Left" BorderBrush="Black" Grid.RowSpan="3" Width="400" Grid.Column="1" Grid.ColumnSpan="2" Height="660">
+            <Button Content="Privat" Click="GoToCreateANote" FontSize="48" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="200"/>
+            <Button Content="Erhverv" Click="GoToOrderOverView" FontSize="48" HorizontalAlignment="Stretch" Margin="0,30,0,0" VerticalAlignment="Stretch" Height="200" FontWeight="Normal"/>
+            <Button Content="Offentlig" Click="GoToCreateOrderPage" FontSize="48" HorizontalAlignment="Stretch" Padding="10,10,10,10" Height="200" VerticalAlignment="Top" Margin="0,30,0,0"  />
         </StackPanel>
 
     </Grid>
