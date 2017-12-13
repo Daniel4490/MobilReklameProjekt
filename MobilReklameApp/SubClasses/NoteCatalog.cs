@@ -22,11 +22,6 @@ namespace MobilReklameApp.SubClasses
             _createNoteCommand = new CreateNoteCommand(_note,this);
 
             _notes = new ObservableCollection<string>();
-            _notes.Add("a note a super long note");
-            _notes.Add("a note");
-            _notes.Add("a note");
-            _notes.Add("a note");
-            _notes.Add("a note");
         }
 
         public ObservableCollection<string> ListAll
