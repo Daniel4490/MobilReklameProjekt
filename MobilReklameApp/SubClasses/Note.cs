@@ -12,11 +12,6 @@ namespace MobilReklameApp.SubClasses
     {
         private string _note;
 
-        public Note()
-        {
-            _note = "";
-        }
-
         public string GetNote
         {
             get { return _note; }

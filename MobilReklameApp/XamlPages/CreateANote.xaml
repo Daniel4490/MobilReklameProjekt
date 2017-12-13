@@ -14,29 +14,43 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
+        
+        <Grid Column="0" Row="0">
         <StackPanel Margin="20,10,0,1" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.RowSpan="2">
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="450" Margin="3,-2,0,0" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522" Grid.RowSpan="3" Grid.Column="1">
-            <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
-            <TextBox Text="{Binding NoteText}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0" PlaceholderText="Opret ny note her:"/>
-            <Button Content="Gem påmindelsen" Command="{Binding CreateNoteCommand}" FontSize="17" Padding="10,10,10,10" Margin="20,1,0,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
-            <StackPanel HorizontalAlignment="Right" Height="Auto" Margin="0,0,424,0" VerticalAlignment="Top" Width="576">
-                <Image Height="Auto" Width="420" Margin="0,0,0,0"/>
+        </Grid>
 
+
+        <Grid Column="1" Row="0">
+        <StackPanel HorizontalAlignment="Left" Height="auto" Margin="5,5,5,5" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522">
+            <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
+            <TextBox Text="{Binding NoteText, Mode=TwoWay}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0" PlaceholderText="Opret ny note her:"/>
+                <Button Content="Gem påmindelsen" Command="{Binding CreateNoteCommand}" FontSize="17" Padding="10,10,10,10" Margin="20,1,0,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
             </StackPanel>
-        </StackPanel>
+        </Grid>
+        
+        <Grid Column="1" Row="1">
+            <ListView ItemsSource="{Binding ListAll}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5,5,5,5" Orientation="Vertical">
+                            <TextBlock FontSize="20" Text="{Binding}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
 
 
     </Grid>
