@@ -10,18 +10,22 @@ using System.Windows.Input;
 
 namespace MobilReklameApp.SubClasses
 {
-    public class NoteCatalog : INotifyPropertyChanged
+    public class NoteCatalog
     {
+        private static NoteCatalog _singletonInstance;
         private Note _note;
         private ObservableCollection<string> _notes;
-        private CreateNoteCommand _createNoteCommand;
+       
 
         public NoteCatalog()
         {
             _note = new Note();
-            _createNoteCommand = new CreateNoteCommand(_note,this);
-
             _notes = new ObservableCollection<string>();
+        }
+
+        public void Add(string note)
+        {
+            _notes.Add(note);
         }
 
         public ObservableCollection<string> ListAll
@@ -29,32 +33,16 @@ namespace MobilReklameApp.SubClasses
             get { return _notes; }
         }
 
-        public void AddNote()
-        {
-            _notes.Add(_note.GetNote);
-        }
 
-        public string NoteText
+        public static NoteCatalog SingletonInstance
         {
-            get { return _note.GetNote; }
-            set
+            get
             {
-                _note.GetNote = value;
-                OnPropertyChanged();
-                _createNoteCommand.RaiseCanExecuteChanged();
+                if (_singletonInstance != null) return _singletonInstance;
+                _singletonInstance = new NoteCatalog();
+                return _singletonInstance;
             }
         }
 
-        public ICommand CreateNoteCommand
-        {
-            get { return _createNoteCommand; }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

@@ -82,6 +82,7 @@
     <Compile Include="SubClasses\CreateNoteCommand.cs" />
     <Compile Include="SubClasses\Note.cs" />
     <Compile Include="SubClasses\NoteCatalog.cs" />
+    <Compile Include="SubClasses\NoteItemViewModel.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
