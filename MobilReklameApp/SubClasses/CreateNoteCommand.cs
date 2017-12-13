@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace MobilReklameApp.SubClasses
 {
-    class CreateNoteCommand : ICommand
+    public class CreateNoteCommand : ICommand
     {
         private Note _note;
         private NoteCatalog _catalog;
@@ -25,7 +25,7 @@ namespace MobilReklameApp.SubClasses
 
         public void Execute(object parameter)
         {
-            _catalog.AddNote();
+            _catalog.Add(_note.GetNote);
 
             _note = new Note();
         }
