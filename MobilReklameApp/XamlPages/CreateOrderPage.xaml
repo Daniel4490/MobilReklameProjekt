@@ -110,7 +110,7 @@
             </Grid>
         </Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Row="1">
-            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="53" Margin="0,50,0,0" Width="170" BorderThickness="2,2,0,2"/>
+            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="53" Margin="0,50,0,0" Width="170" BorderThickness="0,2,2,2" FlowDirection="RightToLeft"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="300" Grid.Column="1" Orientation="Vertical">
             <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Height="60" Margin="0,20,20,0" FontSize="18" HorizontalContentAlignment="Center"/>
