@@ -27,7 +27,7 @@
             <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
             <Button Content="OrdreOversigt" Click="GoToOrderOverViewPage" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-            <Button Content="Kundebase" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
+            <Button Content="Kundebase" Click="GoToCustomerBase" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
         </StackPanel>
         </Grid>
 
