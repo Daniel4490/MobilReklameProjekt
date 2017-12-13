@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:domainClasses="using:MobilReklameApp.DomainClasses"
     mc:Ignorable="d">
-    
+
     <Page.DataContext >
         <domainClasses:CreateOrderViewModel/>
     </Page.DataContext>
@@ -24,49 +24,47 @@
         </Grid.RowDefinitions>
 
 
-            <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" BorderBrush="Black" Grid.ColumnSpan="2">
-                <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-                <Button Content="Ordreoversigt" Click="GoToOrderOverview" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
-            </StackPanel>
+        <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" BorderBrush="Black" Grid.ColumnSpan="2">
+            <Button Content="Tilbage" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,30,0,0" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Button Content="Ordreoversigt" Click="GoToOrderOverview" FontSize="18" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="60" Width="130"/>
+        </StackPanel>
 
 
 
 
-        <Grid Margin="0,0,0,0" Grid.Column="1" Grid.Row="1">
-            
+        <Grid Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" Grid.RowSpan="3" Grid.ColumnSpan="3">
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            
-            
-            <Grid>
-                <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000">
-                    <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
-                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Firmanavn:"/>
-                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="CVR:"/>
-                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Addresse:"/>
-                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Telefon:"/>
-                    <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="E-Mail:"/>
-                </StackPanel>
-            </Grid>
-            
+
+
+            <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Firmanavn:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="CVR:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Addresse:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Telefon:"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="E-Mail:"/>
+            </StackPanel>
+
             <!--<StackPanel HorizontalAlignment="Right" Height="165" Margin="0,0,0,0" VerticalAlignment="Top" Width="1000">
                 <Image Height="165" Width="420" Margin="0,0,0,0"/>
             </StackPanel>-->
 
-            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000">
+            <StackPanel HorizontalAlignment="Left" MinHeight="400" Margin="0,50,0,0" VerticalAlignment="Top" Width="572" Grid.Row="1" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="300">
                 <TextBlock Text="Beskrivelse" TextWrapping="Wrap" Height="50" TextAlignment="Center" FontSize="40" />
-                <TextBox MinHeight="400" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla"/>
+                <TextBox MinHeight="300" Text="" FontSize="28" TextWrapping="Wrap" PlaceholderText="Her kan brugeren så beskrive lidt omkring, hvordan og hvorledes det skal laves og hvad det er kunden vil have lavet. og bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla"/>
             </StackPanel>
 
-            <Grid HorizontalAlignment="Left" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
+            <Grid HorizontalAlignment="Stretch" Height="700" Margin="0,0,0,0"  Width="400" VerticalAlignment="Top" BorderBrush="#66000000" BorderThickness="0,0,0,0" Grid.RowSpan="2" Grid.Column="1" >
 
-                    <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
+                <TextBlock Text="Produkt" TextWrapping="Wrap" Height="50" FontSize="40" VerticalAlignment="Top" TextAlignment="Center" />
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0" BorderThickness="0,0,0,0" BorderBrush="#66000000" VerticalAlignment="Bottom" Height="530">
 
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="530" BorderBrush="#66000000">
@@ -88,33 +86,33 @@
                         <TextBlock Text="Pris kr." TextWrapping="Wrap" Height="30" TextAlignment="Center"/>
                     </StackPanel>
 
-                <StackPanel Height="530" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="50" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                    <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
-                </StackPanel>
+                    <StackPanel Height="530" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="50" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                        <TextBox Text="" Height="30" BorderThickness="2,0,2,1"/>
+                    </StackPanel>
                 </StackPanel>
                 <TextBox HorizontalAlignment="Stretch" Margin="0,50,0,0" VerticalAlignment="Top" Height="120" TextWrapping="Wrap" MaxHeight="120" BorderThickness="2,2,2,2" PlaceholderText="Produkt:"/>
             </Grid>
-            <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="0,0,0,30" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="400" Grid.Column="1" Grid.Row="1">
-                <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="130" Height="60" Margin="0,0,0,0" FontSize="18"/>
-            </StackPanel>
         </Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Row="1">
             <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="52" Margin="0,50,0,0" Width="170" BorderThickness="2,2,0,2"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="300" Grid.Column="1" Orientation="Vertical">
+            <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Height="60" Margin="0,30,20,0" FontSize="18" HorizontalContentAlignment="Center"/>
         </StackPanel>
 
 
