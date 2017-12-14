@@ -7,9 +7,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.DomainClasses;
 using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.DomainClasses
+namespace MobilReklameApp.ViewModels
 {
     public class OrderItemViewModel : INotifyPropertyChanged
     {

@@ -7,8 +7,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.SubClasses
+namespace MobilReklameApp.ViewModels
 {
     class NoteItemViewModel : INotifyPropertyChanged
     {

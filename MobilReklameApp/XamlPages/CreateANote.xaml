@@ -5,11 +5,11 @@
     xmlns:local="using:MobilReklameApp.XamlPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:subClasses="using:MobilReklameApp.SubClasses"
+    xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <subClasses:NoteItemViewModel/>
+        <viewModels:NoteItemViewModel/>
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

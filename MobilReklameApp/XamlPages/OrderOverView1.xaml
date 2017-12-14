@@ -5,11 +5,11 @@
     xmlns:local="using:MobilReklameApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:domainClasses="using:MobilReklameApp.DomainClasses"
+    xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <domainClasses:OrderItemViewModel/>
+        <viewModels:OrderItemViewModel/>
     </Page.DataContext>
 
     <Grid Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
