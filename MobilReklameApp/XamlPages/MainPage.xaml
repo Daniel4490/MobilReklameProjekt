@@ -56,27 +56,27 @@
         </Grid>
 
         <Grid Row="1">
-            <StackPanel Margin="10,0,10,10" Orientation="Vertical" VerticalAlignment="Top">
-                <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300" />
-                <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300" Margin="0,20,0,0" />
+            <StackPanel Margin="0,0,0,0" Orientation="Vertical" VerticalAlignment="Stretch">
+                <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300" VerticalAlignment="Center" Margin="20,0,0,0" />
+                <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300" Margin="20,20,0,0" />
             </StackPanel>
         </Grid>
 
-        <Grid Row="2">
-            <StackPanel>
-                <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0" />
-                <ListView ItemsSource="{Binding Notes}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Margin="5,5,5,5" Orientation="Vertical">
-                                    <TextBlock Padding="10,10,10,10" Text="{Binding}" TextWrapping="Wrap"
+        <Grid Grid.Row="1" Grid.RowSpan="2" Margin="0,380,0,0">
+            <ListView ItemsSource="{Binding Notes}" VerticalAlignment="Bottom" Height="380">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Margin="5,5,5,5" Orientation="Vertical">
+                                <TextBlock Padding="10,10,10,10" Text="{Binding}" TextWrapping="Wrap"
                                                Foreground="Red" FontWeight="Bold" Margin="0,0,0,0" />
-                                </StackPanel>
                             </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel HorizontalAlignment="Stretch" Height="40" Margin="20,0,0,0" VerticalAlignment="Top">
+                <TextBlock Text="Notifikationer" FontSize="30" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
             </StackPanel>
         </Grid>
 
@@ -99,7 +99,7 @@
             </ScrollViewer>
         </Grid>
 
-                <Grid Grid.Column="1" Grid.Row="2">
+        <Grid Grid.Column="1" Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
@@ -119,9 +119,9 @@
                         <ComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding OrderStatuses}" SelectedItem="{Binding SelectedOrder.EnummOrderStatus, Mode=TwoWay}" />
                     </StackPanel>
                 </StackPanel>
-                </StackPanel>
-            
-        </Grid>
+            </StackPanel>
 
         </Grid>
+
+    </Grid>
 </Page>
