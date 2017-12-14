@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.DomainClasses;
 
-namespace MobilReklameApp.DomainClasses
+namespace MobilReklameApp.Catalogs
 {
     class EmployeeCatalog : CatalogBase<Employee>
     {
