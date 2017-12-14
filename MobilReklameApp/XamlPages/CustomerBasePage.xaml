@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         
        <Grid Column="1" Row="1">
-            <StackPanel Margin="0,0,0,0" Width="570" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000">
+            <StackPanel Margin="50,0,0,0" Width="570" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Kunde" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
@@ -33,9 +33,9 @@
         </Grid>
         <Grid Column="0" Row="1">
             <StackPanel Margin="0,0,0,0" Orientation="Vertical" HorizontalAlignment="Left" BorderBrush="Black">
-            <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Left" Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="20,50,0,0"  />
-            <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Center" Height="60" Width="130"/>
-            <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="130" Margin="20,20,0,0"></Button>
+            <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
+             <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
+            <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
         </StackPanel>
         </Grid>
         
