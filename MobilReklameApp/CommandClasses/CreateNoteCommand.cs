@@ -26,8 +26,6 @@ namespace MobilReklameApp.SubClasses
         public void Execute(object parameter)
         {
             _catalog.Add(_note.GetNote);
-
-            _note = new Note();
         }
 
         public void RaiseCanExecuteChanged()
