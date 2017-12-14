@@ -11,8 +11,83 @@ namespace MobilReklameApp.ViewModels
 {
     class CreateOrderViewModel : INotifyPropertyChanged
     {
+        //Produkt___________________________________________________________________________________________________
+        private string _mål;
+        private string _antal;
+        private string _lam;
+        private string _medie;
+        //private string _751c;
+        private string _aluSand3mm;
+        private string _pvc10mm;
+        private string _leveringsAntal;
+        private string _dtpKr;
+        private string _opTil10;
+        private string _fragtKr;
+        private string _prisKr;
 
+        
+        public string Mål
+        {
+            get { return _mål; }
+        }
 
+        public string Antal
+        {
+            get { return _antal; }
+        }
+
+        public string Lam
+        {
+            get { return _lam; }
+        }
+
+        public string Medie
+        {
+            get { return _medie; }
+        }
+
+        //public string 751c
+        //{
+        //  get {
+        //        return _751c;
+        //    } 
+        //}
+
+        public string AluSand3mm
+        {
+            get { return _aluSand3mm; }
+        }
+
+        public string PVC10mm
+        {
+            get { return _pvc10mm; }
+        }
+
+        public string LeveringsAntal
+        {
+            get { return _leveringsAntal; }
+        }
+
+        public string DTPKr
+        {
+            get { return _dtpKr; }
+        }
+
+        public string OpTil10Procent
+        {
+            get { return _opTil10; }
+        }
+
+        public string FragtKr
+        {
+            get { return _fragtKr; }
+        }
+
+        public string PrisKr
+        {
+            get { return _prisKr; }
+        }
+        //Produkt___________________________________________________________________________________________________
         public enum CustomerChosen
         {
             Privat,
@@ -76,8 +151,19 @@ namespace MobilReklameApp.ViewModels
         //This makes the combobox able to grey stuff out
 
         private ObservableCollection<CustomerChosen> _customerChosens;
-        public CreateOrderViewModel()
+        public CreateOrderViewModel(string mål, string antal, string lam, string medie, string aluSand3Mm, string pvc10Mm, string leveringsAntal, string dtpKr, string opTil10, string fragtKr, string prisKr)
         {
+            _mål = mål;
+            _antal = antal;
+            _lam = lam;
+            _medie = medie;
+            _aluSand3mm = aluSand3Mm;
+            _pvc10mm = pvc10Mm;
+            _leveringsAntal = leveringsAntal;
+            _dtpKr = dtpKr;
+            _opTil10 = opTil10;
+            _fragtKr = fragtKr;
+            _prisKr = prisKr;
             //This is to make the ComboBox Work
             _customerChosens = new ObservableCollection<CustomerChosen>();
 
@@ -86,22 +172,6 @@ namespace MobilReklameApp.ViewModels
             _customerChosens.Add(CustomerChosen.Offentlig);
             //This is to make the ComboBox Work
 
-            
-            //Dictionary<CustomerChosen, bool> offentligCustomerState = new Dictionary<CustomerChosen, bool>();
-            //offentligCustomerState.Add(CustomerChosen.Offentlig, true);
-            //offentligCustomerState.Add(CustomerChosen.Offentlig, false);
-
-            //Dictionary<CustomerChosen, bool> erhvervCustomerState = new Dictionary<CustomerChosen, bool>();
-            //erhvervCustomerState.Add(CustomerChosen.Erhverv, false);
-            //erhvervCustomerState.Add(CustomerChosen.Erhverv, true);
-
-            //Dictionary<CustomerChosen, bool> privatCustomerState = new Dictionary<CustomerChosen, bool>();
-            //privatCustomerState.Add(CustomerChosen.Privat, false);
-            //privatCustomerState.Add(CustomerChosen.Privat, false);
-
-            //_allCustomerStates.Add(CustomerChosen.Offentlig, offentligCustomerState);
-            //_allCustomerStates.Add(CustomerChosen.Erhverv, erhvervCustomerState);
-            //_allCustomerStates.Add(CustomerChosen.Privat, privatCustomerState);
 
             _eaNenabled = true;
             _cvRenabled = false;
@@ -123,11 +193,6 @@ namespace MobilReklameApp.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
-
-
-
 
         private CustomerChosen _customerState;
         private Dictionary<CustomerChosen, Dictionary<CustomerChosen, bool>> _allCustomerStates;
