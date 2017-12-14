@@ -74,15 +74,15 @@
     </Compile>
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
-    <Compile Include="DomainClasses\CompanyCustomerCatalogV2.cs" />
-    <Compile Include="DomainClasses\CreateOrderViewModel.cs" />
-    <Compile Include="DomainClasses\CustomerCatalog.cs" />
-    <Compile Include="DomainClasses\PrivateCustomerCatalogV2.cs" />
-    <Compile Include="DomainClasses\PublicCustomerCatalogV2.cs" />
-    <Compile Include="SubClasses\CreateNoteCommand.cs" />
+    <Compile Include="Catalogs\CompanyCustomerCatalogV2.cs" />
+    <Compile Include="ViewModels\CreateOrderViewModel.cs" />
+    <Compile Include="Catalogs\CustomerCatalog.cs" />
+    <Compile Include="Catalogs\PrivateCustomerCatalogV2.cs" />
+    <Compile Include="Catalogs\PublicCustomerCatalogV2.cs" />
+    <Compile Include="CommandClasses\CreateNoteCommand.cs" />
     <Compile Include="SubClasses\Note.cs" />
-    <Compile Include="SubClasses\NoteCatalog.cs" />
-    <Compile Include="SubClasses\NoteItemViewModel.cs" />
+    <Compile Include="Catalogs\NoteCatalog.cs" />
+    <Compile Include="ViewModels\NoteItemViewModel.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
@@ -90,10 +90,10 @@
       <DependentUpon>CreateOrderPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="DomainClasses\Employee.cs" />
-    <Compile Include="DomainClasses\EmployeeCatalog.cs" />
+    <Compile Include="Catalogs\EmployeeCatalog.cs" />
     <Compile Include="DomainClasses\Order.cs" />
     <Compile Include="DomainClasses\OrderCatalog.cs" />
-    <Compile Include="DomainClasses\OrderItemViewModel.cs" />
+    <Compile Include="ViewModels\OrderItemViewModel.cs" />
     <Compile Include="XamlPages\CustomerBasePage.xaml.cs">
       <DependentUpon>CustomerBasePage.xaml</DependentUpon>
     </Compile>
