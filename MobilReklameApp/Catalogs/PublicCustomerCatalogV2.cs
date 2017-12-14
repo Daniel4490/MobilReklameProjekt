@@ -19,11 +19,6 @@ namespace MobilReklameApp.DomainClasses
         public PublicCustomerCatalog()
         {
             _customers = new Dictionary<string, PublicCustomer>();
-            _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
-            _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
-            _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
-
-         
 
         }
 

@@ -10,19 +10,31 @@ namespace MobilReklameApp.SubClasses
 {
     class PublicCustomer : PeopleBase
     {
-        
-        private string _ean;
 
-        public PublicCustomer(string firstName, string lastName, string address, string phone, string email, string ean)
-            : base(firstName, lastName, address, phone, email)
-        {
+        private string _ean;
+        private string _PublicName;
+
+        public PublicCustomer()
             
-            _ean = ean;
+        {
+                
+        }
+
+        public string PublicName
+        {
+            get { return _PublicName; }
+            set { _PublicName = value; }
         }
 
         public string EAN
         {
             get { return _ean; }
+            set { _ean = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{PublicName} {EAN} {Phone} {Email}";
         }
     }
 }

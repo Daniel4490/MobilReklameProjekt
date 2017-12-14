@@ -75,6 +75,10 @@
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
     <Compile Include="Catalogs\CompanyCustomerCatalogV2.cs" />
+    <Compile Include="CommandClasses\CreateCompanyCustomerCommand.cs" />
+    <Compile Include="CommandClasses\CreatePrivateCustomerCommand.cs" />
+    <Compile Include="CommandClasses\CreatePublicCustomerCommand.cs" />
+    <Compile Include="ViewModels\CompanyCustomerItemViewModel.cs" />
     <Compile Include="ViewModels\CreateOrderViewModel.cs" />
     <Compile Include="Catalogs\CustomerCatalog.cs" />
     <Compile Include="Catalogs\PrivateCustomerCatalogV2.cs" />
@@ -83,6 +87,8 @@
     <Compile Include="SubClasses\Note.cs" />
     <Compile Include="Catalogs\NoteCatalog.cs" />
     <Compile Include="ViewModels\NoteItemViewModel.cs" />
+    <Compile Include="ViewModels\PrivateCustomerItemViewModel.cs" />
+    <Compile Include="ViewModels\PublicCustomerItemViewModel.cs" />
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
