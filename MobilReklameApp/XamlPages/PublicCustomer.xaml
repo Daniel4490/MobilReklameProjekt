@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="MobilReklameApp.DomainClasses.CustomerBasePage"
+    x:Class="MobilReklameApp.DomainClasses.PublicCustomer"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MobilReklameApp.DomainClasses"
@@ -11,14 +11,14 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition  Height="8*"/>
+            <RowDefinition  Height="1*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid Column="1" Row="0">
             <StackPanel Orientation="Horizontal">
                 <Button Content="Privat kunde" Margin="10,10,10,10"/>
@@ -26,38 +26,32 @@
                 <Button Content="Erhverv kunde" Margin="10,10,10,10"/>
             </StackPanel>
         </Grid>
-        
-       <Grid Column="1" Row="1">
+
+        <Grid Column="1" Row="1">
             <StackPanel Margin="50,0,0,0" Width="570" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000">
-                <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Privat Kunde" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Offentlig Kunde" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top" Height="50" Width="570"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
                 <Button Content="Gem ny kunde" FontSize="15" HorizontalAlignment="Center" Margin="0,15,0,0" Padding="10,10,10,10" Height="auto" Width="auto"/>
             </StackPanel>
-            
+
         </Grid>
         <Grid Column="0" Row="1">
-            <StackPanel Margin="0,0,0,0" Orientation="Vertical" BorderBrush="Black">
-            <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Center"  Height="60" Width="130" Margin="10,10,10,10"/>
-            <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
-            <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
-        </StackPanel>
+            <StackPanel Margin="0,0,0,0" Orientation="Vertical" HorizontalAlignment="Left" BorderBrush="Black">
+                <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
+                <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
+                <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10"/>
+            </StackPanel>
         </Grid>
-        
+
         <Grid Column="0" Row="0">
             <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" HorizontalAlignment="Center"  Height="60" Width="130" VerticalAlignment="Center"/>
         </Grid>
-        
-        
-        <Grid Column="2" Row="1">
-            <TextBlock Text="Eksisterende Private Kunder" FontSize="40"/>
-            <ListView>
-                
-            </ListView>
-        </Grid>
-        
+
+
 
     </Grid>
 </Page>
