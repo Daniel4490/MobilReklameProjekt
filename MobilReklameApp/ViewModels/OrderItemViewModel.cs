@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.Catalogs;
 using MobilReklameApp.DomainClasses;
 using MobilReklameApp.SubClasses;
 
