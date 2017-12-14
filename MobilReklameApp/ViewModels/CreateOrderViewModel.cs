@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace MobilReklameApp.ViewModels
 {
-    class CreateOrderViewModel : INotifyPropertyChanged
+    public class CreateOrderViewModel : INotifyPropertyChanged
     {
        
         public enum CustomerChosen
