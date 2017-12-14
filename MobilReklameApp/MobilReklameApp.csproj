@@ -75,6 +75,9 @@
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
     <Compile Include="Catalogs\CompanyCustomerCatalogV2.cs" />
+    <Compile Include="ViewModels\CompanyCustomerItemViewModel.cs" />
+    <Compile Include="ViewModels\PrivateCustomerItemViewModel.cs" />
+    <Compile Include="ViewModels\PublicCustomerItemViewModel.cs" />
     <Compile Include="SubClasses\Products.cs" />
     <Compile Include="ViewModels\CreateOrderViewModel.cs" />
     <Compile Include="Catalogs\CustomerCatalog.cs" />
