@@ -78,6 +78,7 @@
     <Compile Include="CommandClasses\CreateCompanyCustomerCommand.cs" />
     <Compile Include="CommandClasses\CreatePrivateCustomerCommand.cs" />
     <Compile Include="CommandClasses\CreatePublicCustomerCommand.cs" />
+    <Compile Include="SubClasses\Products.cs" />
     <Compile Include="ViewModels\CompanyCustomerItemViewModel.cs" />
     <Compile Include="ViewModels\CreateOrderViewModel.cs" />
     <Compile Include="Catalogs\CustomerCatalog.cs" />
