@@ -44,20 +44,21 @@
         </Grid.ColumnDefinitions>
 
 
-            
-            
         <Grid Column="1">
             <StackPanel Margin="10,10,10,10" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Opret påmindelse" Click="CreateANoteClick" FontSize="25" Padding="10,10,10,10" Margin="0,0,20,0" />
-                <Button Content="Kundebase" Click="CustomerBaseClick" FontSize="25" Padding="10,10,10,10" Margin="0,0,20,0"/>
-                <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" TextAlignment="Center" VerticalAlignment="Center" />
+                <Button Content="Opret påmindelse" Click="CreateANoteClick" FontSize="25" Padding="10,10,10,10"
+                        Margin="0,0,20,0" />
+                <Button Content="Kundebase" Click="CustomerBaseClick" FontSize="25" Padding="10,10,10,10"
+                        Margin="0,0,20,0" />
+                <TextBlock Text="Aktiv bruger" FontSize="25" Padding="10,10,10,10" TextAlignment="Center"
+                           VerticalAlignment="Center" />
             </StackPanel>
         </Grid>
-            
+
         <Grid Row="1">
             <StackPanel Margin="10,0,10,10" Orientation="Vertical" VerticalAlignment="Top">
-                <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300"/>
-                <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300" Margin="0,20,0,0"/>
+                <Button Content="Igangværende ordre" Click="OrderOverViewClick" FontSize="30" Width="300" />
+                <Button Content="Opret ordre" Click="CreateOrderPageClick" FontSize="30" Width="300" Margin="0,20,0,0" />
             </StackPanel>
         </Grid>
 
