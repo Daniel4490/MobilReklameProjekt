@@ -30,7 +30,7 @@ namespace MobilReklameApp.ViewModels
                 OnPropertyChanged();
             }
         }
-
+        //This makes the combobox able to grey stuff out
         private void SetTextEnabled(CustomerChosen value)
         {
             if (value== CustomerChosen.Privat)
@@ -71,6 +71,7 @@ namespace MobilReklameApp.ViewModels
                 OnPropertyChanged();
             }
         }
+        //This makes the combobox able to grey stuff out
 
         private ObservableCollection<CustomerChosen> _customerChosens;
         public CreateOrderViewModel()
