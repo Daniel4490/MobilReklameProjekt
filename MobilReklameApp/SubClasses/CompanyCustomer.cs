@@ -12,19 +12,36 @@ namespace MobilReklameApp.SubClasses
     class CompanyCustomer : PeopleBase
     {
         private string _cvr;
+        private string _companyName;
+        private string _att;
 
-        public CompanyCustomer(string cvr, string firstName, string lastName, string address, string phone, string email)
-            : base(firstName, lastName, address, phone, email) 
+        public CompanyCustomer()
+
         {
-            _cvr = cvr;
+
         }
 
-        public string Cvr
+        public string CVR
         {
             get { return _cvr; }
-           // set { _cvr = value; }
+            set { _cvr = value; }
         }
-      
+
+        public string CompanyName
+        {
+            get { return _companyName; }
+            set { _companyName = value; }
+        }
+
+        public string Att
+        {
+            get { return $"{FirstName} {LastName}"; }
+        }
+
+        public override string ToString()
+        {
+            return $"{CompanyName} {CVR} {Phone} {Email}";
+        }
 
 
     }

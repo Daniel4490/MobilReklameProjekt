@@ -15,39 +15,44 @@ namespace MobilReklameApp.BaseClasses
         private string _address;
         private string _phone;
         private string _email;
- 
-        protected PeopleBase(string firstName, string lastName, string address, string phone, string email)
+
+        protected PeopleBase()
         {
-            _firstName = firstName;
-            _lastName = lastName;
-            _address = address;
-            _phone = phone;
-            _email = email;           
+            //_firstName = firstName;
+            //_lastName = lastName;
+            //_address = address;
+            //_phone = phone;
+            //_email = email;           
         }
 
         public string FirstName
         {
             get { return _firstName; }
+            set { _firstName = value; }
         }
 
         public string LastName
         {
             get { return _lastName; }
+            set { _lastName = value; }
         }
 
         public string Address
         {
             get { return _address; }
+            set { _address = value; }
         }
 
         public string Phone
         {
             get { return _phone; }
+            set { _phone = value; }
         }
 
         public string Email
         {
             get { return _email; }
+            set { _email = value; }
         }
 
        public string ID

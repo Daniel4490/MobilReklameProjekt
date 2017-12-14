@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
+using MobilReklameApp.CommandClasses;
 using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.Catalogs
@@ -12,19 +13,14 @@ namespace MobilReklameApp.Catalogs
     {
         private Dictionary<string, PrivateCustomer> _customers;
         private static PrivateCustomerCatalog _singletonInstance = new PrivateCustomerCatalog();
-         //private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
-         private PrivateCustomer _privateCustomer;
+        //private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
+        private PrivateCustomer _privateCustomer;
 
         private PrivateCustomerCatalog()
         {
-
             _customers = new Dictionary<string, PrivateCustomer>();
-            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej", "Larsen phone", "LarsenMail"));
-            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej", "Larsen phone", "LarsenMail"));
-            _customers.Add("Lars", new PrivateCustomer("Lars", "Larsen", "LarsenVej", "Larsen phone", "LarsenMail"));
-
         }
-        public List<PrivateCustomer> listAll
+        public List<PrivateCustomer> ListAll
         {
             get { return _customers.Values.ToList(); }
         }
