@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <subClasses:NoteCatalog/>
+        <subClasses:NoteItemViewModel/>
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
