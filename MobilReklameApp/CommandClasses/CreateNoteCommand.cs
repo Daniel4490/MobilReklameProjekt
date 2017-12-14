@@ -28,8 +28,6 @@ namespace MobilReklameApp.CommandClasses
         public void Execute(object parameter)
         {
             _catalog.Add(_note.GetNote);
-
-            _note = new Note();
         }
 
         public void RaiseCanExecuteChanged()
