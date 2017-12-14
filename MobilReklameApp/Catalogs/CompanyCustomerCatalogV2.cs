@@ -15,13 +15,7 @@ namespace MobilReklameApp.Catalogs
 
         public CompanyCustomerCatalog()
         {
-
             _customers = new Dictionary<string, CompanyCustomer>();
-            _customers.Add("Customer1", new CompanyCustomer("CVR", "FirstName", "LastName", "Address", "Phone", "Mail"));
-            _customers.Add("Customer1", new CompanyCustomer("CVR", "FirstName", "LastName", "Address", "Phone", "Mail"));
-            _customers.Add("Customer1", new CompanyCustomer("CVR", "FirstName", "LastName", "Address", "Phone", "Mail"));
-
-
         }
         public List<CompanyCustomer> listAll
         {
