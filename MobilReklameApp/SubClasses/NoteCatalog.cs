@@ -12,12 +12,12 @@ namespace MobilReklameApp.SubClasses
 {
     public class NoteCatalog
     {
-        private static NoteCatalog _singletonInstance;
+        private static NoteCatalog _singletonInstance = new NoteCatalog();
         private Note _note;
         private ObservableCollection<string> _notes;
        
 
-        public NoteCatalog()
+        private NoteCatalog()
         {
             _note = new Note();
             _notes = new ObservableCollection<string>();
@@ -38,8 +38,6 @@ namespace MobilReklameApp.SubClasses
         {
             get
             {
-                if (_singletonInstance != null) return _singletonInstance;
-                _singletonInstance = new NoteCatalog();
                 return _singletonInstance;
             }
         }

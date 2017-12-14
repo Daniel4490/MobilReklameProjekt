@@ -10,9 +10,9 @@ namespace MobilReklameApp.DomainClasses
     public class OrderCatalog : CatalogBase<Order>
     {
         private Dictionary<int, Order> _orders;
-        private static OrderCatalog _singletonInstance;
+        private static OrderCatalog _singletonInstance = new OrderCatalog();
 
-        public OrderCatalog()
+        private OrderCatalog()
         {
             _orders = new Dictionary<int, Order>();
             _orders.Add(1,new Order(Order.OrderStatus.Afventer, "Ordrebeskrivelse","Produkttype", "Produktmateriale"));
@@ -36,8 +36,6 @@ namespace MobilReklameApp.DomainClasses
         {
             get
             {
-                if (_singletonInstance != null) return _singletonInstance;
-                _singletonInstance = new OrderCatalog();
                 return _singletonInstance;
             }
         }
