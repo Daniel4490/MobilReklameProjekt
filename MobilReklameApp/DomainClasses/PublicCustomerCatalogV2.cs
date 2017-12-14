@@ -10,8 +10,11 @@ namespace MobilReklameApp.DomainClasses
 {
     class PublicCustomerCatalog : CatalogBase<PublicCustomer>
     {
+        
         private Dictionary<string, PublicCustomer> _customers;
         private static PublicCustomerCatalog _singletonInstance;
+
+        
 
         public PublicCustomerCatalog()
         {
@@ -19,6 +22,8 @@ namespace MobilReklameApp.DomainClasses
             _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
             _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
             _customers.Add("Lars", new PublicCustomer("Lars", "Larsen", "LarsenVej", "Larsen mobil", "LarsenMail", "EAN"));
+
+         
 
         }
 
