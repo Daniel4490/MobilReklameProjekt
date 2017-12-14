@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
 using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.Catalogs
+namespace MobilReklameApp.DomainClasses
 {
     class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
     {
@@ -15,7 +15,10 @@ namespace MobilReklameApp.Catalogs
 
         public CompanyCustomerCatalog()
         {
+
             _customers = new Dictionary<string, CompanyCustomer>();
+
+
         }
         public List<CompanyCustomer> listAll
         {

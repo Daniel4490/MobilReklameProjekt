@@ -7,7 +7,7 @@ using MobilReklameApp.BaseClasses;
 using MobilReklameApp.CommandClasses;
 using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.Catalogs
+namespace MobilReklameApp.DomainClasses
 {
     class PrivateCustomerCatalog : CatalogBase<PrivateCustomer>
     {

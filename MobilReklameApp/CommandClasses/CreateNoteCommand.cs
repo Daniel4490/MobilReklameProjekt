@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using MobilReklameApp.Catalogs;
-using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.CommandClasses
+namespace MobilReklameApp.SubClasses
 {
     public class CreateNoteCommand : ICommand
     {
@@ -28,6 +26,8 @@ namespace MobilReklameApp.CommandClasses
         public void Execute(object parameter)
         {
             _catalog.Add(_note.GetNote);
+
+            _note = new Note();
         }
 
         public void RaiseCanExecuteChanged()

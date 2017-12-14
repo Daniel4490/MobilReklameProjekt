@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MobilReklameApp.BaseClasses;
 using MobilReklameApp.SubClasses;
 
-namespace MobilReklameApp.Catalogs
+namespace MobilReklameApp.DomainClasses
 {
     class PublicCustomerCatalog : CatalogBase<PublicCustomer>
     {
