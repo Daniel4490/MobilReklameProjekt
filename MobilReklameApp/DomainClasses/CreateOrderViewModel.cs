@@ -47,7 +47,17 @@ namespace MobilReklameApp.DomainClasses
             offentligCustomerState.Add(CustomerChosen.Offentlig, true);
             offentligCustomerState.Add(CustomerChosen.Offentlig, false);
 
+            Dictionary<CustomerChosen, bool> erhvervCustomerState = new Dictionary<CustomerChosen, bool>();
+            erhvervCustomerState.Add(CustomerChosen.Erhverv, false);
+            erhvervCustomerState.Add(CustomerChosen.Erhverv, true);
+
+            Dictionary<CustomerChosen, bool> privatCustomerState = new Dictionary<CustomerChosen, bool>();
+            privatCustomerState.Add(CustomerChosen.Privat, false);
+            privatCustomerState.Add(CustomerChosen.Privat, false);
+
             _allCustomerStates.Add(CustomerChosen.Offentlig, offentligCustomerState);
+            _allCustomerStates.Add(CustomerChosen.Erhverv, erhvervCustomerState);
+            _allCustomerStates.Add(CustomerChosen.Privat, privatCustomerState);
 
 
         }
