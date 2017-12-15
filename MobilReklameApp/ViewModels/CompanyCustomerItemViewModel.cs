@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -21,10 +22,11 @@ namespace MobilReklameApp.ViewModels
         public CompanyCustomerItemViewModel()
         {
             _companyCustomer = new CompanyCustomer();
+            _companyCustomerCatalog = new CompanyCustomerCatalog();
             _createCompanyCustomerCommand = new CreateCompanyCustomerCommand(_companyCustomer, _companyCustomerCatalog);
         }
 
-        public List<CompanyCustomer> ListAll
+        public ObservableCollection<CompanyCustomer> ListAll
         {
             get { return _companyCustomerCatalog.listAll; }
         }

@@ -13,7 +13,6 @@ namespace MobilReklameApp.SubClasses
     {
         private string _cvr;
         private string _companyName;
-        private string _att;
 
         public CompanyCustomer()
 
