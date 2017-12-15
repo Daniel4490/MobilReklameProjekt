@@ -5,11 +5,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using MobilReklameApp.Annotations;
+
 
 namespace MobilReklameApp.SubClasses
 {
-    public class Products : INotifyPropertyChanged
+    class Products : INotifyPropertyChanged
     {
         //Produkt___________________________________________________________________________________________________
         private string _mål;
@@ -171,7 +171,7 @@ namespace MobilReklameApp.SubClasses
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
+        
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
