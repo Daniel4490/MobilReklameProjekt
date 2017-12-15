@@ -33,10 +33,10 @@
 
 
         <Grid Column="1" Row="0">
-        <StackPanel HorizontalAlignment="Left" Height="auto" Margin="5,5,5,5" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522">
-            <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
-            <TextBox Text="{Binding NoteText, Mode=TwoWay}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0" PlaceholderText="Opret ny note her:"/>
-                <Button Content="Gem påmindelsen" Command="{Binding CreateNoteCommand}" FontSize="17" Padding="10,10,10,10" Margin="20,1,0,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+            <StackPanel HorizontalAlignment="Left" Height="auto" Margin="5,5,5,5" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.503,0.522">
+                <TextBlock Text="Ny Påmindelse" TextWrapping="Wrap" Height="66" TextAlignment="Center" FontSize="40" Margin="0,0,0,0" />
+                <TextBox Text="{Binding NoteText, Mode=TwoWay}" Height="300" FontSize="28" TextWrapping="Wrap" Margin="-2,0,0,0" PlaceholderText="Opret ny note her:"/>
+                <Button Content="Gem påmindelsen" Command="{Binding CreateNoteCommand}" FontSize="17" Padding="10,10,10,10" Margin="225,1,205,0" Height="55" Width="170" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
             </StackPanel>
         </Grid>
         
