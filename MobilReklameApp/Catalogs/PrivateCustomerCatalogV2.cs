@@ -19,6 +19,7 @@ namespace MobilReklameApp.DomainClasses
         private PrivateCustomerCatalog()
         {
             _customers = new Dictionary<string, PrivateCustomer>();
+            _privateCustomer = new PrivateCustomer();
         }
         public List<PrivateCustomer> ListAll
         {
