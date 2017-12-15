@@ -11,11 +11,6 @@ namespace MobilReklameApp.ViewModels
 {
     public class CreateOrderViewModel : INotifyPropertyChanged
     {
-
-        public CreateOrderViewModel()
-        {
-            
-        }
        
         public enum CustomerChosen
         {
