@@ -66,17 +66,17 @@
             </StackPanel>
         </Grid>
 
-        <Grid Column="2" Row="1">
-            <TextBlock Text="Eksisterende Private Kunder" FontSize="40"/>
-            <ListView ItemsSource="{Binding ListAll}">
+        <Grid Column="2" Row="1" Grid.RowSpan="2">
+            <TextBlock Text="Eksisterende Private Kunder" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <ListView ItemsSource="{Binding ListAll}" VerticalAlignment="Bottom" Height="800">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding FirstName}"/>
-                            <TextBlock Text="{Binding LastName}"/>
-                            <TextBlock Text="{Binding Address}"/>
-                            <TextBlock Text="{Binding Phone}"/>
-                            <TextBlock Text="{Binding Email}"/>
+                            <TextBlock Text="{Binding LastName}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding Address}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding Phone}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding Email}" Margin="10,0,0,0"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
