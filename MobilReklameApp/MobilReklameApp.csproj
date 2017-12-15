@@ -90,6 +90,9 @@
     <Compile Include="ViewModels\NoteItemViewModel.cs" />
     <Compile Include="ViewModels\PrivateCustomerItemViewModel.cs" />
     <Compile Include="ViewModels\PublicCustomerItemViewModel.cs" />
+    <Compile Include="XamlPages\CompanyCustomer.xaml.cs">
+      <DependentUpon>CompanyCustomer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XamlPages\CreateANote.xaml.cs">
       <DependentUpon>CreateANote.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,9 @@
     <Compile Include="SubClasses\CompanyCustomer.cs" />
     <Compile Include="SubClasses\PrivateCustomer.cs" />
     <Compile Include="SubClasses\PublicCustomer.cs" />
+    <Compile Include="XamlPages\PublicCustomer.xaml.cs">
+      <DependentUpon>PublicCustomer.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -156,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="XamlPages\CompanyCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="XamlPages\CreateANote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +183,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="XamlPages\OrderOverView1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlPages\PublicCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
