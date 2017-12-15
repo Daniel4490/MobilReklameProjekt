@@ -37,8 +37,23 @@
                         BorderBrush="#66000000">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Erhverv Kunde" TextWrapping="Wrap"
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding CompanyName, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Firmanavn"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding CompanyName, Mode=TwoWay}"
+                         VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Firmanavn" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}"
+                         VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Adresse" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}"
+                         VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Telefon" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Email, Mode=TwoWay}"
+                         VerticalAlignment="Top" Height="50"
+                         Width="570" PlaceholderText="E-Mail" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Att, Mode=TwoWay}"
+                         VerticalAlignment="Top" Height="50"
+                         Width="570" PlaceholderText="Att:"/>
+                
+
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}" VerticalAlignment="Top"
                          Height="50" Width="570" PlaceholderText="Addresse"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}" VerticalAlignment="Top"
@@ -47,6 +62,7 @@
                          Width="570" PlaceholderText="E-Mail"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding CVR, Mode=TwoWay}" VerticalAlignment="Top" Height="50"
                          Width="570" PlaceholderText="CVR"/>
+
             </StackPanel>
             <Button Content="Gem ny kunde" Command="{Binding CreateCompanyCustomerCommand}" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>

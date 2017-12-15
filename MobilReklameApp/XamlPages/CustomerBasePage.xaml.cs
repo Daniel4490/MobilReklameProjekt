@@ -43,9 +43,16 @@ namespace MobilReklameApp.DomainClasses
             this.Frame.Navigate(typeof(OrderOverView1), null);
         }
 
-        public void GoToCreateANote(object sender, RoutedEventArgs o)
+        public void GoToCompanyCustomer(object sender, RoutedEventArgs o)
         {
-            this.Frame.Navigate(typeof(CreateANote), null);
+            this.Frame.Navigate(typeof(CompanyCustomer), null);
         }
+
+        public void GoToPublicCustomer(object sender, RoutedEventArgs o)
+        {
+            this.Frame.Navigate(typeof(PublicCustomer), null);
+        }
+
+        
     }
 }
