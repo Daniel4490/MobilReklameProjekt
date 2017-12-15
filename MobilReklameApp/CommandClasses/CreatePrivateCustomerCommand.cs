@@ -9,7 +9,7 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.CommandClasses
 {
-    class CreatePrivateCustomerCommand : ICommand
+   public class CreatePrivateCustomerCommand : ICommand
     {
         private PrivateCustomer _privateCustomer;
         private PrivateCustomerCatalog _privateCustomerCatalog;

@@ -9,9 +9,9 @@
     xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
 
-    <!--<Page.DataContext >
+    <Page.DataContext >
         <viewModels:CreateOrderViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>

@@ -5,8 +5,11 @@
     xmlns:local="using:MobilReklameApp.DomainClasses"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <viewModels:PrivateCustomerItemViewModel/>
+     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -32,16 +35,18 @@
                         BorderBrush="#66000000">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Privat Kunde" TextWrapping="Wrap"
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50"
-                         Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding FirstName}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Fornavn"  />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding LastName}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Efternavn" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Adresse" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone}" VerticalAlignment="Top" Height="50"
+                         Width="570" PlaceholderText="Telefon" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Email}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="E-mail" />
             </StackPanel>
-            <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
+            <Button Content="Gem ny kunde" Command="{Binding CreatePrivateCustomerCommand}" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
         </Grid>
 

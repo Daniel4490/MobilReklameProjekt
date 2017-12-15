@@ -13,8 +13,8 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.ViewModels
 {
-    class PrivateCustomerItemViewModel : INotifyPropertyChanged
-    {
+   public class PrivateCustomerItemViewModel : INotifyPropertyChanged
+   {
         private PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
         private PrivateCustomer _privateCustomer;
         private CreatePrivateCustomerCommand _createPrivateCustomerCommand;

@@ -11,6 +11,11 @@ namespace MobilReklameApp.ViewModels
 {
     public class CreateOrderViewModel : INotifyPropertyChanged
     {
+
+        public CreateOrderViewModel()
+        {
+            
+        }
        
         public enum CustomerChosen
         {
@@ -31,7 +36,7 @@ namespace MobilReklameApp.ViewModels
             }
         }
         //This makes the combobox able to grey stuff out
-        private void SetTextEnabled(CustomerChosen value)
+        public void SetTextEnabled(CustomerChosen value)
         {
             if (value== CustomerChosen.Privat)
             {
