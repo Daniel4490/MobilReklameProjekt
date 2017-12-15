@@ -11,29 +11,64 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition  Height="8*"/>
-            <RowDefinition  Height="1*"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Kunde" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top" Height="50" Width="570"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="CVR" VerticalAlignment="Top" Height="50" Width="570"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top" Height="50" Width="570"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top" Height="50" Width="570"/>
-            <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50" Width="570"/>
-        </StackPanel>
-        <StackPanel Margin="4,-100,-154,-764" Orientation="Vertical" HorizontalAlignment="Left" Grid.Row="1" BorderBrush="Black" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10" Margin="20,10,0,0" Height="60" Width="130" VerticalAlignment="Top"/>
-            <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Left" Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="20,90,0,0"  />
-            <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Center" Height="60" Width="130"/>
-            <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="130" Margin="20,20,0,0"></Button>
-        </StackPanel>
 
-        <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="386,428,-516,-488" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="3" ></Button>
+        <Grid Column="1" Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Privat kunde" Margin="10,10,10,10"/>
+                <Button Content="Offentilig kunde" Margin="10,10,10,10"/>
+                <Button Content="Erhverv kunde" Margin="10,10,10,10"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Column="1" Row="1">
+            <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" BorderThickness="0,0,0,0"
+                        BorderBrush="#66000000">
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Privat Kunde" TextWrapping="Wrap"
+                           VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50"
+                         Width="570" />
+            </StackPanel>
+            <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
+                    VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Column="0" Row="0">
+            <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10"
+                    Margin="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        </Grid>
+
+        <Grid Column="0" Row="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <Button Content="Opret Ordre" Click="GoToCreateOrderPage" FontSize="18" HorizontalAlignment="Left"
+                        Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="10,10,10,10" />
+                <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Left"
+                        Margin="10,10,10,10" VerticalAlignment="Center" Height="60" Width="130" />
+                <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
+                        VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Column="2" Row="1">
+            <TextBlock Text="Eksisterende Private Kunder" FontSize="40"/>
+            <ListView>
+
+            </ListView>
+        </Grid>
+
 
     </Grid>
 </Page>
+
