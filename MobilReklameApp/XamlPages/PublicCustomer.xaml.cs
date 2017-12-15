@@ -24,7 +24,7 @@ namespace MobilReklameApp.XamlPages
     {
         public PublicCustomer()
         {
-            this.InitializeComponent();
+           // this.InitializeComponent();
         }
     }
 }

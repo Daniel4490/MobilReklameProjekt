@@ -45,7 +45,7 @@
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
         </Grid>
 
-        <Grid Column="0" Row="0">
+        <!--<Grid Column="0" Row="0">
             <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10"
                     Margin="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Center" />
         </Grid>
@@ -59,7 +59,7 @@
                 <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
                         VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
             </StackPanel>
-        </Grid>
+        </Grid>-->
 
         <Grid Column="2" Row="1">
             <TextBlock Text="Eksisterende Offentlige Kunder" FontSize="40"/>

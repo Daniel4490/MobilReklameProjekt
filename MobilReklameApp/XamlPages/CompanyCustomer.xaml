@@ -5,7 +5,12 @@
     xmlns:local="using:MobilReklameApp.DomainClasses"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:CompanyCustomerItemViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -40,12 +45,14 @@
                          Height="50" Width="570" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50"
                          Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50"
+                         Width="570" />
             </StackPanel>
             <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
         </Grid>
 
-        <Grid Column="0" Row="0">
+        <!--<Grid Column="0" Row="0">
             <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10"
                     Margin="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Center" />
         </Grid>
@@ -59,7 +66,7 @@
                 <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
                         VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
             </StackPanel>
-        </Grid>
+        </Grid>-->
 
         <Grid Column="2" Row="1">
             <TextBlock Text="Eksisterende Erhverv Kunder" FontSize="40"/>
