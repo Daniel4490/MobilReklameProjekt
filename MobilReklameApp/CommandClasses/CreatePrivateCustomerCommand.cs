@@ -28,8 +28,6 @@ namespace MobilReklameApp.CommandClasses
         public void Execute(object parameter)
         {
             _privateCustomerCatalog.Add(_privateCustomer);
-
-            _privateCustomer = new PrivateCustomer();
         }
 
         public void RaiseCanExecuteChanged()
