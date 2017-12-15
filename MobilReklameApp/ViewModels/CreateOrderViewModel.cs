@@ -31,7 +31,7 @@ namespace MobilReklameApp.ViewModels
             }
         }
         //This makes the combobox able to grey stuff out
-        private void SetTextEnabled(CustomerChosen value)
+        public void SetTextEnabled(CustomerChosen value)
         {
             if (value== CustomerChosen.Privat)
             {
@@ -74,8 +74,8 @@ namespace MobilReklameApp.ViewModels
         }
         //This makes the combobox able to grey stuff out
 
-        private ObservableCollection<CustomerChosen> _customerChosens;
-        public CreateOrderViewModel(string mål, string antal, string lam, string medie, string aluSand3Mm, string pvc10Mm, string leveringsAntal, string dtpKr, string opTil10, string fragtKr, string prisKr)
+        public ObservableCollection<CustomerChosen> _customerChosens;
+        public CreateOrderViewModel()
         {
             
             //This is to make the ComboBox Work
@@ -108,18 +108,12 @@ namespace MobilReklameApp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private CustomerChosen _customerState;
-        private Dictionary<CustomerChosen, Dictionary<CustomerChosen, bool>> _allCustomerStates;
+        
+        
         private bool _eaNenabled;
         private bool _cvRenabled;
 
-        public Dictionary<CustomerChosen, bool> CustomerStates
-        {
-            get
-            {
-                return _allCustomerStates[_customerState];
-            }
-        }
+        
 
 
 

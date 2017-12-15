@@ -5,13 +5,14 @@
     xmlns:local="using:MobilReklameApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:domainClasses="using:MobilReklameApp.DomainClasses" 
+    xmlns:domainClasses="using:MobilReklameApp.DomainClasses"
     xmlns:viewModels="using:MobilReklameApp.ViewModels"
+
     mc:Ignorable="d">
 
-    <!--<Page.DataContext >
+    <Page.DataContext >
         <viewModels:CreateOrderViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -48,8 +49,8 @@
             <StackPanel Margin="0,0,0,0" Width="570" Height="352" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,0,0,0" BorderBrush="#66000000" Grid.RowSpan="2" Grid.ColumnSpan="2">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Kundeinformation" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Navn/Firmanavn:"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="CVR:"/>
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="EAN:" BorderThickness="2,2,2,0"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="CVR:" IsEnabled="{Binding CVRenabled}"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="EAN:" BorderThickness="2,2,2,0" IsEnabled="{Binding EANenabled}"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Addresse:"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" BorderThickness="2,2,2,0" PlaceholderText="Telefon:"/>
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50" Width="570" PlaceholderText="E-Mail:"/>
@@ -111,7 +112,7 @@
             </Grid>
         </Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Row="1">
-            <ComboBox ItemsSource="{Binding CustomerChosens}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="53" Margin="0,50,0,0" Width="170" BorderThickness="0,2,2,2" FlowDirection="RightToLeft"/>
+            <ComboBox ItemsSource="{Binding CustomerChosens}" SelectedItem="{Binding EnummOrderStatus, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="53" Margin="0,50,0,0" Width="170" BorderThickness="0,2,2,2" FlowDirection="RightToLeft"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="300" Grid.Column="1" Orientation="Vertical">
             <Button Content="Gem Ordre" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Height="60" Margin="0,20,20,0" FontSize="18" HorizontalContentAlignment="Center"/>

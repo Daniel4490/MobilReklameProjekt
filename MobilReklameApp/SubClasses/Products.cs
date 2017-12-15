@@ -26,21 +26,25 @@ namespace MobilReklameApp.SubClasses
         public string Mål
         {
             get { return _mål; }
+            set { _mål = value; }
         }
 
         public string Antal
         {
             get { return _antal; }
+            set { _antal = value; }
         }
 
         public string Lam
         {
             get { return _lam; }
+            set { _lam = value; }
         }
 
         public string Medie
         {
             get { return _medie; }
+            set { _medie = value; }
         }
 
         //public string 751c
@@ -53,36 +57,43 @@ namespace MobilReklameApp.SubClasses
         public string AluSand3mm
         {
             get { return _aluSand3mm; }
+            set { _aluSand3mm = value; }
         }
 
         public string PVC10mm
         {
             get { return _pvc10mm; }
+            set { _pvc10mm = value; }
         }
 
         public string LeveringsAntal
         {
             get { return _leveringsAntal; }
+            set { _leveringsAntal = value; }
         }
 
         public string DTPKr
         {
             get { return _dtpKr; }
+            set { _dtpKr = value; }
         }
 
         public string OpTil10Procent
         {
             get { return _opTil10; }
+            set { _opTil10 = value; }
         }
 
         public string FragtKr
         {
             get { return _fragtKr; }
+            set { _fragtKr = value; }
         }
 
         public string PrisKr
         {
             get { return _prisKr; }
+            set { _prisKr = value; }
         }
         //Produkt___________________________________________________________________________________________________
 
