@@ -35,7 +35,8 @@ namespace MobilReklameApp.ViewModels
 
         public ObservableCollection<PrivateCustomer> ListAll
         {
-            get { return _privateCustomerCatalog.ListAll; }
+            get
+            { return _privateCustomerCatalog.ListAll; }
         }
 
         public string FirstName

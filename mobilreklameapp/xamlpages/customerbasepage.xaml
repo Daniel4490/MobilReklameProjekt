@@ -68,7 +68,7 @@
 
         <Grid Column="2" Row="1" Grid.RowSpan="2">
             <TextBlock Text="Eksisterende Private Kunder" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ListView ItemsSource="{Binding ListAll}" VerticalAlignment="Bottom" Height="800">
+            <ListView ItemsSource="{Binding ListAll}" VerticalAlignment="Top" Height="600" Margin="0,100,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">

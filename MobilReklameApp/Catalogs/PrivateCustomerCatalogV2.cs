@@ -26,24 +26,24 @@ namespace MobilReklameApp.DomainClasses
             _privateCustomer = new PrivateCustomer();
 
             _collection = new ObservableCollection<PrivateCustomer>();
-
-
-
         }
         public ObservableCollection<PrivateCustomer> ListAll
         {
             get
             {
+                _collection.Clear();
                 foreach (PrivateCustomer customer in _customers.Values)
                 {
-                    if (_collection.Contains(customer) == false)
-                    {
-                        _collection.Add(customer);
-                    }
+                    _collection.Add(customer);
                 }
                 return _collection;
             }
         }
+
+       public Dictionary<string, PrivateCustomer> Customers
+       {
+            get { return _customers; }
+       }
 
 
         public void Add(PrivateCustomer customer)
