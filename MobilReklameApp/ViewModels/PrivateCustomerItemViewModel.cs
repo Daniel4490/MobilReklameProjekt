@@ -26,14 +26,6 @@ namespace MobilReklameApp.ViewModels
             _createPrivateCustomerCommand = new CreatePrivateCustomerCommand(_privateCustomer, _privateCustomerCatalog, this);
 
             _customerCollection = new ObservableCollection<PrivateCustomer>();
-
-            foreach (PrivateCustomer customer in _privateCustomerCatalog.ListAll)
-            {
-                if (_customerCollection.Contains(customer) == false)
-                {
-                    _customerCollection.Add(customer);
-                }
-            }
         }
 
        public void Refresh()
