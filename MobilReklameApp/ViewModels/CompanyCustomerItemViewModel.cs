@@ -19,11 +19,14 @@ namespace MobilReklameApp.ViewModels
         private CompanyCustomerCatalog _companyCustomerCatalog;
         private CreateCompanyCustomerCommand _createCompanyCustomerCommand;
 
+
         public CompanyCustomerItemViewModel()
         {
             _companyCustomer = new CompanyCustomer();
             _companyCustomerCatalog = new CompanyCustomerCatalog();
             _createCompanyCustomerCommand = new CreateCompanyCustomerCommand(_companyCustomer, _companyCustomerCatalog);
+
+
         }
 
         public ObservableCollection<CompanyCustomer> ListAll

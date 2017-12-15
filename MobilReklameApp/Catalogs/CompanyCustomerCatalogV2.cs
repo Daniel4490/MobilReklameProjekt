@@ -13,12 +13,13 @@ namespace MobilReklameApp.DomainClasses
     class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
     {
         private Dictionary<string, CompanyCustomer> _customers;
-        private ObservableCollection<CompanyCustomer> _customerCollection;
         private static CompanyCustomerCatalog _singletonInstance;
+        private ObservableCollection<CompanyCustomer> _customerCollection;
 
         public CompanyCustomerCatalog()
         {
             _customers = new Dictionary<string, CompanyCustomer>();
+
             _customerCollection = new ObservableCollection<CompanyCustomer>();
 
             foreach (CompanyCustomer companyCustomer in _customers.Values)
@@ -28,6 +29,7 @@ namespace MobilReklameApp.DomainClasses
                     _customerCollection.Add(companyCustomer);
                 }
             }
+
         }
 
         public ObservableCollection<CompanyCustomer> listAll

@@ -68,8 +68,18 @@
 
         <Grid Column="2" Row="1">
             <TextBlock Text="Eksisterende Private Kunder" FontSize="40"/>
-            <ListView>
-
+            <ListView ItemsSource="{Binding ListAll}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding FirstName}"/>
+                            <TextBlock Text="{Binding LastName}"/>
+                            <TextBlock Text="{Binding Address}"/>
+                            <TextBlock Text="{Binding Phone}"/>
+                            <TextBlock Text="{Binding Email}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </Grid>
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,15 +17,34 @@ namespace MobilReklameApp.DomainClasses
         //private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
         private PrivateCustomer _privateCustomer;
 
+       private ObservableCollection<PrivateCustomer> _collection;
+
+
         private PrivateCustomerCatalog()
         {
             _customers = new Dictionary<string, PrivateCustomer>();
             _privateCustomer = new PrivateCustomer();
+
+            _collection = new ObservableCollection<PrivateCustomer>();
+
+
+
         }
-        public List<PrivateCustomer> ListAll
+        public ObservableCollection<PrivateCustomer> ListAll
         {
-            get { return _customers.Values.ToList(); }
+            get
+            {
+                foreach (PrivateCustomer customer in _customers.Values)
+                {
+                    if (_collection.Contains(customer) == false)
+                    {
+                        _collection.Add(customer);
+                    }
+                }
+                return _collection;
+            }
         }
+
 
         public void Add(PrivateCustomer customer)
         {
