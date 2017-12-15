@@ -18,23 +18,28 @@ namespace MobilReklameApp.ViewModels
         private PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
         private PrivateCustomer _privateCustomer;
         private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
-       private ObservableCollection<PrivateCustomer> _customerCollection;
+        private ObservableCollection<PrivateCustomer> _customerCollection;
 
         public PrivateCustomerItemViewModel()
         {
             _privateCustomer = new PrivateCustomer();
-            _createPrivateCustomerCommand = new CreatePrivateCustomerCommand(_privateCustomer, _privateCustomerCatalog);
+            _createPrivateCustomerCommand = new CreatePrivateCustomerCommand(_privateCustomer, _privateCustomerCatalog, this);
 
             _customerCollection = new ObservableCollection<PrivateCustomer>();
 
-            foreach (PrivateCustomer companyCustomer in _privateCustomerCatalog.ListAll)
+            foreach (PrivateCustomer customer in _privateCustomerCatalog.ListAll)
             {
-                if (_customerCollection.Contains(companyCustomer) == false)
+                if (_customerCollection.Contains(customer) == false)
                 {
-                    _customerCollection.Add(companyCustomer);
+                    _customerCollection.Add(customer);
                 }
             }
         }
+
+       public void Refresh()
+       {
+           OnPropertyChanged(nameof(ListAll));
+       }
 
         public ObservableCollection<PrivateCustomer> ListAll
         {
