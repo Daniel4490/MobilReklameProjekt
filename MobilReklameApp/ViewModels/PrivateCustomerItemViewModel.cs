@@ -13,8 +13,8 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.ViewModels
 {
-    class PrivateCustomerItemViewModel : INotifyPropertyChanged
-    {
+   public class PrivateCustomerItemViewModel : INotifyPropertyChanged
+   {
         private PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
         private PrivateCustomer _privateCustomer;
         private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
@@ -35,7 +35,7 @@ namespace MobilReklameApp.ViewModels
             get { return _privateCustomer.FirstName; }
             set
             {
-                FirstName = value;
+                _privateCustomer.FirstName = value;
                 OnPropertyChanged();
             }
 
@@ -46,7 +46,7 @@ namespace MobilReklameApp.ViewModels
             get { return _privateCustomer.LastName; }
             set
             {
-                LastName = value;
+                _privateCustomer.LastName = value;
                 OnPropertyChanged();
             }
         }
@@ -56,7 +56,7 @@ namespace MobilReklameApp.ViewModels
             get { return _privateCustomer.Address; }
             set
             {
-                Adress = value;
+                _privateCustomer.Address = value;
                 OnPropertyChanged();
             }
         }
@@ -66,7 +66,7 @@ namespace MobilReklameApp.ViewModels
             get { return _privateCustomer.Phone; }
             set
             {
-                Phone = value;
+                _privateCustomer.Phone = value;
                 OnPropertyChanged();
             }
         }
@@ -76,7 +76,7 @@ namespace MobilReklameApp.ViewModels
             get { return _privateCustomer.Email; }
             set
             {
-                Email = value;
+                _privateCustomer.Email = value;
                 OnPropertyChanged();
             }
         }

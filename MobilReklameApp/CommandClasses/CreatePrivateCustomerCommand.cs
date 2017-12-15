@@ -9,7 +9,7 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.CommandClasses
 {
-    class CreatePrivateCustomerCommand : ICommand
+   public class CreatePrivateCustomerCommand : ICommand
     {
         private PrivateCustomer _privateCustomer;
         private PrivateCustomerCatalog _privateCustomerCatalog;
@@ -28,8 +28,6 @@ namespace MobilReklameApp.CommandClasses
         public void Execute(object parameter)
         {
             _privateCustomerCatalog.Add(_privateCustomer);
-
-            _privateCustomer = new PrivateCustomer();
         }
 
         public void RaiseCanExecuteChanged()

@@ -1,5 +1,5 @@
-﻿ <Page
-    x:Class="MobilReklameApp.DomainClasses.CustomerBasePage"
+﻿<Page
+    x:Class="MobilReklameApp.DomainClasses.CompanyCustomerPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MobilReklameApp.DomainClasses"
@@ -7,9 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
+
     <Page.DataContext>
-        <viewModels:PrivateCustomerItemViewModel/>
-     </Page.DataContext>
+        <viewModels:CompanyCustomerItemViewModel/>
+    </Page.DataContext>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -33,24 +35,24 @@
         <Grid Column="1" Row="1">
             <StackPanel Margin="0,0,0,0" Width="570" Height="302" VerticalAlignment="Top" BorderThickness="0,0,0,0"
                         BorderBrush="#66000000">
-                <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Privat Kunde" TextWrapping="Wrap"
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Erhverv Kunde" TextWrapping="Wrap"
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding FirstName, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Fornavn"  />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding LastName, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Efternavn" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Adresse" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}" VerticalAlignment="Top" Height="50"
-                         Width="570" PlaceholderText="Telefon" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="E-mail" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top"
+                         Height="50" Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50"
+                         Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="50"
+                         Width="570" />
             </StackPanel>
-            <Button Content="Gem ny kunde" Command="{Binding CreatePrivateCustomerCommand}" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
+            <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
         </Grid>
 
-        <Grid Column="0" Row="0">
+        <!--<Grid Column="0" Row="0">
             <Button Content="Hovedmenu" Click="BackToMainPageClick" FontSize="18" Padding="10,10,10,10"
                     Margin="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" HorizontalAlignment="Center" />
         </Grid>
@@ -64,10 +66,10 @@
                 <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
                         VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
             </StackPanel>
-        </Grid>
+        </Grid>-->
 
         <Grid Column="2" Row="1">
-            <TextBlock Text="Eksisterende Private Kunder" FontSize="40"/>
+            <TextBlock Text="Eksisterende Erhverv Kunder" FontSize="40"/>
             <ListView>
 
             </ListView>

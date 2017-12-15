@@ -15,6 +15,7 @@ namespace MobilReklameApp.BaseClasses
         private string _address;
         private string _phone;
         private string _email;
+        
 
         protected PeopleBase()
         {
@@ -22,7 +23,9 @@ namespace MobilReklameApp.BaseClasses
             //_lastName = lastName;
             //_address = address;
             //_phone = phone;
-            //_email = email;           
+            //_email = email;    
+
+            ID = _phone;
         }
 
         public string FirstName
@@ -58,6 +61,7 @@ namespace MobilReklameApp.BaseClasses
        public string ID
        {
            get { return _phone; }
+            set { _phone = value; }
        }
 
         //creates a unique ID based on the first two initials in firstname, 

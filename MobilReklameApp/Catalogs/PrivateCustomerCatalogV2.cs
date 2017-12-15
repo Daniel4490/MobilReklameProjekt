@@ -9,8 +9,8 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class PrivateCustomerCatalog : CatalogBase<PrivateCustomer>
-    {
+   public class PrivateCustomerCatalog : CatalogBase<PrivateCustomer>
+   {
         private Dictionary<string, PrivateCustomer> _customers;
         private static PrivateCustomerCatalog _singletonInstance = new PrivateCustomerCatalog();
         //private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
