@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using MobilReklameApp.CommandClasses;
 using MobilReklameApp.DomainClasses;
 using MobilReklameApp.SubClasses;
@@ -86,6 +87,11 @@ namespace MobilReklameApp.ViewModels
                 Email = value;
                 OnPropertyChanged();
             }
+        }
+
+        public ICommand CreateCompanyCustomerCommand
+        {
+            get { return _createCompanyCustomerCommand; }
         }
 
 
