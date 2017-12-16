@@ -14,30 +14,37 @@ namespace MobilReklameApp.DomainClasses
     {
         private Dictionary<string, CompanyCustomer> _customers;
         private static CompanyCustomerCatalog _singletonInstance;
-        private ObservableCollection<CompanyCustomer> _customerCollection;
+        private ObservableCollection<CompanyCustomer> _collection;
 
         public CompanyCustomerCatalog()
         {
             _customers = new Dictionary<string, CompanyCustomer>();
 
-            _customerCollection = new ObservableCollection<CompanyCustomer>();
+            _collection = new ObservableCollection<CompanyCustomer>();
 
-            foreach (CompanyCustomer companyCustomer in _customers.Values)
-            {
-                if (_customerCollection.Contains(companyCustomer) == false)
-                {
-                    _customerCollection.Add(companyCustomer);
-                }
-            }
 
         }
 
-        public ObservableCollection<CompanyCustomer> listAll
+        public ObservableCollection<CompanyCustomer> ListAll
         {
-            get { return _customerCollection; }
+            get
+            {
+                _collection.Clear();
+                foreach (CompanyCustomer customer in _customers.Values)
+                {
+                    _collection.Add(customer);
+                }
+                return _collection;
+            }
         }
 
-        public void Add(CompanyCustomer customer)
+        public Dictionary<string, CompanyCustomer> Customers
+        {
+            get { return _customers; }
+        }
+
+
+        public void AddCustomer(CompanyCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }

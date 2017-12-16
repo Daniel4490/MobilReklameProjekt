@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MobilReklameApp.DomainClasses;
 using MobilReklameApp.SubClasses;
+using MobilReklameApp.ViewModels;
 
 namespace MobilReklameApp.CommandClasses
 {
@@ -13,11 +14,13 @@ namespace MobilReklameApp.CommandClasses
     {
         private CompanyCustomer _companyCustomer;
         private CompanyCustomerCatalog _companyCustomerCatalog;
+        private CompanyCustomerItemViewModel _ivm;
 
-        public CreateCompanyCustomerCommand(CompanyCustomer companyCustomer, CompanyCustomerCatalog companyCustomerCatalog)
+        public CreateCompanyCustomerCommand(CompanyCustomer companyCustomer, CompanyCustomerCatalog companyCustomerCatalog, CompanyCustomerItemViewModel ivm)
         {
             _companyCustomer = companyCustomer;
-            _companyCustomerCatalog = companyCustomerCatalog ;
+            _companyCustomerCatalog = companyCustomerCatalog;
+            _ivm = ivm;
         }
 
         public bool CanExecute(object parameter)
@@ -27,7 +30,12 @@ namespace MobilReklameApp.CommandClasses
 
         public void Execute(object parameter)
         {
-            _companyCustomerCatalog.Add(_companyCustomer);
+            if (_companyCustomerCatalog.Customers.ContainsKey(_companyCustomer.ID) == false)
+            {
+                _companyCustomerCatalog.AddCustomer(_companyCustomer);
+            }
+            _ivm.Refresh();
+            
         }
 
         public void RaiseCanExecuteChanged()

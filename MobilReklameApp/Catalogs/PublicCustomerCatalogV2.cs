@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,22 +14,34 @@ namespace MobilReklameApp.DomainClasses
         
         private Dictionary<string, PublicCustomer> _customers;
         private static PublicCustomerCatalog _singletonInstance;
-
-        
+        private ObservableCollection<PublicCustomer> _collection;
 
         public PublicCustomerCatalog()
         {
             _customers = new Dictionary<string, PublicCustomer>();
+            _collection = new ObservableCollection<PublicCustomer>();
 
         }
 
-        public List<PublicCustomer> listAll
+        public ObservableCollection<PublicCustomer> ListAll
         {
-            get { return _customers.Values.ToList(); }
+            get
+            {
+                _collection.Clear();
+                foreach (PublicCustomer customer in _customers.Values)
+                {
+                    _collection.Add(customer);
+                }
+                return _collection;
+            }
         }
 
+        public Dictionary<string, PublicCustomer> Customers
+        {
+            get { return _customers; }
+        }
 
-        public void Add(PublicCustomer customer)
+        public void AddCustomer(PublicCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }

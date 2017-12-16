@@ -5,7 +5,13 @@
     xmlns:local="using:MobilReklameApp.DomainClasses"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:MobilReklameApp.ViewModels"
     mc:Ignorable="d">
+
+
+    <Page.DataContext>
+        <viewModels:PublicCustomerItemViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -32,14 +38,14 @@
                         BorderBrush="#66000000">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Offentlig Kunde" TextWrapping="Wrap"
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Firmanavn " VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Addresse" VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="Telefon " VerticalAlignment="Top"
-                         Height="50" Width="570" />
-                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="E-Mail " VerticalAlignment="Top" Height="50"
-                         Width="570" />
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding PublicName,Mode=TwoWay}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Navn"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Address, Mode=TwoWay}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Addresse"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}" VerticalAlignment="Top"
+                         Height="50" Width="570" PlaceholderText="Telefon"/>
+                <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding EAN}" VerticalAlignment="Top" Height="50"
+                         Width="570" PlaceholderText="EAN"/>
             </StackPanel>
             <Button Content="Gem ny kunde" FontSize="15" Padding="10,10,10,10" Height="60" Width="130"
                     VerticalAlignment="Center" Margin="10,10,10,10" HorizontalAlignment="Center"/>
@@ -61,13 +67,22 @@
             </StackPanel>
         </Grid>-->
 
-        <Grid Column="2" Row="1">
-            <TextBlock Text="Eksisterende Offentlige Kunder" FontSize="40"/>
-            <ListView>
-
+        <Grid Column="2" Row="1" Grid.RowSpan="2">
+            <TextBlock Text="Eksisterende offentlig Kunder" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <ListView ItemsSource="{Binding ListAll}" VerticalAlignment="Top" Height="600" Margin="0,100,0,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding PublicName}"/>
+                            <TextBlock Text="{Binding Address}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding Phone}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding Email}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding EAN}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </Grid>
-
 
     </Grid>
 </Page>

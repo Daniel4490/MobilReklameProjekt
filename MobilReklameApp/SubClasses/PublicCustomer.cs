@@ -8,7 +8,7 @@ using MobilReklameApp.DomainClasses;
 
 namespace MobilReklameApp.SubClasses
 {
-    class PublicCustomer : PeopleBase
+    public class PublicCustomer : PeopleBase
     {
 
         private string _ean;

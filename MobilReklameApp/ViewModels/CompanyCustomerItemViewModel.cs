@@ -16,7 +16,7 @@ namespace MobilReklameApp.ViewModels
     class CompanyCustomerItemViewModel : INotifyPropertyChanged
     {
         private CompanyCustomer _companyCustomer;
-        private CompanyCustomerCatalog _companyCustomerCatalog;
+        private CompanyCustomerCatalog _companyCustomerCatalog = CompanyCustomerCatalog.SingletonInstance;
         private CreateCompanyCustomerCommand _createCompanyCustomerCommand;
 
 
@@ -24,14 +24,17 @@ namespace MobilReklameApp.ViewModels
         {
             _companyCustomer = new CompanyCustomer();
             _companyCustomerCatalog = new CompanyCustomerCatalog();
-            _createCompanyCustomerCommand = new CreateCompanyCustomerCommand(_companyCustomer, _companyCustomerCatalog);
+            _createCompanyCustomerCommand = new CreateCompanyCustomerCommand(_companyCustomer, _companyCustomerCatalog, this);
+        }
 
-
+        public void Refresh()
+        {
+            OnPropertyChanged(nameof(ListAll));
         }
 
         public ObservableCollection<CompanyCustomer> ListAll
         {
-            get { return _companyCustomerCatalog.listAll; }
+            get { return _companyCustomerCatalog.ListAll; }
         }
 
         public string CompanyName

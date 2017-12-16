@@ -14,17 +14,12 @@ namespace MobilReklameApp.DomainClasses
    {
         private Dictionary<string, PrivateCustomer> _customers;
         private static PrivateCustomerCatalog _singletonInstance = new PrivateCustomerCatalog();
-        //private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
-        private PrivateCustomer _privateCustomer;
-
-       private ObservableCollection<PrivateCustomer> _collection;
+        private ObservableCollection<PrivateCustomer> _collection;
 
 
         private PrivateCustomerCatalog()
         {
             _customers = new Dictionary<string, PrivateCustomer>();
-            _privateCustomer = new PrivateCustomer();
-
             _collection = new ObservableCollection<PrivateCustomer>();
         }
         public ObservableCollection<PrivateCustomer> ListAll
@@ -46,7 +41,7 @@ namespace MobilReklameApp.DomainClasses
        }
 
 
-        public void Add(PrivateCustomer customer)
+        public void AddCustomer(PrivateCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }

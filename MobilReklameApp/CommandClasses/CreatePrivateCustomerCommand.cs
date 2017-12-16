@@ -32,7 +32,7 @@ namespace MobilReklameApp.CommandClasses
         {
             if (_privateCustomerCatalog.Customers.ContainsKey(_privateCustomer.ID) == false)
             {
-                _privateCustomerCatalog.Add(_privateCustomer);
+                _privateCustomerCatalog.AddCustomer(_privateCustomer);
             }
 
             _ivm.Refresh();
