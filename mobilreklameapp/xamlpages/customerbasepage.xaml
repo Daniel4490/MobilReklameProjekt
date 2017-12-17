@@ -24,8 +24,8 @@
 
         <Grid Column="1" Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Offentilig kunde" Margin="10,10,10,10"/>
-                <Button Content="Erhverv kunde" Margin="10,10,10,10"/>
+                <Button Content="Offentilig kunde" Margin="285,10,10,10" Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                <Button Content="Erhverv kunde" Margin="10,10,10,10" Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             </StackPanel>
         </Grid>
 
@@ -35,13 +35,13 @@
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0.4,0" Text="Ny Privat Kunde" TextWrapping="Wrap"
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding FirstName, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Fornavn"  />
+                         Height="50" Width="570" PlaceholderText="Fornavn" BorderThickness="2,2,2,0"  />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding LastName, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Efternavn" />
+                         Height="50" Width="570" PlaceholderText="Efternavn" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}" VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Adresse" />
+                         Height="50" Width="570" PlaceholderText="Adresse" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}" VerticalAlignment="Top" Height="50"
-                         Width="570" PlaceholderText="Telefon" />
+                         Width="570" PlaceholderText="Telefon" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Top"
                          Height="50" Width="570" PlaceholderText="E-mail" />
             </StackPanel>
@@ -60,7 +60,7 @@
                         Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="10,10,10,10" />
                 <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Left"
                         Margin="10,10,10,10" VerticalAlignment="Center" Height="60" Width="130" />
-                <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
+                <Button Content="Påmindelser" Click="CreateANoteClick" FontSize="18" HorizontalAlignment="Left"
                         VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
             </StackPanel>
         </Grid>
@@ -72,10 +72,10 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding FirstName}"/>
-                            <TextBlock Text="{Binding LastName}" Margin="10,0,0,0"/>
-                            <TextBlock Text="{Binding Address}" Margin="10,0,0,0"/>
-                            <TextBlock Text="{Binding Phone}" Margin="10,0,0,0"/>
-                            <TextBlock Text="{Binding Email}" Margin="10,0,0,0"/>
+                            <TextBlock Text="{Binding LastName}" Margin="4,0,0,0"/>
+                            <TextBlock Text="{Binding Address}" Margin="20,0,0,0"/>
+                            <TextBlock Text="{Binding Phone}" Margin="20,0,0,0"/>
+                            <TextBlock Text="{Binding Email}" Margin="20,0,0,0"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
