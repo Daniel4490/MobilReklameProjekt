@@ -11,7 +11,9 @@ namespace MobilReklameApp.ViewModels
 {
     public class CreateOrderViewModel : INotifyPropertyChanged
     {
-       
+        private bool _eANenabled;
+        private bool _cVRenabled;
+
         public enum CustomerChosen
         {
             Privat,
@@ -22,7 +24,7 @@ namespace MobilReklameApp.ViewModels
 
         public CustomerChosen EnummOrderStatus
         {
-            get { return _selectedCustomer; }
+            get => _selectedCustomer;
             set
             {
                 _selectedCustomer = value;
@@ -30,7 +32,7 @@ namespace MobilReklameApp.ViewModels
                 OnPropertyChanged();
             }
         }
-        //This makes the combobox able to grey stuff out
+
         public void SetTextEnabled(CustomerChosen value)
         {
             if (value== CustomerChosen.Privat)
@@ -47,59 +49,34 @@ namespace MobilReklameApp.ViewModels
             {
                 EANenabled = true;
                 CVRenabled = false;
-            }
-            
-            
+            } 
         }
-
-        
+     
         public bool EANenabled
         {
-            get { return _eaNenabled; }
-            set
-            {
-                _eaNenabled = value;
-                OnPropertyChanged();
-            }
+            get => _eANenabled;
+            set { _eANenabled = value; OnPropertyChanged(); }
+
         }
 
         public bool CVRenabled
         {
-            get { return _cvRenabled; }
-            set
-            {
-                _cvRenabled = value;
-                OnPropertyChanged();
-            }
+            get => _cVRenabled;
+            set { _cVRenabled = value; OnPropertyChanged(); }
         }
-        //This makes the combobox able to grey stuff out
 
         public ObservableCollection<CustomerChosen> _customerChosens;
         public CreateOrderViewModel()
         {
-            
-            //This is to make the ComboBox Work
-            _customerChosens = new ObservableCollection<CustomerChosen>();
-
-            _customerChosens.Add(CustomerChosen.Privat);
-            _customerChosens.Add(CustomerChosen.Erhverv);
-            _customerChosens.Add(CustomerChosen.Offentlig);
-            //This is to make the ComboBox Work
-
-
-            _eaNenabled = true;
-            _cvRenabled = false;
-
+            _customerChosens = new ObservableCollection<CustomerChosen>
+            {
+                CustomerChosen.Privat,
+                CustomerChosen.Erhverv,
+                CustomerChosen.Offentlig
+            };
         }
 
-        //This is to make the ComboBox Work
-        public ObservableCollection<CustomerChosen> CustomerChosens
-        {
-            get { return _customerChosens; }
-
-        }
-        //This is to make the ComboBox Work
-
+        public ObservableCollection<CustomerChosen> CustomerChosens => _customerChosens;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -107,27 +84,5 @@ namespace MobilReklameApp.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        
-        
-        private bool _eaNenabled;
-        private bool _cvRenabled;
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

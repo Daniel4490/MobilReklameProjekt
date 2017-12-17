@@ -22,75 +22,41 @@ namespace MobilReklameApp.DomainClasses
             Leveret
         }
 
-        
-        
-        private string _orderDescription;
-        private string _orderDate = DateTime.Now.ToString("D"); //.ToLongDateString
-        private string _orderDeliveryDate = DateTime.Now.AddDays(365).ToString("D"); //.ToLongDateString
+        private readonly string _orderDate = DateTime.Now.ToString("D");
+        private readonly string _orderDeliveryDate = DateTime.Now.AddDays(365).ToString("D");
         private static int _orderNumber = 1000;
-        private string _productType;
         private OrderStatus _orderStatus;
-        private string _productMaterial;
-
-        
-
-        
 
         public Order(OrderStatus orderStatus, string orderDescription, string produktType, string produktMateriale)
         {
-            _orderDescription = orderDescription;
-            _productType = produktType;
+            OrderDescriptions = orderDescription;
+            ProductType = produktType;
             _orderStatus = orderStatus;
-            _productMaterial = produktMateriale;
+            ProductMaterial = produktMateriale;
             OrderNumber = _orderNumber++;
-
         }
 
+        public string OrderDescriptions { get; set; }
 
+        public string OrderDate => _orderDate;
 
-        
-        public string OrderDescriptions
-        {
-            get { return _orderDescription; }
-            set { _orderDescription = value; }
-        }
-
-        public string OrderDate
-        {
-            get { return _orderDate ; }
-
-        }
-
-
-        public string OrderDeliveryDate
-        {
-            get { return _orderDeliveryDate; }
-
-        }
+        public string OrderDeliveryDate => _orderDeliveryDate;
 
         public int OrderNumber { get; set; }
 
         public OrderStatus EnummOrderStatus
         {
-            get { return _orderStatus; }
+            get => _orderStatus;
             set
             {
                 _orderStatus = value;
                 OnPropertyChanged();
             }
-        }
-        
+        }    
 
-        public string ProductType
-        {
-            get { return _productType; }
-        }
+        public string ProductType { get; }
 
-        public string ProductMaterial
-        {
-            get { return _productMaterial; }
-        }
-
+        public string ProductMaterial { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

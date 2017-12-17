@@ -10,15 +10,7 @@ namespace MobilReklameApp.SubClasses
 {
     public class PrivateCustomer : PeopleBase
     {
-        public PrivateCustomer()
-            
-        {
-            
-        }
-
-        
-
-        public override string ToString()
+         public override string ToString()
         {
             return $"{FirstName} {LastName} {Address} {Phone} {Email}";
         }

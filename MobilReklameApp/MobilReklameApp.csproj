@@ -75,9 +75,12 @@
     <Compile Include="BaseClasses\CatalogBase.cs" />
     <Compile Include="BaseClasses\PeopleBase.cs" />
     <Compile Include="Catalogs\CompanyCustomerCatalogV2.cs" />
+    <Compile Include="Catalogs\ProductCatalog.cs" />
     <Compile Include="CommandClasses\CreateCompanyCustomerCommand.cs" />
     <Compile Include="CommandClasses\CreatePrivateCustomerCommand.cs" />
+    <Compile Include="CommandClasses\CreateProductsCommand.cs" />
     <Compile Include="CommandClasses\CreatePublicCustomerCommand.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="SubClasses\Products.cs" />
     <Compile Include="ViewModels\CompanyCustomerItemViewModel.cs" />
     <Compile Include="ViewModels\CreateOrderViewModel.cs" />
@@ -196,7 +199,11 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <!--<ItemGroup>
+    <Reference Include="Microsoft.Build.Tasks.v4.0">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.Build.Tasks.v4.0.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

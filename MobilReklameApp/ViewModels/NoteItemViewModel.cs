@@ -10,11 +10,11 @@ using System.Windows.Input;
 
 namespace MobilReklameApp.SubClasses
 {
-    class NoteItemViewModel : INotifyPropertyChanged
+    internal class NoteItemViewModel : INotifyPropertyChanged
     {
-        private NoteCatalog _noteCatalog = NoteCatalog.SingletonInstance;
-        private Note _note;
-        private CreateNoteCommand _createNoteCommand;
+        private readonly NoteCatalog _noteCatalog = NoteCatalog.SingletonInstance;
+        private readonly Note _note;
+        private readonly CreateNoteCommand _createNoteCommand;
 
         public NoteItemViewModel()
         {
@@ -22,14 +22,11 @@ namespace MobilReklameApp.SubClasses
             _createNoteCommand = new CreateNoteCommand(_note, _noteCatalog);
         }
 
-        public ObservableCollection<string> ListAll
-        {
-            get { return _noteCatalog.ListAll; }
-        }
+        public ObservableCollection<string> ListAll => _noteCatalog.ListAll;
 
         public string NoteText
         {
-            get { return _note.GetNote; }
+            get => _note.GetNote;
             set
             {
                 _note.GetNote = value;
@@ -38,10 +35,7 @@ namespace MobilReklameApp.SubClasses
             }
         }
 
-        public ICommand CreateNoteCommand
-        {
-            get { return _createNoteCommand; }
-        }
+        public ICommand CreateNoteCommand => _createNoteCommand;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

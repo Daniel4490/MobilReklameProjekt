@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,67 +13,55 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.ViewModels
 {
-    class PublicCustomerItemViewModel : INotifyPropertyChanged
+    public class PublicCustomerItemViewModel : INotifyPropertyChanged
     {
-        private PublicCustomerCatalog _publicCustomerCatalog = PublicCustomerCatalog.SingletonInstance;
-        private PublicCustomer _publicCustomer;
-        private CreatePublicCustomerCommand _createPublicCustomerCommand;
+        private readonly PublicCustomerCatalog _publicCustomerCatalog = PublicCustomerCatalog.SingletonInstance;
+        private readonly PublicCustomer _publicCustomer;
+        private readonly CreatePublicCustomerCommand _createPublicCustomerCommand;
 
         public PublicCustomerItemViewModel()
         {
             _publicCustomer = new PublicCustomer();
-            _createPublicCustomerCommand = new CreatePublicCustomerCommand(_publicCustomer, _publicCustomerCatalog);
+            _createPublicCustomerCommand = new CreatePublicCustomerCommand(
+                _publicCustomer, 
+                _publicCustomerCatalog, 
+                this);
         }
 
-        public List<PublicCustomer> ListAll
+        public void Refresh()
         {
-            get { return _publicCustomerCatalog.listAll; }
+            OnPropertyChanged(nameof(ListAll));
         }
+
+        public ObservableCollection<PublicCustomer> ListAll => _publicCustomerCatalog.ListAll;
 
         public string PublicName
         {
-            get { return _publicCustomer.PublicName; }
-            set
-            {
-                PublicName = value;
-                OnPropertyChanged();
-            }
+            get => _publicCustomer.PublicName;
+            set { _publicCustomer.PublicName = value; OnPropertyChanged(); }
         }
 
-        public string Adress
+        public string Address
         {
-            get { return _publicCustomer.Address; }
-            set
-            {
-                Adress = value;
-                OnPropertyChanged();
-            }
+            get => _publicCustomer.Address;
+            set { _publicCustomer.Address = value; OnPropertyChanged(); }
         }
+
+        public string EAN => EAN;
 
         public string Phone
         {
-            get { return _publicCustomer.Phone; }
-            set
-            {
-                Phone = value;
-                OnPropertyChanged();
-            }
+            get => _publicCustomer.Phone;
+            set { _publicCustomer.Phone = value; OnPropertyChanged(); }
         }
 
         public string Email
         {
-            get { return _publicCustomer.Email; }
-            set
-            {
-                Email = value;
-                OnPropertyChanged();
-            }
+            get => _publicCustomer.Email;
+            set { _publicCustomer.Email = value; OnPropertyChanged(); }
         }
 
-        public ICommand CreatePublicCustomerCommand
-        {
-            get { return _createPublicCustomerCommand; }
-        }
+        public ICommand CreatePublicCustomerCommand => _createPublicCustomerCommand;
 
 
         public event PropertyChangedEventHandler PropertyChanged;

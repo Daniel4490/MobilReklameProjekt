@@ -10,38 +10,38 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
+    internal class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
     {
-        private Dictionary<string, CompanyCustomer> _customers;
-        private ObservableCollection<CompanyCustomer> _customerCollection;
+        private readonly Dictionary<string, CompanyCustomer> _customers;
         private static CompanyCustomerCatalog _singletonInstance;
+        private readonly ObservableCollection<CompanyCustomer> _collection;
 
         public CompanyCustomerCatalog()
         {
             _customers = new Dictionary<string, CompanyCustomer>();
-            _customerCollection = new ObservableCollection<CompanyCustomer>();
+            _collection = new ObservableCollection<CompanyCustomer>();
+        }
 
-            foreach (CompanyCustomer companyCustomer in _customers.Values)
+        public ObservableCollection<CompanyCustomer> ListAll
+        {
+            get
             {
-                if (_customerCollection.Contains(companyCustomer) == false)
+                _collection.Clear();
+                foreach (CompanyCustomer customer in _customers.Values)
                 {
-                    _customerCollection.Add(companyCustomer);
+                    _collection.Add(customer);
                 }
+                return _collection;
             }
         }
 
-        public ObservableCollection<CompanyCustomer> listAll
-        {
-            get { return _customerCollection; }
-        }
+        public Dictionary<string, CompanyCustomer> Customers => _customers;
 
-        public void Add(CompanyCustomer customer)
+        public void AddCustomer(CompanyCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }
 
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
         public static CompanyCustomerCatalog SingletonInstance
         {
             get

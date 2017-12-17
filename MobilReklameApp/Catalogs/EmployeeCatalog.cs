@@ -7,7 +7,7 @@ using MobilReklameApp.BaseClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class EmployeeCatalog : CatalogBase<Employee>
+    internal class EmployeeCatalog : CatalogBase<Employee>
     {
         private Dictionary<int, Employee> _employees;
         private static EmployeeCatalog _singletonInstance;
@@ -17,9 +17,7 @@ namespace MobilReklameApp.DomainClasses
             _employees = new Dictionary<int, Employee>();
             
         }
-
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
+        
         public static EmployeeCatalog SingletonInstance
         {
             get

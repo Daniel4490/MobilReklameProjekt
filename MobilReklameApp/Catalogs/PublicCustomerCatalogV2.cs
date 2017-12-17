@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,33 +9,40 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class PublicCustomerCatalog : CatalogBase<PublicCustomer>
+    internal class PublicCustomerCatalog : CatalogBase<PublicCustomer>
     {
         
-        private Dictionary<string, PublicCustomer> _customers;
+        private readonly Dictionary<string, PublicCustomer> _customers;
         private static PublicCustomerCatalog _singletonInstance;
-
-        
+        private readonly ObservableCollection<PublicCustomer> _collection;
 
         public PublicCustomerCatalog()
         {
             _customers = new Dictionary<string, PublicCustomer>();
+            _collection = new ObservableCollection<PublicCustomer>();
 
         }
 
-        public List<PublicCustomer> listAll
+        public ObservableCollection<PublicCustomer> ListAll
         {
-            get { return _customers.Values.ToList(); }
+            get
+            {
+                _collection.Clear();
+                foreach (PublicCustomer customer in _customers.Values)
+                {
+                    _collection.Add(customer);
+                }
+                return _collection;
+            }
         }
 
+        public Dictionary<string, PublicCustomer> Customers => _customers;
 
-        public void Add(PublicCustomer customer)
+        public void AddCustomer(PublicCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }
 
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
         public static PublicCustomerCatalog SingletonInstance
         {
             get

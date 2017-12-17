@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MobilReklameApp.DomainClasses;
 using MobilReklameApp.SubClasses;
+using MobilReklameApp.ViewModels;
 
 namespace MobilReklameApp.CommandClasses
 {
    public class CreatePrivateCustomerCommand : ICommand
     {
-        private PrivateCustomer _privateCustomer;
-        private PrivateCustomerCatalog _privateCustomerCatalog;
+        private readonly PrivateCustomer _privateCustomer;
+        private readonly PrivateCustomerCatalog _privateCustomerCatalog;
+        private readonly PrivateCustomerItemViewModel _ivm;
 
-        public CreatePrivateCustomerCommand(PrivateCustomer privateCustomer, PrivateCustomerCatalog privateCustomerCatalog)
+        public CreatePrivateCustomerCommand(PrivateCustomer privateCustomer, PrivateCustomerCatalog privateCustomerCatalog, PrivateCustomerItemViewModel ivm)
         {
             _privateCustomer = privateCustomer;
             _privateCustomerCatalog = privateCustomerCatalog;
+            _ivm = ivm;
         }
 
         public bool CanExecute(object parameter)
@@ -27,7 +30,11 @@ namespace MobilReklameApp.CommandClasses
 
         public void Execute(object parameter)
         {
-            _privateCustomerCatalog.Add(_privateCustomer);
+            if (_privateCustomerCatalog.Customers.ContainsKey(_privateCustomer.ID) == false)
+            {
+                _privateCustomerCatalog.AddCustomer(_privateCustomer);
+            }
+            _ivm.Refresh();
         }
 
         public void RaiseCanExecuteChanged()
