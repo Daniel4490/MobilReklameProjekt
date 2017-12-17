@@ -60,7 +60,7 @@
                         Padding="10,10,10,10" Height="60" Width="130" VerticalAlignment="Top" Margin="10,10,10,10" />
                 <Button Content="Ordreoversigt" Click="GoToOrderOverView" FontSize="18" HorizontalAlignment="Left"
                         Margin="10,10,10,10" VerticalAlignment="Center" Height="60" Width="130" />
-                <Button Content="Påmindelser" Click="GoToCreateANote" FontSize="18" HorizontalAlignment="Left"
+                <Button Content="Påmindelser" Click="CreateANoteClick" FontSize="18" HorizontalAlignment="Left"
                         VerticalAlignment="Center" Height="60" Width="130" Margin="10,10,10,10" />
             </StackPanel>
         </Grid>

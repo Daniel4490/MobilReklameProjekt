@@ -53,6 +53,10 @@ namespace MobilReklameApp.DomainClasses
             this.Frame.Navigate(typeof(PublicCustomer), null);
         }
 
-        
+
+        public void CreateANoteClick(object sender, RoutedEventArgs o)
+        {
+            this.Frame.Navigate(typeof(CreateANote), null);
+        }
     }
 }
