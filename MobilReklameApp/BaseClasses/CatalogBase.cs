@@ -16,11 +16,5 @@ namespace MobilReklameApp.BaseClasses
         }
 
         public List<TDomainClass> All => _items.Values.ToList();
-
-        public void Add(TDomainClass obj)
-        {
-           //_items.Add(obj.Id, obj);
-        }
-
     }
 }
