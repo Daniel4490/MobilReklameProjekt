@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace MobilReklameApp.SubClasses
 {
-    class Products : INotifyPropertyChanged
+    internal class Products : INotifyPropertyChanged
     {
-        //Produkt___________________________________________________________________________________________________
         private string _mål;
         private string _antal;
         private string _lam;
@@ -28,125 +27,76 @@ namespace MobilReklameApp.SubClasses
 
         public string Mål
         {
-            get { return _mål; }
-            set
-            {
-                _mål = value;
-                OnPropertyChanged();
-            }
+            get => _mål;
+            set { _mål = value; OnPropertyChanged(); }
         }
 
         public string Antal
         {
-            get { return _antal; }
-            set
-            {
-                _antal = value;
-                OnPropertyChanged();
-            }
+            get => _antal;
+            set { _antal = value; OnPropertyChanged(); }
         }
 
         public string Lam
         {
-            get { return _lam; }
-            set
-            {
-                _lam = value;
-                OnPropertyChanged();
-            }
+            get => _lam;
+            set { _lam = value; OnPropertyChanged(); }
         }
 
         public string Medie
         {
-            get { return _medie; }
-            set
-            {
-                _medie = value;
-                OnPropertyChanged();
-            }
+            get => _medie;
+            set { _medie = value; OnPropertyChanged(); }
         }
 
         public string Syv51c
         {
-            get { return _syv51c; }
-            set
-            {
-                _syv51c = value;
-                OnPropertyChanged();
-            }
+            get => _syv51c;
+            set { _syv51c = value; OnPropertyChanged(); }
         }
 
         public string AluSand3mm
         {
-            get { return _aluSand3mm; }
-            set
-            {
-                _aluSand3mm = value;
-                OnPropertyChanged();
-            }
+            get => _aluSand3mm;
+            set { _aluSand3mm = value; OnPropertyChanged(); }
         }
 
         public string PVC10mm
         {
-            get { return _pvc10mm; }
-            set
-            {
-                _pvc10mm = value;
-                OnPropertyChanged();
-            }
+            get => _pvc10mm;
+            set { _pvc10mm = value; OnPropertyChanged(); }
         }
 
         public string LeveringsAntal
         {
-            get { return _leveringsAntal; }
-            set
-            {
-                _leveringsAntal = value;
-                OnPropertyChanged();
-            }
+            get => _leveringsAntal;
+            set { _leveringsAntal = value; OnPropertyChanged(); }
         }
 
         public string DTPKr
         {
-            get { return _dtpKr; }
-            set
-            {
-                _dtpKr = value;
-                OnPropertyChanged();
-            }
+            get => _dtpKr;
+            set { _dtpKr = value; OnPropertyChanged(); }
         }
 
         public string OpTil10Procent
         {
-            get { return _opTil10; }
-            set
-            {
-                _opTil10 = value;
-                OnPropertyChanged();
-            }
+            get => _opTil10;
+            set { _opTil10 = value; OnPropertyChanged(); }
         }
 
         public string FragtKr
         {
-            get { return _fragtKr; }
-            set
-            {
-                _fragtKr = value;
-                OnPropertyChanged();
-            }
+            get => _fragtKr;
+            set { _fragtKr = value; OnPropertyChanged(); }
         }
 
         public string PrisKr
         {
-            get { return _prisKr; }
-            set
-            {
-                _prisKr = value;
-                OnPropertyChanged();
-            }
+            get => _prisKr;
+            set { _prisKr = value; OnPropertyChanged(); }
         }
-        //Produkt___________________________________________________________________________________________________
-
+        
         public Products(string mål, string antal, string lam, string medie, string syv51c,  string aluSand3Mm, string pvc10Mm,
             string leveringsAntal, string dtpKr, string opTil10, string fragtKr, string prisKr)
         {

@@ -9,33 +9,13 @@ using MobilReklameApp.DomainClasses;
 
 namespace MobilReklameApp.SubClasses
 {
-    class CompanyCustomer : PeopleBase
+    internal class CompanyCustomer : PeopleBase
     {
-        private string _cvr;
-        private string _companyName;
+        public string CVR { get; set; }
 
-        public CompanyCustomer()
+        public string CompanyName { get; set; }
 
-        {
-
-        }
-
-        public string CVR
-        {
-            get { return _cvr; }
-            set { _cvr = value; }
-        }
-
-        public string CompanyName
-        {
-            get { return _companyName; }
-            set { _companyName = value; }
-        }
-
-        public string Att
-        {
-            get { return $"{FirstName} {LastName}"; }
-        }
+        public string Att => $"{FirstName} {LastName}";
 
         public override string ToString()
         {

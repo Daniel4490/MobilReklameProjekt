@@ -13,12 +13,12 @@ namespace MobilReklameApp.DomainClasses
 {
     public class OrderItemViewModel : INotifyPropertyChanged
     {
-        private OrderCatalog _orderCatalog = OrderCatalog.SingletonInstance;
-        private NoteCatalog _noteCatalog = NoteCatalog.SingletonInstance;
+        private readonly OrderCatalog _orderCatalog = OrderCatalog.SingletonInstance;
+        private readonly NoteCatalog _noteCatalog = NoteCatalog.SingletonInstance;
 
-        private ObservableCollection<Order> _orders = new ObservableCollection<Order>();
-        private ObservableCollection<Order.OrderStatus> _orderStatuses = new ObservableCollection<Order.OrderStatus>();
-        private ObservableCollection<string> _notes = new ObservableCollection<string>();
+        private readonly ObservableCollection<Order> _orders = new ObservableCollection<Order>();
+        private readonly ObservableCollection<Order.OrderStatus> _orderStatuses = new ObservableCollection<Order.OrderStatus>();
+        private readonly ObservableCollection<string> _notes = new ObservableCollection<string>();
 
         private Order _selectedOrder;
         private Order.OrderStatus _selectedStatus;
@@ -45,24 +45,15 @@ namespace MobilReklameApp.DomainClasses
             _selectedOrder = _orders[0];
         }
 
-        public ObservableCollection<Order> Orders
-        {
-            get { return _orders; }
-        }
+        public ObservableCollection<Order> Orders => _orders;
 
-        public ObservableCollection<string> Notes
-        {
-            get { return _notes; }
-        }
+        public ObservableCollection<string> Notes => _notes;
 
-        public ObservableCollection<Order.OrderStatus> OrderStatuses
-        {
-            get { return _orderStatuses; }
-        }
+        public ObservableCollection<Order.OrderStatus> OrderStatuses => _orderStatuses;
 
         public Order.OrderStatus SelectedStatus
         {
-            get { return _selectedStatus; }
+            get => _selectedStatus;
             set
             {
                 _selectedStatus = value;
@@ -73,12 +64,9 @@ namespace MobilReklameApp.DomainClasses
 
         public Order SelectedOrder
         {
-            get { return _selectedOrder; }
-            set
-            {
-                _selectedOrder = value;
-                OnPropertyChanged();
-            }
+            get => _selectedOrder;
+            set { _selectedOrder = value; OnPropertyChanged(); }
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

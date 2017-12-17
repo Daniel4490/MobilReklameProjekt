@@ -14,7 +14,7 @@ namespace MobilReklameApp.SubClasses
     {
         private static NoteCatalog _singletonInstance = new NoteCatalog();
         private Note _note;
-        private ObservableCollection<string> _notes;
+        private readonly ObservableCollection<string> _notes;
        
 
         private NoteCatalog()
@@ -28,19 +28,17 @@ namespace MobilReklameApp.SubClasses
             _notes.Add(note);
         }
 
-        public ObservableCollection<string> ListAll
-        {
-            get { return _notes; }
-        }
+        public ObservableCollection<string> ListAll => _notes;
 
 
         public static NoteCatalog SingletonInstance
         {
             get
             {
+                if (_singletonInstance != null) return _singletonInstance;
+                _singletonInstance = new NoteCatalog();
                 return _singletonInstance;
             }
         }
-
     }
 }

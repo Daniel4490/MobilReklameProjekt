@@ -9,8 +9,8 @@ namespace MobilReklameApp.SubClasses
 {
     public class CreateNoteCommand : ICommand
     {
-        private Note _note;
-        private NoteCatalog _catalog;
+        private readonly Note _note;
+        private readonly NoteCatalog _catalog;
 
         public CreateNoteCommand(Note note, NoteCatalog catalog)
         {

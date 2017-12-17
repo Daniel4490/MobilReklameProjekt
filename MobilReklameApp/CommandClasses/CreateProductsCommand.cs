@@ -8,13 +8,11 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.CommandClasses
 {
-    class CreateProductsCommand : ICommand
+    internal class CreateProductsCommand : ICommand
     {
         private ICommand _commandImplementation;
 
         private Products _products;
-
-
 
         public bool CanExecute(object parameter)
         {

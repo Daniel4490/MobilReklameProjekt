@@ -10,13 +10,16 @@ using MobilReklameApp.ViewModels;
 
 namespace MobilReklameApp.CommandClasses
 {
-    class CreateCompanyCustomerCommand : ICommand
+    internal class CreateCompanyCustomerCommand : ICommand
     {
-        private CompanyCustomer _companyCustomer;
-        private CompanyCustomerCatalog _companyCustomerCatalog;
-        private CompanyCustomerItemViewModel _ivm;
+        private readonly CompanyCustomer _companyCustomer;
+        private readonly CompanyCustomerCatalog _companyCustomerCatalog;
+        private readonly CompanyCustomerItemViewModel _ivm;
 
-        public CreateCompanyCustomerCommand(CompanyCustomer companyCustomer, CompanyCustomerCatalog companyCustomerCatalog, CompanyCustomerItemViewModel ivm)
+        public CreateCompanyCustomerCommand(
+            CompanyCustomer companyCustomer, 
+            CompanyCustomerCatalog companyCustomerCatalog, 
+            CompanyCustomerItemViewModel ivm)
         {
             _companyCustomer = companyCustomer;
             _companyCustomerCatalog = companyCustomerCatalog;
@@ -34,8 +37,7 @@ namespace MobilReklameApp.CommandClasses
             {
                 _companyCustomerCatalog.AddCustomer(_companyCustomer);
             }
-            _ivm.Refresh();
-            
+            _ivm.Refresh();            
         }
 
         public void RaiseCanExecuteChanged()
@@ -44,6 +46,5 @@ namespace MobilReklameApp.CommandClasses
         }
 
         public event EventHandler CanExecuteChanged;
-
     }
 }

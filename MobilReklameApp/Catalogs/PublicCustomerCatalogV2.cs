@@ -9,12 +9,12 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class PublicCustomerCatalog : CatalogBase<PublicCustomer>
+    internal class PublicCustomerCatalog : CatalogBase<PublicCustomer>
     {
         
-        private Dictionary<string, PublicCustomer> _customers;
+        private readonly Dictionary<string, PublicCustomer> _customers;
         private static PublicCustomerCatalog _singletonInstance;
-        private ObservableCollection<PublicCustomer> _collection;
+        private readonly ObservableCollection<PublicCustomer> _collection;
 
         public PublicCustomerCatalog()
         {
@@ -36,18 +36,13 @@ namespace MobilReklameApp.DomainClasses
             }
         }
 
-        public Dictionary<string, PublicCustomer> Customers
-        {
-            get { return _customers; }
-        }
+        public Dictionary<string, PublicCustomer> Customers => _customers;
 
         public void AddCustomer(PublicCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }
 
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
         public static PublicCustomerCatalog SingletonInstance
         {
             get

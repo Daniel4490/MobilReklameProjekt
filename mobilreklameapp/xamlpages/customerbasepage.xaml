@@ -24,7 +24,6 @@
 
         <Grid Column="1" Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Privat kunde" Margin="10,10,10,10"/>
                 <Button Content="Offentilig kunde" Margin="10,10,10,10"/>
                 <Button Content="Erhverv kunde" Margin="10,10,10,10"/>
             </StackPanel>

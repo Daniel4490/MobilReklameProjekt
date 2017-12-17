@@ -10,19 +10,16 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.DomainClasses
 {
-    class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
+    internal class CompanyCustomerCatalog : CatalogBase<CompanyCustomer>
     {
-        private Dictionary<string, CompanyCustomer> _customers;
+        private readonly Dictionary<string, CompanyCustomer> _customers;
         private static CompanyCustomerCatalog _singletonInstance;
-        private ObservableCollection<CompanyCustomer> _collection;
+        private readonly ObservableCollection<CompanyCustomer> _collection;
 
         public CompanyCustomerCatalog()
         {
             _customers = new Dictionary<string, CompanyCustomer>();
-
             _collection = new ObservableCollection<CompanyCustomer>();
-
-
         }
 
         public ObservableCollection<CompanyCustomer> ListAll
@@ -38,19 +35,13 @@ namespace MobilReklameApp.DomainClasses
             }
         }
 
-        public Dictionary<string, CompanyCustomer> Customers
-        {
-            get { return _customers; }
-        }
-
+        public Dictionary<string, CompanyCustomer> Customers => _customers;
 
         public void AddCustomer(CompanyCustomer customer)
         {
             _customers.Add(customer.ID, customer);
         }
 
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
         public static CompanyCustomerCatalog SingletonInstance
         {
             get

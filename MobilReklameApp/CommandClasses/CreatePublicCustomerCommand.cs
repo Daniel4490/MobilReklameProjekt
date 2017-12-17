@@ -10,11 +10,11 @@ using MobilReklameApp.ViewModels;
 
 namespace MobilReklameApp.CommandClasses
 {
-    class CreatePublicCustomerCommand : ICommand
+    internal class CreatePublicCustomerCommand : ICommand
     {
-        private PublicCustomer _publicCustomer;
-        private PublicCustomerCatalog _publicCustomerCatalog;
-        private PublicCustomerItemViewModel _ivm;
+        private readonly PublicCustomer _publicCustomer;
+        private readonly PublicCustomerCatalog _publicCustomerCatalog;
+        private readonly PublicCustomerItemViewModel _ivm;
 
         public CreatePublicCustomerCommand(PublicCustomer publicCustomer, PublicCustomerCatalog publicCustomerCatalog, PublicCustomerItemViewModel ivm)
         {

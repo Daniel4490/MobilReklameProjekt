@@ -13,11 +13,11 @@ using MobilReklameApp.SubClasses;
 
 namespace MobilReklameApp.ViewModels
 {
-    class CompanyCustomerItemViewModel : INotifyPropertyChanged
+    internal class CompanyCustomerItemViewModel : INotifyPropertyChanged
     {
-        private CompanyCustomer _companyCustomer;
-        private CompanyCustomerCatalog _companyCustomerCatalog = CompanyCustomerCatalog.SingletonInstance;
-        private CreateCompanyCustomerCommand _createCompanyCustomerCommand;
+        private readonly CompanyCustomer _companyCustomer;
+        private readonly CompanyCustomerCatalog _companyCustomerCatalog = CompanyCustomerCatalog.SingletonInstance;
+        private readonly CreateCompanyCustomerCommand _createCompanyCustomerCommand;
 
 
         public CompanyCustomerItemViewModel()
@@ -32,75 +32,42 @@ namespace MobilReklameApp.ViewModels
             OnPropertyChanged(nameof(ListAll));
         }
 
-        public ObservableCollection<CompanyCustomer> ListAll
-        {
-            get { return _companyCustomerCatalog.ListAll; }
-        }
+        public ObservableCollection<CompanyCustomer> ListAll => _companyCustomerCatalog.ListAll;
 
         public string CompanyName
         {
-            get { return _companyCustomer.CompanyName; }
-            set
-            {
-                CompanyName = CompanyName = value;
-                OnPropertyChanged();
-            }
+            get => _companyCustomer.CompanyName;
+            set { _companyCustomer.CompanyName = value; OnPropertyChanged(); }
+
         }
 
         public string CVR
         {
-            get { return _companyCustomer.CVR; }
-            set
-            {
-                CVR = value;
-                OnPropertyChanged();
-            }
+            get => _companyCustomer.CVR;
+            set { _companyCustomer.CVR = value; OnPropertyChanged(); }
         }
 
-        public string Att
-        {
-            get { return _companyCustomer.Att; }
-            set
-            {
-                Att = value;
-                OnPropertyChanged();
-            }
-        }
+        public string Att => _companyCustomer.Att;
 
         public string Adress
         {
-            get { return _companyCustomer.Address; }
-            set
-            {
-                Adress = value;
-                OnPropertyChanged();
-            }
+            get => _companyCustomer.Address;
+            set { _companyCustomer.Address = value; OnPropertyChanged(); }
         }
 
         public string Phone
         {
-            get { return _companyCustomer.Phone; }
-            set
-            {
-                Phone = value;
-                OnPropertyChanged();
-            }
+            get => _companyCustomer.Phone;
+            set { _companyCustomer.Phone = value; OnPropertyChanged(); }
         }
 
         public string Email
         {
-            get { return _companyCustomer.Email; }
-            set
-            {
-                Email = value;
-                OnPropertyChanged();
-            }
+            get => _companyCustomer.Email;
+            set { _companyCustomer.Email = value; OnPropertyChanged(); }
         }
 
-        public ICommand CreateCompanyCustomerCommand
-        {
-            get { return _createCompanyCustomerCommand; }
-        }
+        public ICommand CreateCompanyCustomerCommand => _createCompanyCustomerCommand;
 
 
         public event PropertyChangedEventHandler PropertyChanged;

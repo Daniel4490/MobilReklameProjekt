@@ -12,9 +12,9 @@ namespace MobilReklameApp.CommandClasses
 {
    public class CreatePrivateCustomerCommand : ICommand
     {
-        private PrivateCustomer _privateCustomer;
-        private PrivateCustomerCatalog _privateCustomerCatalog;
-        private PrivateCustomerItemViewModel _ivm;
+        private readonly PrivateCustomer _privateCustomer;
+        private readonly PrivateCustomerCatalog _privateCustomerCatalog;
+        private readonly PrivateCustomerItemViewModel _ivm;
 
         public CreatePrivateCustomerCommand(PrivateCustomer privateCustomer, PrivateCustomerCatalog privateCustomerCatalog, PrivateCustomerItemViewModel ivm)
         {
@@ -34,7 +34,6 @@ namespace MobilReklameApp.CommandClasses
             {
                 _privateCustomerCatalog.AddCustomer(_privateCustomer);
             }
-
             _ivm.Refresh();
         }
 

@@ -15,9 +15,9 @@ namespace MobilReklameApp.ViewModels
 {
    public class PrivateCustomerItemViewModel : INotifyPropertyChanged
    {
-        private PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
-        private PrivateCustomer _privateCustomer;
-        private CreatePrivateCustomerCommand _createPrivateCustomerCommand;
+        private readonly PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
+        private readonly PrivateCustomer _privateCustomer;
+        private readonly CreatePrivateCustomerCommand _createPrivateCustomerCommand;
 
         public PrivateCustomerItemViewModel()
         {
@@ -30,71 +30,42 @@ namespace MobilReklameApp.ViewModels
            OnPropertyChanged(nameof(ListAll));
        }
 
-        public ObservableCollection<PrivateCustomer> ListAll
-        {
-            get
-            { return _privateCustomerCatalog.ListAll; }
-        }
+        public ObservableCollection<PrivateCustomer> ListAll => _privateCustomerCatalog.ListAll;
 
-        public string FirstName
-        {
-            get { return _privateCustomer.FirstName; }
-            set
-            {
-                _privateCustomer.FirstName = value;
-                OnPropertyChanged();
-            }
+       public string FirstName
+       {
+           get => _privateCustomer.FirstName;
+           set { _privateCustomer.FirstName = value; OnPropertyChanged(); }
+       }
 
-        }
-
-        public string LastName
-        {
-            get { return _privateCustomer.LastName; }
-            set
-            {
-                _privateCustomer.LastName = value;
-                OnPropertyChanged();
-            }
-        }
+       public string LastName
+       {
+           get => _privateCustomer.LastName;
+           set { _privateCustomer.LastName = value; OnPropertyChanged(); }
+       }
 
         public string Adress
         {
-            get { return _privateCustomer.Address; }
-            set
-            {
-                _privateCustomer.Address = value;
-                OnPropertyChanged();
-            }
+            get => _privateCustomer.Address;
+            set { _privateCustomer.Address = value; OnPropertyChanged(); }
         }
 
         public string Phone
         {
-            get { return _privateCustomer.Phone; }
-            set
-            {
-                _privateCustomer.Phone = value;
-                OnPropertyChanged();
-            }
+            get => _privateCustomer.Phone;
+            set { _privateCustomer.Phone = value; OnPropertyChanged(); }
         }
 
         public string Email
         {
-            get { return _privateCustomer.Email; }
-            set
-            {
-                _privateCustomer.Email = value;
-                OnPropertyChanged();
-            }
+            get => _privateCustomer.Email;
+            set { _privateCustomer.Email = value; OnPropertyChanged(); }
         }
 
-        public ICommand CreatePrivateCustomerCommand
-        {
-            get { return _createPrivateCustomerCommand; }
-        }
+        public ICommand CreatePrivateCustomerCommand => _createPrivateCustomerCommand;
 
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
+       public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

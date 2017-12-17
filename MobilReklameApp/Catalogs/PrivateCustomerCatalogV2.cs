@@ -12,10 +12,9 @@ namespace MobilReklameApp.DomainClasses
 {
    public class PrivateCustomerCatalog : CatalogBase<PrivateCustomer>
    {
-        private Dictionary<string, PrivateCustomer> _customers;
+        private readonly Dictionary<string, PrivateCustomer> _customers;
         private static PrivateCustomerCatalog _singletonInstance = new PrivateCustomerCatalog();
-        private ObservableCollection<PrivateCustomer> _collection;
-
+        private readonly ObservableCollection<PrivateCustomer> _collection;
 
         private PrivateCustomerCatalog()
         {
@@ -35,25 +34,20 @@ namespace MobilReklameApp.DomainClasses
             }
         }
 
-       public Dictionary<string, PrivateCustomer> Customers
+       public Dictionary<string, PrivateCustomer> Customers => _customers;
+
+
+       public void AddCustomer(PrivateCustomer customer)
        {
-            get { return _customers; }
+            _customers.Add(customer.ID, customer);
        }
 
-
-        public void AddCustomer(PrivateCustomer customer)
-        {
-            _customers.Add(customer.ID, customer);
-        }
-
-        //The following insures that this catalog becomes a singleton
-        //along with the "_singletonInstance" instance field at the top
         public static PrivateCustomerCatalog SingletonInstance
         {
             get
             {
-               // if (_singletonInstance != null) return _singletonInstance;
-               // _singletonInstance = new PrivateCustomerCatalog();
+               if (_singletonInstance != null) return _singletonInstance;
+               _singletonInstance = new PrivateCustomerCatalog();
                 return _singletonInstance;
             }
         }
