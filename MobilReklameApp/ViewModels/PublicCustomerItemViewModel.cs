@@ -22,7 +22,10 @@ namespace MobilReklameApp.ViewModels
         public PublicCustomerItemViewModel()
         {
             _publicCustomer = new PublicCustomer();
-            _createPublicCustomerCommand = new CreatePublicCustomerCommand(_publicCustomer, _publicCustomerCatalog, this);
+            _createPublicCustomerCommand = new CreatePublicCustomerCommand(
+                _publicCustomer, 
+                _publicCustomerCatalog, 
+                this);
         }
 
         public void Refresh()
