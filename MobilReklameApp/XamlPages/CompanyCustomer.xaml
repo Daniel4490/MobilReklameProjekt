@@ -26,9 +26,8 @@
 
         <Grid Column="1" Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Privat kunde" Margin="10,10,10,10"/>
-                <Button Content="Offentilig kunde" Margin="10,10,10,10"/>
-                <Button Content="Erhverv kunde" Margin="10,10,10,10"/>
+                <Button Content="Privat kunde" Margin="285,10,10,10" Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                <Button Content="Offentilig kunde" Margin="10,10,10,10" Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             </StackPanel>
         </Grid>
 
@@ -39,19 +38,19 @@
                            VerticalAlignment="Top" Height="50" Width="570" TextAlignment="Center" FontSize="40" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding CompanyName, Mode=TwoWay}"
                          VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Firmanavn" />
+                         Height="50" Width="570" PlaceholderText="Firmanavn" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}"
                          VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Adresse" />
+                         Height="50" Width="570" PlaceholderText="Adresse" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Phone, Mode=TwoWay}"
                          VerticalAlignment="Top"
-                         Height="50" Width="570" PlaceholderText="Telefon" />
+                         Height="50" Width="570" PlaceholderText="Telefon" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Email, Mode=TwoWay}"
                          VerticalAlignment="Top" Height="50"
-                         Width="570" PlaceholderText="E-Mail" />
+                         Width="570" PlaceholderText="E-Mail" BorderThickness="2,2,2,0" />
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Att, Mode=TwoWay}"
                          VerticalAlignment="Top" Height="50"
-                         Width="570" PlaceholderText="Att:"/>
+                         Width="570" PlaceholderText="Att."/>
                 
 
                 <TextBox HorizontalAlignment="Left" Margin="0,0,0,0" Text="{Binding Adress, Mode=TwoWay}" VerticalAlignment="Top"

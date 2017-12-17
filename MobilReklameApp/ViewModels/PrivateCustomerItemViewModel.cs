@@ -22,6 +22,7 @@ namespace MobilReklameApp.ViewModels
         public PrivateCustomerItemViewModel()
         {
             _privateCustomer = new PrivateCustomer();
+            _privateCustomerCatalog = new PrivateCustomerCatalog();
             _createPrivateCustomerCommand = new CreatePrivateCustomerCommand(_privateCustomer, _privateCustomerCatalog, this);
         }
 

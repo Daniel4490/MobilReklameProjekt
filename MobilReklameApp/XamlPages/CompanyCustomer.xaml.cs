@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MobilReklameApp.SubClasses;
+using MobilReklameApp.XamlPages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,7 +26,19 @@ namespace MobilReklameApp.XamlPages
     {
         public CompanyCustomer()
         {
-          // this.InitializeComponent();
+            this.InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void GoToPrivateCustomer(object sender, RoutedEventArgs o)
+        {
+            this.Frame.Navigate(typeof(PrivateCustomer), null);
+        }
+
     }
 }

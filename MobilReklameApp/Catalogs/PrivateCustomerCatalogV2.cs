@@ -16,7 +16,7 @@ namespace MobilReklameApp.DomainClasses
         private static PrivateCustomerCatalog _singletonInstance = new PrivateCustomerCatalog();
         private readonly ObservableCollection<PrivateCustomer> _collection;
 
-        private PrivateCustomerCatalog()
+        public PrivateCustomerCatalog()
         {
             _customers = new Dictionary<string, PrivateCustomer>();
             _collection = new ObservableCollection<PrivateCustomer>();
