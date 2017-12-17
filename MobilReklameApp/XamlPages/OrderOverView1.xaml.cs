@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MobilReklameApp.DomainClasses;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,6 +38,10 @@ namespace MobilReklameApp
             this.Frame.Navigate(typeof(CreateOrderPage), null);
         }
 
+        public void CustomerBaseClick(object sender, RoutedEventArgs t)
+        {
+            this.Frame.Navigate(typeof(CustomerBasePage), null);
+        }
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
