@@ -9,7 +9,7 @@ using MobilReklameApp.DomainClasses;
 
 namespace MobilReklameApp.SubClasses
 {
-    internal class CompanyCustomer : PeopleBase
+    public class CompanyCustomer : PeopleBase
     {
         public string CVR { get; set; }
 
