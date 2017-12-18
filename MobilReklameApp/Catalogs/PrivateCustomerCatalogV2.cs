@@ -48,7 +48,7 @@ namespace MobilReklameApp.DomainClasses
             {
                if (_singletonInstance != null) return _singletonInstance;
                _singletonInstance = new PrivateCustomerCatalog();
-                return _singletonInstance;
+               return _singletonInstance;
             }
         }
     }

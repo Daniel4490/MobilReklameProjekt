@@ -15,14 +15,9 @@ namespace MobilReklameApp.SubClasses
         public string GetNote
         {
             get => _note;
-            set
-            {
-                _note = value;
-                OnPropertyChanged();
-            }
+            set { _note = value; OnPropertyChanged(); }
         }
       
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

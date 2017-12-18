@@ -14,8 +14,7 @@ namespace MobilReklameApp.DomainClasses
 
         public EmployeeCatalog()
         {
-            _employees = new Dictionary<int, Employee>();
-            
+            _employees = new Dictionary<int, Employee>();    
         }
         
         public static EmployeeCatalog SingletonInstance

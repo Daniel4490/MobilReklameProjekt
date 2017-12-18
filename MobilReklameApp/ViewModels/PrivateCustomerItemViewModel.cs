@@ -15,7 +15,7 @@ namespace MobilReklameApp.ViewModels
 {
    public class PrivateCustomerItemViewModel : INotifyPropertyChanged
    {
-        private readonly PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
+       private readonly PrivateCustomerCatalog _privateCustomerCatalog = PrivateCustomerCatalog.SingletonInstance;
         private readonly PrivateCustomer _privateCustomer;
         private readonly CreatePrivateCustomerCommand _createPrivateCustomerCommand;
 
