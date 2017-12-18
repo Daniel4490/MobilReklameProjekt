@@ -41,7 +41,6 @@ namespace MobilReklameApp.DomainClasses
             _orderStatuses.Add(Order.OrderStatus.Færdig);
             _orderStatuses.Add(Order.OrderStatus.Igangværende);
             _orderStatuses.Add(Order.OrderStatus.Leveret);
-
             _selectedOrder = _orders[0];
         }
 
@@ -66,7 +65,6 @@ namespace MobilReklameApp.DomainClasses
         {
             get => _selectedOrder;
             set { _selectedOrder = value; OnPropertyChanged(); }
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -10,7 +10,6 @@ namespace MobilReklameApp.SubClasses
 {
     public class PublicCustomer : PeopleBase
     {
-
         public string PublicName { get; set; }
 
         public string EAN { get; set; }

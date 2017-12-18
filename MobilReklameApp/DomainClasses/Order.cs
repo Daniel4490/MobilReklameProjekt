@@ -47,11 +47,7 @@ namespace MobilReklameApp.DomainClasses
         public OrderStatus EnummOrderStatus
         {
             get => _orderStatus;
-            set
-            {
-                _orderStatus = value;
-                OnPropertyChanged();
-            }
+            set { _orderStatus = value; OnPropertyChanged(); }
         }    
 
         public string ProductType { get; }

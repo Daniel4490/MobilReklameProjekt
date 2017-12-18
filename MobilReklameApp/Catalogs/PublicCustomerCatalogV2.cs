@@ -20,7 +20,6 @@ namespace MobilReklameApp.DomainClasses
         {
             _customers = new Dictionary<string, PublicCustomer>();
             _collection = new ObservableCollection<PublicCustomer>();
-
         }
 
         public ObservableCollection<PublicCustomer> ListAll

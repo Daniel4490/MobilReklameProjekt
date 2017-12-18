@@ -10,13 +10,9 @@ namespace MobilReklameApp.DomainClasses
 {
     class Employee : PeopleBase
     {
-
-
         public Employee()
         {
             
-        }
-
-        
+        }        
     }
 }

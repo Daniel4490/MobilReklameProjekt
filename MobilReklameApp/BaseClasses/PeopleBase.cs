@@ -11,9 +11,9 @@ namespace MobilReklameApp.BaseClasses
    public abstract class PeopleBase
    {
        protected PeopleBase()
-        {
+       {
             ID = Phone;
-        }
+       }
 
         public string FirstName { get; set; }
 
@@ -31,5 +31,4 @@ namespace MobilReklameApp.BaseClasses
            set => Phone = value;
        }
    }
-
 }
